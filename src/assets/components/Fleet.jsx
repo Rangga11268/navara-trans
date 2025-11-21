@@ -16,7 +16,7 @@ const Fleet = () => {
              
              {/* Main Item (Big Bus) */}
              <div className="md:col-span-2 md:row-span-2 relative rounded-[2rem] overflow-hidden group cursor-pointer shadow-lg">
-                <img src="https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?q=80&w=2069&auto=format&fit=crop" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" alt="SHD Bus" />
+                <img src="/assets/img/bus11.webp" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" alt="SHD Bus" />
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent"></div>
                 <div className="absolute bottom-0 left-0 p-8 md:p-10 text-white">
                    <div className="bg-orange-600 text-white text-[10px] font-bold px-3 py-1 rounded mb-3 w-fit">HDD / SHD / MHD</div>
@@ -35,7 +35,7 @@ const Fleet = () => {
 
              {/* Item 2 (Medium Bus) */}
              <div className="md:col-span-2 relative rounded-[2rem] overflow-hidden group cursor-pointer shadow-lg">
-                 <img src="https://images.unsplash.com/photo-1570125909517-53cb21c89bf9?q=80&w=2070&auto=format&fit=crop" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" alt="Medium Bus" />
+                 <img src="/assets/img/storiesdown.co_navara_trip_ppf.jpeg" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" alt="Medium Bus" />
                  <div className="absolute inset-0 bg-gradient-to-r from-slate-900/90 to-transparent"></div>
                  <div className="absolute inset-0 p-8 flex flex-col justify-center items-start text-white">
                     <div className="flex items-center gap-2 mb-2">
@@ -68,15 +68,20 @@ const Fleet = () => {
                 </div>
              </div>
 
-              {/* Item 4 (Facility Highlight) */}
-              <div className="relative rounded-[2rem] overflow-hidden group cursor-pointer shadow-lg bg-orange-600 text-white">
-                 {/* Pattern */}
-                 <div className="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full blur-2xl -mr-10 -mt-10"></div>
-                 <div className="p-6 h-full flex flex-col justify-center items-center text-center">
-                    <Music size={32} className="mb-3 text-orange-200" />
-                    <h3 className="text-xl font-black mb-1">Full Entertainment</h3>
-                    <p className="text-white/80 text-xs mb-4">Youtube & Karaoke on the go.</p>
-                    <div className="bg-white text-orange-600 px-3 py-1 rounded-lg text-[10px] font-bold shadow-lg">Standard Fasilitas</div>
+              {/* Item 4 (Video Highlight) */}
+              <div className="relative rounded-[2rem] overflow-hidden group cursor-pointer shadow-lg bg-black">
+                 <video 
+                    src="/assets/video/Dieng.mp4" 
+                    className="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity"
+                    autoPlay 
+                    muted 
+                    loop 
+                    playsInline
+                 />
+                 <div className="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors"></div>
+                 <div className="absolute bottom-4 right-4 bg-white/20 backdrop-blur-md px-3 py-1 rounded-full text-white text-xs font-bold flex items-center gap-2">
+                    <Music size={14} />
+                    <span>Onboard Entertainment</span>
                  </div>
              </div>
 

@@ -1,11 +1,11 @@
 import React from 'react';
-import Navbar from "./assets/components/Navbar";
-import Hero from "./assets/components/Hero";
-import BookingWidget from "./assets/components/BookingWidget";
-import Destinations from './assets/components/Destinations';
-import Fleet from './assets/components/Fleet';
-import Promo from './assets/components/Promo';
-import Footer from './assets/components/Footer';
+import Navbar from "./assets/Components/Navbar";
+import Hero from "./assets/Components/Hero";
+import BookingWidget from "./assets/Components/BookingWidget";
+import Destinations from './assets/Components/Destinations';
+import Fleet from './assets/Components/Fleet';
+import Promo from './assets/Components/Promo';
+import Footer from './assets/Components/Footer';
 import FloatingCTA from './assets/components/FloatingCTA';
 
 const App = () => {
