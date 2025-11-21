@@ -7,8 +7,12 @@ const Footer = () => {
       <div className="container mx-auto px-4">
          <div className="grid grid-cols-1 md:grid-cols-5 gap-12 mb-12">
             <div className="md:col-span-2 space-y-6">
-               <div className="flex items-center gap-2">
-                  <div className="bg-orange-600 p-2 rounded-lg text-white"><Bus size={24} /></div>
+               <div className="flex items-center gap-3">
+                  <img 
+                    src="/assets/img/storiesdown.co_navara_trip_ppf.jpeg" 
+                    alt="Navara Trans Logo" 
+                    className="w-14 h-14 rounded-xl object-cover shadow-md"
+                  />
                   <div className="flex flex-col">
                      <span className="text-2xl font-black text-slate-900 leading-none">NAVARA</span>
                      <span className="text-[10px] font-bold text-orange-500 uppercase tracking-widest">Surabaya</span>

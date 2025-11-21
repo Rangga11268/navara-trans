@@ -1,64 +1,98 @@
 import React from 'react';
-import { MapPin, Instagram, PlayCircle } from 'lucide-react';
+import { ArrowRight, Star, Calendar, MapPin } from 'lucide-react';
 
 const Hero = () => {
   return (
-    <header className="relative min-h-[100vh] md:min-h-[850px] flex items-center overflow-hidden bg-slate-950 pt-20 md:pt-0">
-      {/* Dynamic Background */}
+    <section className="relative min-h-screen flex items-center pt-20 overflow-hidden bg-slate-900">
+      {/* Background Image with Parallax-like effect */}
       <div className="absolute inset-0 z-0">
         <img 
           src="https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?q=80&w=2069&auto=format&fit=crop" 
-          alt="Navara Tourism Bus" 
-          className="w-full h-full object-cover object-center opacity-50"
+          alt="Luxury Bus Travel" 
+          className="w-full h-full object-cover opacity-60 scale-105 animate-slow-zoom"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-slate-950 via-slate-950/70 to-transparent"></div>
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-slate-950/50 to-slate-950"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-slate-950 via-slate-950/80 to-transparent"></div>
+        <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent"></div>
       </div>
 
-      {/* Floating Orbs */}
-      <div className="absolute top-1/4 right-[10%] w-96 h-96 bg-orange-600/20 rounded-full blur-[100px] animate-pulse"></div>
-      <div className="absolute bottom-1/4 left-[5%] w-64 h-64 bg-blue-600/20 rounded-full blur-[80px]"></div>
+      <div className="container mx-auto px-4 md:px-8 relative z-10 grid md:grid-cols-2 gap-12 items-center">
+        
+        {/* Text Content */}
+        <div className="space-y-8">
+          <div className="inline-flex items-center gap-2 bg-orange-500/10 border border-orange-500/20 rounded-full px-4 py-1.5 backdrop-blur-sm animate-fade-in-up">
+            <Star size={14} className="text-orange-500 fill-orange-500" />
+            <span className="text-orange-400 text-xs font-bold tracking-widest uppercase">Premium Bus Charter</span>
+          </div>
 
-      <div className="container mx-auto px-4 relative z-10 h-full flex flex-col justify-center">
-        <div className="grid md:grid-cols-12 gap-12 items-center">
-          <div className="md:col-span-8 flex flex-col gap-6 animate-in slide-in-from-bottom-10 duration-1000">
-            <div className="flex items-center gap-3">
-              <div className="px-3 py-1 rounded-full bg-orange-500/20 border border-orange-500/30 text-orange-400 text-xs font-bold uppercase tracking-widest backdrop-blur-md">
-                #1 Sewa Bus Surabaya
-              </div>
-              <div className="px-3 py-1 rounded-full bg-white/10 border border-white/10 text-slate-300 text-xs font-bold backdrop-blur-md flex items-center gap-1">
-                <MapPin size={10} className="text-red-500 fill-red-500" /> Start from Surabaya & Sidoarjo
-              </div>
-            </div>
-            
-            <h1 className="text-5xl md:text-7xl lg:text-8xl font-black text-white leading-[0.9] tracking-tight">
-              Liburan Seru <br/>
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-orange-600">Tanpa Ribet.</span>
-            </h1>
-            
-            <p className="text-slate-400 text-lg md:text-xl leading-relaxed max-w-xl border-l-4 border-orange-600 pl-6">
-              Solusi transportasi wisata premium untuk rombongan Anda. 
-              Unit terbaru, kru ramah, dan siap mengantar ke seluruh destinasi Jawa-Bali dari Surabaya.
-            </p>
+          <h1 className="text-5xl md:text-7xl font-black text-white leading-tight tracking-tight animate-fade-in-up delay-100">
+            Jelajahi <br/>
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-orange-600">Keindahan</span> <br/>
+            Indonesia.
+          </h1>
 
-            <div className="flex flex-wrap gap-4 mt-4">
-              <button className="bg-orange-600 hover:bg-orange-700 text-white px-8 py-4 rounded-2xl font-bold shadow-lg shadow-orange-600/20 transition-all hover:-translate-y-1 flex items-center gap-3 group">
-                <Instagram size={20} /> Cek Galeri Trip
-              </button>
-              <button className="group bg-white/5 hover:bg-white/10 backdrop-blur-md text-white border border-white/10 px-8 py-4 rounded-2xl font-bold transition-all flex items-center gap-3">
-                 <PlayCircle size={20} className="text-orange-500 group-hover:scale-110 transition-transform" /> Video Unit
-              </button>
-            </div>
+          <p className="text-lg text-slate-300 max-w-lg leading-relaxed animate-fade-in-up delay-200">
+            Nikmati perjalanan wisata yang aman dan nyaman dengan armada terbaru dari Navara Trans. Fasilitas lengkap, pelayanan ramah.
+          </p>
+
+          <div className="flex flex-col sm:flex-row gap-4 animate-fade-in-up delay-300">
+            <button className="bg-orange-600 text-white px-8 py-4 rounded-2xl font-bold flex items-center justify-center gap-2 hover:bg-orange-700 transition-all transform hover:scale-105 shadow-lg shadow-orange-900/20">
+              Booking Sekarang <ArrowRight size={20} />
+            </button>
+            <button className="bg-white/10 text-white border border-white/10 px-8 py-4 rounded-2xl font-bold hover:bg-white/20 transition-all backdrop-blur-sm">
+              Lihat Armada
+            </button>
+          </div>
+
+          {/* Stats */}
+          <div className="pt-8 flex items-center gap-8 border-t border-white/10 animate-fade-in-up delay-500">
+             <div>
+                <h4 className="text-3xl font-black text-white">50+</h4>
+                <p className="text-slate-400 text-sm">Unit Armada</p>
+             </div>
+             <div>
+                <h4 className="text-3xl font-black text-white">10k+</h4>
+                <p className="text-slate-400 text-sm">Pelanggan Happy</p>
+             </div>
+             <div>
+                <h4 className="text-3xl font-black text-white">24/7</h4>
+                <p className="text-slate-400 text-sm">Support</p>
+             </div>
           </div>
         </div>
-      </div>
 
-      {/* Scroll Indicator */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 text-white/30 flex flex-col items-center gap-2 animate-bounce">
-         <span className="text-[10px] uppercase tracking-widest font-bold">Scroll</span>
-         <div className="w-px h-12 bg-gradient-to-b from-transparent via-white/30 to-transparent"></div>
+        {/* Floating Booking Card (Desktop Only) */}
+        <div className="hidden md:block animate-fade-in-left delay-700">
+           <div className="bg-white/5 backdrop-blur-xl border border-white/10 p-8 rounded-[2.5rem] shadow-2xl relative overflow-hidden">
+              <div className="absolute top-0 right-0 w-64 h-64 bg-orange-500/20 rounded-full blur-3xl -mr-20 -mt-20"></div>
+              
+              <h3 className="text-2xl font-bold text-white mb-6 relative z-10">Rencanakan Perjalanan</h3>
+              
+              <div className="space-y-4 relative z-10">
+                 <div className="bg-slate-900/50 p-4 rounded-2xl border border-white/5">
+                    <label className="text-slate-400 text-xs font-bold uppercase mb-2 block">Tujuan</label>
+                    <div className="flex items-center gap-3 text-white">
+                       <MapPin size={20} className="text-orange-500" />
+                       <span className="font-medium">Yogyakarta, Indonesia</span>
+                    </div>
+                 </div>
+
+                 <div className="bg-slate-900/50 p-4 rounded-2xl border border-white/5">
+                    <label className="text-slate-400 text-xs font-bold uppercase mb-2 block">Tanggal</label>
+                    <div className="flex items-center gap-3 text-white">
+                       <Calendar size={20} className="text-orange-500" />
+                       <span className="font-medium">Pilih Tanggal</span>
+                    </div>
+                 </div>
+
+                 <button className="w-full bg-white text-slate-900 py-4 rounded-xl font-bold hover:bg-orange-50 transition-colors mt-4">
+                    Cek Ketersediaan
+                 </button>
+              </div>
+           </div>
+        </div>
+
       </div>
-    </header>
+    </section>
   );
 };
 

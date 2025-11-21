@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Bus, Menu, X } from 'lucide-react';
+import { Bus, Menu, X, Phone, ChevronRight } from 'lucide-react';
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -23,56 +23,60 @@ const Navbar = () => {
 
   return (
     <nav 
-      className={`fixed w-full z-50 transition-all duration-300 ease-in-out ${
+      className={`fixed w-full z-50 transition-all duration-500 ease-[cubic-bezier(0.4,0,0.2,1)] ${
         isScrolled 
-          ? 'bg-slate-900/95 backdrop-blur-lg shadow-lg py-3 border-b border-white/10' 
+          ? 'bg-slate-950/80 backdrop-blur-xl shadow-2xl py-3 border-b border-white/5' 
           : 'bg-transparent py-6'
       }`}
     >
       <div className="container mx-auto px-4 md:px-8 flex justify-between items-center">
-        {/* Logo */}
+        {/* Logo Section */}
         <div className="flex items-center gap-3 group cursor-pointer z-50">
-          <div className={`p-2.5 rounded-xl transition-all duration-500 ${isScrolled ? 'bg-orange-600' : 'bg-white/10 backdrop-blur-sm border border-white/20'}`}>
-            <Bus className="w-6 h-6 text-white" />
-          </div>
+          <img 
+            src="/assets/img/storiesdown.co_navara_trip_ppf.jpeg" 
+            alt="Navara Trans Logo" 
+            className="w-12 h-12 rounded-full object-cover border-2 border-white/20 shadow-lg group-hover:scale-105 transition-transform duration-500"
+          />
           <div className="flex flex-col">
-            <span className="text-2xl font-black tracking-tight leading-none text-white drop-shadow-sm">
+            <span className="text-2xl font-black tracking-tighter leading-none text-white drop-shadow-sm group-hover:tracking-normal transition-all duration-500">
               NAVARA
             </span>
-            <span className="text-[10px] font-bold tracking-[0.4em] uppercase text-orange-500 drop-shadow-sm">
-              Pariwisata
+            <span className="text-[10px] font-bold tracking-[0.4em] uppercase text-orange-500 drop-shadow-sm group-hover:text-white transition-colors duration-300">
+              TRANS
             </span>
           </div>
         </div>
 
         {/* Desktop Menu */}
-        <div className="hidden md:flex items-center gap-8 bg-slate-900/50 backdrop-blur-md px-8 py-3 rounded-full border border-white/10">
+        <div className={`hidden md:flex items-center gap-1 bg-slate-950/50 backdrop-blur-2xl p-1.5 rounded-full border border-white/10 transition-all duration-500 ${isScrolled ? 'translate-y-0 opacity-100' : 'translate-y-0 opacity-100'}`}>
           {navLinks.map((link) => (
             <a 
               key={link.name} 
               href={link.href}
-              className="text-sm font-medium text-slate-200 hover:text-white hover:font-bold transition-all relative group"
+              className="px-5 py-2 rounded-full text-sm font-medium text-slate-300 hover:text-white hover:bg-white/10 transition-all relative group overflow-hidden"
             >
-              {link.name}
-              <span className="absolute -bottom-1 left-1/2 w-0 h-0.5 bg-orange-500 transition-all group-hover:w-full group-hover:left-0 duration-300"></span>
+              <span className="relative z-10">{link.name}</span>
             </a>
           ))}
         </div>
 
         {/* Desktop CTA Buttons */}
-        <div className="hidden md:flex items-center gap-4">
-           <div className="flex flex-col text-right mr-2 text-white">
-              <span className="text-[10px] uppercase text-slate-400 font-bold">Hotline 24 Jam</span>
-              <span className="text-sm font-bold font-mono tracking-wide">031-8899-1234</span>
+        <div className="hidden md:flex items-center gap-6">
+           <div className="flex flex-col text-right mr-2 text-white group cursor-pointer">
+              <span className="text-[10px] uppercase text-slate-400 font-bold group-hover:text-orange-500 transition-colors">Hotline 24 Jam</span>
+              <span className="text-sm font-bold font-mono tracking-wide flex items-center gap-2">
+                <Phone size={12} className="text-orange-500" /> 031-8899-1234
+              </span>
            </div>
-           <button className="bg-white text-slate-900 hover:bg-orange-500 hover:text-white px-5 py-2.5 rounded-xl text-sm font-bold transition-all transform hover:scale-105 shadow-lg">
+           <button className="bg-white text-slate-950 hover:bg-orange-600 hover:text-white px-6 py-2.5 rounded-xl text-sm font-bold transition-all transform hover:scale-105 shadow-[0_0_20px_rgba(255,255,255,0.3)] hover:shadow-[0_0_20px_rgba(234,88,12,0.5)] flex items-center gap-2 group">
             Cek Harga
+            <ChevronRight size={16} className="group-hover:translate-x-1 transition-transform" />
           </button>
         </div>
 
         {/* Mobile Menu Toggle */}
         <button 
-          className="md:hidden text-white z-50 p-2 bg-white/10 rounded-lg backdrop-blur-sm active:scale-95 transition-transform"
+          className="md:hidden text-white z-50 p-2 bg-white/10 rounded-xl backdrop-blur-sm active:scale-95 transition-transform border border-white/10"
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
         >
           {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
@@ -81,18 +85,22 @@ const Navbar = () => {
 
       {/* Mobile Fullscreen Menu */}
       <div className={`fixed inset-0 bg-slate-950 z-40 flex flex-col justify-center items-center gap-8 transition-all duration-500 ${isMobileMenuOpen ? 'opacity-100 visible translate-y-0' : 'opacity-0 invisible -translate-y-10'}`}>
-         {navLinks.map((link) => (
+         <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-10"></div>
+         {navLinks.map((link, index) => (
             <a 
               key={link.name} 
               href={link.href}
-              className="text-2xl font-bold text-white hover:text-orange-500 transition-colors"
+              className="text-3xl font-black text-white hover:text-orange-500 transition-all transform hover:scale-110"
+              style={{ transitionDelay: `${index * 50}ms` }}
               onClick={() => setIsMobileMenuOpen(false)}
             >
               {link.name}
             </a>
           ))}
-          <div className="w-16 h-1 bg-slate-800 rounded-full"></div>
-          <button className="bg-orange-600 text-white px-8 py-4 rounded-2xl text-lg font-bold w-3/4">Hubungi Marketing</button>
+          <div className="w-16 h-1 bg-slate-800 rounded-full my-4"></div>
+          <button className="bg-orange-600 text-white px-8 py-4 rounded-2xl text-lg font-bold w-3/4 shadow-xl shadow-orange-900/20 active:scale-95 transition-all">
+            Hubungi Marketing
+          </button>
       </div>
     </nav>
   );
