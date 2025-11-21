@@ -1,6 +1,6 @@
 import React from 'react';
 import { MapPin, Calendar, Users, Star, ArrowRight, CheckCircle2, Phone } from 'lucide-react';
-import { openWhatsApp, createTourInquiryMessage } from '../../utils/whatsapp.js';
+import { openWhatsApp } from '../../utils/whatsapp.js';
 
 const TourPackages = () => {
   const tourPackages = [
@@ -44,7 +44,7 @@ const TourPackages = () => {
       duration: "2 Hari 1 Malam",
       destination: "Gunung Bromo",
       price: "Mulai 1.5 jt",
-      image: "/assets/img/BromoWisata",
+      image: "/assets/img/BromoWisata.jpg",
       rating: 4.8,
       participants: "Min. 15 pax",
       highlights: [
