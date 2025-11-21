@@ -16,7 +16,7 @@ const Destinations = () => {
           <div>
              <div className="inline-block bg-orange-100 text-orange-600 text-[10px] font-bold px-3 py-1 rounded-full mb-3 uppercase tracking-widest">Start Surabaya</div>
              <h2 className="text-3xl md:text-4xl font-black text-slate-900 mb-2">Destinasi Favorit</h2>
-             <p className="text-slate-500">Ide liburan populer pelanggan Navara Trans bulan ini.</p>
+             <p className="text-slate-500">Ide liburan populer pelanggan Navara Trip bulan ini.</p>
           </div>
           <a href="#" className="text-orange-600 font-bold flex items-center gap-1 hover:gap-2 transition-all">Lihat Katalog <ArrowRight size={18} /></a>
         </div>

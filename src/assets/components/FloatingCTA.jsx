@@ -32,7 +32,7 @@ const FloatingCTA = () => {
        </div>
 
        <a
-         href="https://wa.me/6281113556799?text=Halo%20Navara%20Trans%2C%20saya%20ingin%20bertanya%20tentang%20layanan%20sewa%20bus."
+         href="https://wa.me/6281113556799?text=Halo%20Navara%20Trip%2C%20saya%20ingin%20bertanya%20tentang%20layanan%20sewa%20bus."
          target="_blank"
          rel="noopener noreferrer"
          className="bg-green-600 text-white px-6 py-3 rounded-full shadow-2xl font-bold flex items-center gap-3 hover:bg-green-700 transition-colors ring-4 ring-white/20 backdrop-blur-sm animate-pulse hover:animate-none"

@@ -110,7 +110,7 @@ const TourPackages = () => {
   ];
 
   const handleInquiry = (packageName) => {
-    const message = `Halo Navara Trans! 👋\n\nSaya tertarik dengan paket wisata:\n*${packageName}*\n\nMohon info lebih lanjut untuk:\n- Harga detail\n- Itinerary lengkap\n- Tanggal keberangkatan tersedia\n\nTerima kasih! 🙏`;
+    const message = `Halo Navara Trip! 👋\n\nSaya tertarik dengan paket wisata:\n*${packageName}*\n\nMohon info lebih lanjut untuk:\n- Harga detail\n- Itinerary lengkap\n- Tanggal keberangkatan tersedia\n\nTerima kasih! 🙏`;
     openWhatsApp(message);
   };
 

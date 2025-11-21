@@ -32,7 +32,7 @@ const Hero = () => {
           </h1>
 
           <p className="text-lg text-slate-300 max-w-lg leading-relaxed animate-fade-in-up delay-200">
-            Nikmati perjalanan wisata yang aman dan nyaman dengan armada terbaru dari Navara Trans. Fasilitas lengkap, pelayanan ramah.
+            Nikmati perjalanan wisata yang aman dan nyaman dengan armada terbaru dari Navara Trip. Fasilitas lengkap, pelayanan ramah.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 animate-fade-in-up delay-300">

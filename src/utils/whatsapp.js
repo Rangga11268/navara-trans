@@ -3,13 +3,13 @@
  * Opens WhatsApp with pre-filled message
  */
 
-// WhatsApp number for Navara Trans
+// WhatsApp number for Navara Trip
 const DEFAULT_PHONE = '6281113556799';
 
 /**
  * Opens WhatsApp chat with a pre-filled message
  * @param {string} message - The message to send
- * @param {string} phoneNumber - WhatsApp number (default: Navara Trans)
+ * @param {string} phoneNumber - WhatsApp number (default: Navara Trip)
  */
 export const openWhatsApp = (message, phoneNumber = DEFAULT_PHONE) => {
   const encodedMessage = encodeURIComponent(message);
@@ -39,7 +39,7 @@ Mohon informasi harga dan ketersediaan. Terima kasih!`;
 export const createTourInquiryMessage = () => {
   return `🎒 *PAKET TOUR WISATA*
 
-Halo Navara Trans! Saya tertarik dengan paket tour wisata.
+Halo Navara Trip! Saya tertarik dengan paket tour wisata.
 
 Mohon informasi lengkap mengenai:
 - Destinasi yang tersedia
@@ -78,7 +78,7 @@ Saya tertarik untuk trip ke ${destinationName}. Mohon informasi paket dan harga.
  * Create general inquiry message
  */
 export const createGeneralInquiryMessage = () => {
-  return `👋 Halo Navara Trans!
+  return `👋 Halo Navara Trip!
 
 Saya ingin mendapatkan informasi lebih lanjut tentang layanan sewa bus dan paket wisata Anda.
 
@@ -91,7 +91,7 @@ Terima kasih!`;
 export const createPricelistRequestMessage = () => {
   return `📋 *REQUEST PRICELIST*
 
-Halo Navara Trans! Saya ingin mendapatkan pricelist terbaru untuk:
+Halo Navara Trip! Saya ingin mendapatkan pricelist terbaru untuk:
 - Sewa bus (Big Bus & Hiace)
 - Paket wisata
 - Corporate gathering

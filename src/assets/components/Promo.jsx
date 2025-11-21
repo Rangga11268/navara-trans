@@ -18,9 +18,9 @@ const Promo = () => {
                  <button className="flex items-center gap-3 bg-white hover:bg-slate-200 text-slate-900 px-6 py-3 rounded-xl transition-colors font-bold">
                     Download Pricelist (PDF)
                  </button>
-                 <button className="flex items-center gap-3 bg-transparent border border-slate-700 text-white hover:bg-slate-800 px-6 py-3 rounded-xl transition-colors font-bold">
+                 <a href="https://www.instagram.com/navara_trip/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 bg-transparent border border-slate-700 text-white hover:bg-slate-800 px-6 py-3 rounded-xl transition-colors font-bold">
                     <Instagram /> @navara_trip
-                 </button>
+                 </a>
               </div>
               
               {/* Stats */}
@@ -46,7 +46,7 @@ const Promo = () => {
                   <div className="absolute -inset-4 bg-orange-500/20 rounded-[2.5rem] blur-2xl -z-10"></div>
                   <img 
                     src="/assets/img/Reservasi.jpg" 
-                    alt="Reservasi Navara Trans" 
+                    alt="Reservasi Navara Trip" 
                     className="w-full h-auto rounded-[2rem] shadow-2xl rotate-3 hover:rotate-0 transition-all duration-500 border border-white/10"
                   />
               </div>

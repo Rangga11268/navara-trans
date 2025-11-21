@@ -44,7 +44,7 @@ const Navbar = () => {
           <div className="flex items-center gap-3 group cursor-pointer z-50 relative">
             <img 
               src="/assets/img/logoNoBg.png" 
-              alt="Navara Trans Logo" 
+              alt="Navara Trip Logo" 
               className="w-10 md:w-12 h-auto object-contain group-hover:scale-105 transition-transform duration-500"
             />
             <div className="flex flex-col">
@@ -52,7 +52,7 @@ const Navbar = () => {
                 NAVARA
               </span>
               <span className="text-[8px] md:text-[10px] font-bold tracking-[0.4em] uppercase text-orange-500 drop-shadow-sm group-hover:text-white transition-colors duration-300">
-                TRANS
+                TRIP
               </span>
             </div>
           </div>
@@ -141,7 +141,7 @@ const Navbar = () => {
              </div>
              
              <p className="text-center text-[10px] text-slate-600 uppercase tracking-widest">
-                © 2024 Navara Trans
+                © 2025 Navara Trip
              </p>
           </div>
         </div>

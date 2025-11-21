@@ -15,7 +15,7 @@ const Footer = () => {
                   />
                   <div className="flex flex-col">
                      <span className="text-2xl font-black text-slate-900 leading-none">NAVARA</span>
-                     <span className="text-[10px] font-bold text-orange-500 uppercase tracking-widest">Surabaya</span>
+                     <span className="text-[10px] font-bold text-orange-500 uppercase tracking-widest">TRIP</span>
                   </div>
                </div>
                <p className="text-slate-500 leading-relaxed pr-4">
@@ -23,7 +23,7 @@ const Footer = () => {
                   Garasi & Kantor pusat kami berlokasi strategis di Surabaya Selatan untuk melayani penjemputan area Gerbangkertosusila.
                </p>
                <div className="flex gap-4">
-                  <a href="https://www.instagram.com/navara_trip?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-slate-50 flex items-center justify-center text-slate-600 hover:bg-slate-900 hover:text-white transition-colors">
+                  <a href="https://www.instagram.com/navara_trip/" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-slate-50 flex items-center justify-center text-slate-600 hover:bg-slate-900 hover:text-white transition-colors">
                      <Instagram size={18} />
                   </a>
                   <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-slate-50 flex items-center justify-center text-slate-600 hover:bg-slate-900 hover:text-white transition-colors">
@@ -74,7 +74,7 @@ const Footer = () => {
             </div>
          </div>
          <div className="border-t border-slate-100 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-slate-400 font-medium">
-            <p>&copy; 2025 PT Navara Pariwisata Surabaya. All rights reserved.</p>
+            <p>&copy; 2025 PT Sasmito Navara Trip. All rights reserved.</p>
             <div className="flex gap-6">
                <a href="#" className="hover:text-slate-900">Privacy</a>
                <a href="#" className="hover:text-slate-900">Terms</a>
