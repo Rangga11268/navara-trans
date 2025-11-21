@@ -9,9 +9,9 @@ const Footer = () => {
             <div className="md:col-span-2 space-y-6">
                <div className="flex items-center gap-3">
                   <img 
-                    src="/assets/img/storiesdown.co_navara_trip_ppf.jpeg" 
+                    src="/assets/img/logoNoBg.png" 
                     alt="Navara Trans Logo" 
-                    className="w-14 h-14 rounded-xl object-cover shadow-md"
+                    className="w-16 h-auto object-contain"
                   />
                   <div className="flex flex-col">
                      <span className="text-2xl font-black text-slate-900 leading-none">NAVARA</span>
@@ -24,7 +24,7 @@ const Footer = () => {
                </p>
                <div className="flex gap-4">
                   {[Instagram, Facebook, Mail].map((Icon, i) => (
-                     <a key={i} href="#" className="w-10 h-10 rounded-full bg-slate-50 flex items-center justify-center text-slate-600 hover:bg-slate-900 hover:text-white transition-colors">
+                     <a key={i} href={i === 0 ? "https://www.instagram.com/navara_trip?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" : "#"} className="w-10 h-10 rounded-full bg-slate-50 flex items-center justify-center text-slate-600 hover:bg-slate-900 hover:text-white transition-colors">
                         <Icon size={18} />
                      </a>
                   ))}
@@ -58,7 +58,7 @@ const Footer = () => {
                      <MapPin size={16} className="text-orange-600 mt-1 shrink-0"/> 
                      <span>Jl. Raya Rungkut Madya No. 88, Surabaya, Jawa Timur 60293</span>
                   </li>
-                  <li className="flex items-center gap-2"><Phone size={16} className="text-orange-600"/> 031-8899-1234</li>
+                  <li className="flex items-center gap-2"><Phone size={16} className="text-orange-600"/> 0811-3556-799</li>
                   <li className="flex items-center gap-2"><Smartphone size={16} className="text-orange-600"/> 0812-3456-7890 (WA)</li>
                </ul>
             </div>

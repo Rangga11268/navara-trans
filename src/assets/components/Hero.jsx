@@ -3,11 +3,11 @@ import { ArrowRight, Star, Calendar, MapPin } from 'lucide-react';
 
 const Hero = () => {
   return (
-    <section className="relative min-h-screen flex items-center pt-20 overflow-hidden bg-slate-900">
+    <section className="relative min-h-screen flex items-center pt-20 pb-20 lg:pb-32 overflow-hidden bg-slate-900">
       {/* Background Image with Parallax-like effect */}
       <div className="absolute inset-0 z-0">
         <img 
-          src="https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?q=80&w=2069&auto=format&fit=crop" 
+          src="/assets/img/hero2.jpg" 
           alt="Luxury Bus Travel" 
           className="w-full h-full object-cover opacity-60 scale-105 animate-slow-zoom"
         />
@@ -15,7 +15,7 @@ const Hero = () => {
         <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent"></div>
       </div>
 
-      <div className="container mx-auto px-4 md:px-8 relative z-10 grid md:grid-cols-2 gap-12 items-center">
+      <div className="container mx-auto px-4 md:px-8 relative z-10 grid lg:grid-cols-2 gap-12 items-center">
         
         {/* Text Content */}
         <div className="space-y-8">
@@ -46,11 +46,11 @@ const Hero = () => {
           {/* Stats */}
           <div className="pt-8 flex items-center gap-8 border-t border-white/10 animate-fade-in-up delay-500">
              <div>
-                <h4 className="text-3xl font-black text-white">50+</h4>
+                <h4 className="text-3xl font-black text-white">4+</h4>
                 <p className="text-slate-400 text-sm">Unit Armada</p>
              </div>
              <div>
-                <h4 className="text-3xl font-black text-white">10k+</h4>
+                <h4 className="text-3xl font-black text-white">Ribuan</h4>
                 <p className="text-slate-400 text-sm">Pelanggan Happy</p>
              </div>
              <div>

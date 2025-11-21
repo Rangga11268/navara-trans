@@ -19,18 +19,18 @@ const Promo = () => {
                     Download Pricelist (PDF)
                  </button>
                  <button className="flex items-center gap-3 bg-transparent border border-slate-700 text-white hover:bg-slate-800 px-6 py-3 rounded-xl transition-colors font-bold">
-                    <Instagram /> @navaratrans.sby
+                    <Instagram /> @navara_trip
                  </button>
               </div>
               
               {/* Stats */}
               <div className="mt-12 grid grid-cols-3 gap-8 border-t border-white/10 pt-8">
                  <div>
-                    <p className="text-3xl font-bold text-white">50+</p>
+                    <p className="text-3xl font-bold text-white">4+</p>
                     <p className="text-slate-500 text-xs">Unit Ready</p>
                  </div>
                  <div>
-                    <p className="text-3xl font-bold text-white">10th</p>
+                    <p className="text-3xl font-bold text-white">1th</p>
                     <p className="text-slate-500 text-xs">Pengalaman</p>
                  </div>
                  <div>
@@ -42,35 +42,13 @@ const Promo = () => {
 
            {/* Visual Illustration */}
            <div className="md:w-1/2 flex justify-center">
-              <div className="relative w-[320px] h-[400px] bg-slate-900 rounded-[2rem] border border-slate-800 shadow-2xl p-8 flex flex-col gap-4 rotate-3 hover:rotate-0 transition-all">
-                  <div className="flex items-center justify-between mb-4 border-b border-slate-800 pb-4">
-                     <div>
-                        <p className="text-slate-400 text-xs">INVOICE</p>
-                        <p className="text-white font-bold">#NVR-BOOK-001</p>
-                     </div>
-                     <BadgeCheck className="text-green-500" />
-                  </div>
-                  <div className="space-y-4">
-                     <div className="flex justify-between text-sm">
-                        <span className="text-slate-400">Unit</span>
-                        <span className="text-white font-bold">1x Big Bus SHD (50s)</span>
-                     </div>
-                     <div className="flex justify-between text-sm">
-                        <span className="text-slate-400">Tujuan</span>
-                        <span className="text-white font-bold">Malang - Batu City Tour</span>
-                     </div>
-                     <div className="flex justify-between text-sm">
-                        <span className="text-slate-400">Durasi</span>
-                        <span className="text-white font-bold">2 Hari 1 Malam</span>
-                     </div>
-                     <div className="bg-slate-800 p-4 rounded-xl mt-4">
-                        <div className="flex justify-between items-center">
-                           <span className="text-slate-400 text-xs">Total Harga</span>
-                           <span className="text-orange-500 font-bold text-xl">Rp 6.xxx.xxx</span>
-                        </div>
-                     </div>
-                     <button className="w-full bg-orange-600 text-white py-3 rounded-lg font-bold mt-2">Book Now</button>
-                  </div>
+              <div className="relative w-full max-w-md">
+                  <div className="absolute -inset-4 bg-orange-500/20 rounded-[2.5rem] blur-2xl -z-10"></div>
+                  <img 
+                    src="/assets/img/Reservasi.jpg" 
+                    alt="Reservasi Navara Trans" 
+                    className="w-full h-auto rounded-[2rem] shadow-2xl rotate-3 hover:rotate-0 transition-all duration-500 border border-white/10"
+                  />
               </div>
            </div>
        </div>

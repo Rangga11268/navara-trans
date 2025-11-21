@@ -3,8 +3,8 @@ import { ArrowRight } from 'lucide-react';
 
 const Destinations = () => {
   const destinationList = [
-    { name: "Ziarah Wali 5", type: "Religi", price: "Call for Price", img: "https://images.unsplash.com/photo-1602486907352-4486567cb941?q=80&w=1000&auto=format&fit=crop" },
-    { name: "Malang & Batu", type: "City Tour", price: "Best Deal", img: "https://images.unsplash.com/photo-1596402180200-889922458d7a?q=80&w=1000&auto=format&fit=crop" },
+    { name: "Ziarah Wali 5", type: "Religi", price: "Call for Price", img: "/assets/img/ziarahwali5.webp" },
+    { name: "Malang & Batu", type: "City Tour", price: "Best Deal", img: "/assets/img/malangbatu.jpg" },
     { name: "Gunung Bromo", type: "Adventure", price: "Popular", img: "https://images.unsplash.com/photo-1584810359583-96fc3448beaa?q=80&w=1000&auto=format&fit=crop" },
     { name: "Bali Overland", type: "Long Trip", price: "4-5 Hari", img: "https://images.unsplash.com/photo-1537996194471-e657df975ab4?q=80&w=1000&auto=format&fit=crop" },
   ];

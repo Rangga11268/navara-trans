@@ -33,9 +33,9 @@ const Navbar = () => {
         {/* Logo Section */}
         <div className="flex items-center gap-3 group cursor-pointer z-50">
           <img 
-            src="/assets/img/storiesdown.co_navara_trip_ppf.jpeg" 
+            src="/assets/img/logoNoBg.png" 
             alt="Navara Trans Logo" 
-            className="w-12 h-12 rounded-full object-cover border-2 border-white/20 shadow-lg group-hover:scale-105 transition-transform duration-500"
+            className="w-12 h-auto object-contain group-hover:scale-105 transition-transform duration-500"
           />
           <div className="flex flex-col">
             <span className="text-2xl font-black tracking-tighter leading-none text-white drop-shadow-sm group-hover:tracking-normal transition-all duration-500">
@@ -58,20 +58,6 @@ const Navbar = () => {
               <span className="relative z-10">{link.name}</span>
             </a>
           ))}
-        </div>
-
-        {/* Desktop CTA Buttons */}
-        <div className="hidden md:flex items-center gap-6">
-           <div className="flex flex-col text-right mr-2 text-white group cursor-pointer">
-              <span className="text-[10px] uppercase text-slate-400 font-bold group-hover:text-orange-500 transition-colors">Hotline 24 Jam</span>
-              <span className="text-sm font-bold font-mono tracking-wide flex items-center gap-2">
-                <Phone size={12} className="text-orange-500" /> 031-8899-1234
-              </span>
-           </div>
-           <button className="bg-white text-slate-950 hover:bg-orange-600 hover:text-white px-6 py-2.5 rounded-xl text-sm font-bold transition-all transform hover:scale-105 shadow-[0_0_20px_rgba(255,255,255,0.3)] hover:shadow-[0_0_20px_rgba(234,88,12,0.5)] flex items-center gap-2 group">
-            Cek Harga
-            <ChevronRight size={16} className="group-hover:translate-x-1 transition-transform" />
-          </button>
         </div>
 
         {/* Mobile Menu Toggle */}

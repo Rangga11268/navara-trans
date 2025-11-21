@@ -5,7 +5,7 @@ const BookingWidget = () => {
   const [activeTab, setActiveTab] = useState('charter'); // 'charter' or 'tour'
 
   return (
-    <div className="container mx-auto px-4 relative z-20 -mt-16 mb-20">
+    <div className="container mx-auto px-4 relative z-20 mt-0 lg:-mt-16 mb-20">
       <div className="bg-white/90 backdrop-blur-xl rounded-3xl shadow-2xl shadow-black/20 p-2 border border-white/50 ring-1 ring-slate-200/50 max-w-6xl mx-auto">
         
         <div className="bg-white rounded-2xl p-6 md:p-8 shadow-sm">
