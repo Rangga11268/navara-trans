@@ -1,12 +1,12 @@
 import React from 'react';
-import Navbar from "./assets/Components/Navbar.jsx";
-import Hero from "./assets/Components/Hero.jsx";
-import BookingWidget from "./assets/Components/BookingWidget.jsx";
-import Destinations from './assets/Components/Destinations.jsx';
+import Navbar from "./assets/components/Navbar.jsx";
+import Hero from "./assets/components/Hero.jsx";
+import BookingWidget from "./assets/components/BookingWidget.jsx";
+import Destinations from './assets/components/Destinations.jsx';
 import Fleet from './assets/Components/Fleet.jsx';
-import Promo from './assets/Components/Promo.jsx';
-import Footer from './assets/Components/Footer.jsx';
-import FloatingCTA from './assets/Components/FloatingCTA.jsx';
+import Promo from './assets/components/Promo.jsx';
+import Footer from './assets/components/Footer.jsx';
+import FloatingCTA from './assets/components/FloatingCTA.jsx';
 
 const App = () => {
   return (
