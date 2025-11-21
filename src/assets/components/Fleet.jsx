@@ -9,7 +9,7 @@ const fleetData = [
     title: "Dieng",
     category: "Royal Series",
     capacity: "50 Seats",
-    image: "/assets/img/bus1Dieng.webp",
+    image: "/assets/img/Dieng/diengBus.webp",
     tags: ["Karaoke", "Coolbox", "Dispenser"],
     note: "Ready Now",
     year: "2025",
