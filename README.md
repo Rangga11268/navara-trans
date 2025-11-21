@@ -1,3 +1,7 @@
+<div align="center">
+  <img src="public/assets/img/logoNoBg.png" alt="Navara Trans Logo" width="150" />
+</div>
+
 # 🚌 Navara Trans - Premium Bus Charter & Tourism
 
 ![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
