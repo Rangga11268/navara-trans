@@ -205,7 +205,7 @@ const BookingWidget = () => {
 
       {/* Trust Indicators */}
       <div className="mt-8 flex flex-wrap justify-center gap-6 md:gap-12 text-slate-500 font-medium text-sm md:text-base">
-         <div className="flex items-center gap-2"><ShieldCheck className="text-green-500" size={18} /> Unit Tahun 2023-2024</div>
+         <div className="flex items-center gap-2"><ShieldCheck className="text-green-500" size={18} /> Unit Tahun 2023-2025</div>
          <div className="flex items-center gap-2"><Users className="text-blue-500" size={18} /> Crew Pariwisata Berpengalaman</div>
          <div className="flex items-center gap-2"><CheckCircle2 className="text-orange-500" size={18} /> Izin Kemenhub Resmi</div>
       </div>
