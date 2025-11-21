@@ -1,4 +1,3 @@
-```javascript
 import React from 'react';
 import { ArrowRight, Star, Calendar, MapPin } from 'lucide-react';
 import { scrollToSection } from '../../utils/scroll.js';
@@ -108,4 +107,3 @@ const Hero = () => {
 };
 
 export default Hero;
-```
