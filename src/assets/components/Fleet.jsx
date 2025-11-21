@@ -70,7 +70,7 @@ const Fleet = () => {
                 Armada <span className="text-orange-600">Pilihan</span>
              </h2>
              <p className="text-slate-600 text-lg leading-relaxed">
-                Kombinasi sempurna antara kenyamanan Big Bus (Coming Soon June 2025) dan fleksibilitas Hiace untuk segala kebutuhan perjalanan Anda.
+                Kombinasi sempurna antara kenyamanan Big Bus dan fleksibilitas Hiace untuk segala kebutuhan perjalanan Anda.
              </p>
           </div>
 
