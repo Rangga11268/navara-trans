@@ -10,7 +10,7 @@ const TourPackages = () => {
       duration: "4 Hari 3 Malam",
       destination: "Bali",
       price: "Mulai 4.5 jt",
-      image: "https://images.unsplash.com/photo-1537996194471-e657df975ab4?q=80&w=1000&auto=format&fit=crop",
+      image: "/assets/img/BaliWisata.webp",
       rating: 4.9,
       participants: "Min. 20 pax",
       highlights: [
@@ -44,7 +44,7 @@ const TourPackages = () => {
       duration: "2 Hari 1 Malam",
       destination: "Gunung Bromo",
       price: "Mulai 1.5 jt",
-      image: "https://images.unsplash.com/photo-1584810359583-96fc3448beaa?q=80&w=1000&auto=format&fit=crop",
+      image: "/assets/img/BromoWisata",
       rating: 4.8,
       participants: "Min. 15 pax",
       highlights: [

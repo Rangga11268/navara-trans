@@ -11,7 +11,7 @@ const fleetData = [
     capacity: "50 Seats",
     image: "/assets/img/bus1Dieng.webp",
     tags: ["Karaoke", "Coolbox", "Dispenser"],
-    note: "Available June 2025"
+    note: "Ready Now"
   },
   {
     id: 2,
@@ -20,7 +20,7 @@ const fleetData = [
     capacity: "50 Seats",
     image: "/assets/img/bus 2 Bromo.webp",
     tags: ["Best Seller", "Lincah", "Full AC"],
-    note: "Available June 2025"
+    note: "Ready Now"
   },
   {
     id: 3,
@@ -29,7 +29,7 @@ const fleetData = [
     capacity: "50 Seats",
     image: "/assets/img/Bus 3.jpg",
     tags: ["Captain Seat", "Private", "Luxury"],
-    note: "Available June 2025"
+    note: "Ready Now"
   },
   {
     id: 4,
@@ -38,7 +38,7 @@ const fleetData = [
     capacity: "50 Seats",
     image: "/assets/img/bus1Dieng.webp",
     tags: ["Economical", "Comfort", "Group"],
-    note: "Available June 2025"
+    note: "Ready Now"
   },
   {
     id: 5,
