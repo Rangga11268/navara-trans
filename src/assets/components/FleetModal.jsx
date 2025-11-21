@@ -149,7 +149,7 @@ const FleetModal = ({ isOpen, onClose, fleet }) => {
                 </div>
                 <div>
                   <p className="text-slate-500 text-sm mb-1">Tahun</p>
-                  <p className="font-bold text-slate-900">2023-2024</p>
+                  <p className="font-bold text-slate-900">{fleet.year || '2023-2024'}</p>
                 </div>
                 <div>
                   <p className="text-slate-500 text-sm mb-1">Tipe</p>
@@ -159,8 +159,39 @@ const FleetModal = ({ isOpen, onClose, fleet }) => {
                   <p className="text-slate-500 text-sm mb-1">Kondisi</p>
                   <p className="font-bold text-green-600">Prima & Terawat</p>
                 </div>
+                {fleet.specs && (
+                  <>
+                    <div>
+                      <p className="text-slate-500 text-sm mb-1">Chassis</p>
+                      <p className="font-bold text-slate-900">{fleet.specs.chassis}</p>
+                    </div>
+                    <div>
+                      <p className="text-slate-500 text-sm mb-1">Body</p>
+                      <p className="font-bold text-slate-900">{fleet.specs.body}</p>
+                    </div>
+                  </>
+                )}
               </div>
             </div>
+
+            {/* Gallery */}
+            {fleet.gallery && (
+              <div className="mb-8">
+                <h3 className="text-xl font-bold text-slate-900 mb-4">Galeri Foto</h3>
+                <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+                  {fleet.gallery.map((img, idx) => (
+                    <div key={idx} className="rounded-xl overflow-hidden h-32 md:h-48 group relative shadow-md hover:shadow-xl transition-all">
+                      <img 
+                        src={img} 
+                        alt={`${fleet.title} ${idx + 1}`}
+                        className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                      />
+                      <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors" />
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
 
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4">

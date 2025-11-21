@@ -6,39 +6,71 @@ import FleetModal from './FleetModal.jsx';
 const fleetData = [
   {
     id: 1,
-    title: "Big Bus SHD 01",
+    title: "Dieng",
     category: "Royal Series",
     capacity: "50 Seats",
     image: "/assets/img/bus1Dieng.webp",
     tags: ["Karaoke", "Coolbox", "Dispenser"],
-    note: "Ready Now"
+    note: "Ready Now",
+    year: "2025",
+    specs: {
+      chassis: "Mercedes Benz OH 1626 S",
+      body: "Jetbus 5 SHD"
+    },
+    gallery: [
+      "/assets/img/Dieng/diengBus.webp",
+      "/assets/img/Dieng/Dieng2.webp",
+      "/assets/img/Dieng/Dieng3.webp",
+      "/assets/img/Dieng/Dieng4.webp",
+      "/assets/img/Dieng/Dieng5.webp",
+      "/assets/img/Dieng/Dieng6.webp"
+    ]
   },
   {
     id: 2,
-    title: "Big Bus SHD 02",
+    title: "Bromo",
     category: "Royal Series",
     capacity: "50 Seats",
     image: "/assets/img/bus 2 Bromo.webp",
     tags: ["Best Seller", "Lincah", "Full AC"],
-    note: "Ready Now"
+    note: "Ready Now",
+    year: "2025",
+    specs: {
+      chassis: "Hino RM 280 ABS",
+      body: "Jetbus 5 SHD"
+    },
+    gallery: [
+      "/assets/img/Bromo/Bromo1.webp",
+      "/assets/img/Bromo/Bromo2.webp"
+    ]
   },
   {
     id: 3,
-    title: "Big Bus SHD 03",
+    title: "SHD 03",
     category: "Royal Series",
     capacity: "50 Seats",
     image: "/assets/img/Bus 3.jpg",
     tags: ["Captain Seat", "Private", "Luxury"],
-    note: "Ready Now"
+    note: "Ready Now",
+    year: "2025",
+    specs: {
+      chassis: "Hino RM 280 ABS",
+      body: "Jetbus 5 SHD"
+    }
   },
   {
     id: 4,
-    title: "Big Bus SHD 04",
+    title: "SHD 04",
     category: "Royal Series",
     capacity: "50 Seats",
     image: "/assets/img/bus1Dieng.webp",
     tags: ["Economical", "Comfort", "Group"],
-    note: "Ready Now"
+    note: "Ready Now",
+    year: "2025",
+    specs: {
+      chassis: "Hino RM 280 ABS",
+      body: "Jetbus 5 SHD"
+    }
   },
   {
     id: 5,
@@ -47,7 +79,8 @@ const fleetData = [
     capacity: "14 Seats",
     image: "/assets/img/hiace.jpg",
     tags: ["Compact", "City Tour", "Family"],
-    note: "Ready Now"
+    note: "Ready Now",
+    year: "2023-2024"
   },
   {
     id: 6,
@@ -56,7 +89,8 @@ const fleetData = [
     capacity: "12 Seats",
     image: "/assets/img/hiace.jpg",
     tags: ["Luxury", "Spacious", "VIP"],
-    note: "Ready Now"
+    note: "Ready Now",
+    year: "2023-2024"
   }
 ];
 
