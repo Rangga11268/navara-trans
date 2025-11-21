@@ -6,7 +6,7 @@ import Destinations from './assets/Components/Destinations';
 import Fleet from './assets/Components/Fleet';
 import Promo from './assets/Components/Promo';
 import Footer from './assets/Components/Footer';
-import FloatingCTA from './assets/components/FloatingCTA';
+import FloatingCTA from './assets/Components/FloatingCTA';
 
 const App = () => {
   return (
