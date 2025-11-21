@@ -3,7 +3,7 @@ import Navbar from "./assets/components/Navbar.jsx";
 import Hero from "./assets/components/Hero.jsx";
 import BookingWidget from "./assets/components/BookingWidget.jsx";
 import Destinations from './assets/components/Destinations.jsx';
-import Fleet from './assets/Components/Fleet.jsx';
+import Fleet from './assets/components/Fleet.jsx';
 import Promo from './assets/components/Promo.jsx';
 import Footer from './assets/components/Footer.jsx';
 import FloatingCTA from './assets/components/FloatingCTA.jsx';
