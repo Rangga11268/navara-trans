@@ -1,5 +1,7 @@
+```javascript
 import React from 'react';
 import { ArrowRight, Star, Calendar, MapPin } from 'lucide-react';
+import { scrollToSection } from '../../utils/scroll';
 
 const Hero = () => {
   return (
@@ -35,10 +37,16 @@ const Hero = () => {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 animate-fade-in-up delay-300">
-            <button className="bg-orange-600 text-white px-8 py-4 rounded-2xl font-bold flex items-center justify-center gap-2 hover:bg-orange-700 transition-all transform hover:scale-105 shadow-lg shadow-orange-900/20">
+            <button 
+              onClick={() => scrollToSection('booking', 120)}
+              className="bg-orange-600 text-white px-8 py-4 rounded-2xl font-bold flex items-center justify-center gap-2 hover:bg-orange-700 transition-all transform hover:scale-105 shadow-lg shadow-orange-900/20"
+            >
               Booking Sekarang <ArrowRight size={20} />
             </button>
-            <button className="bg-white/10 text-white border border-white/10 px-8 py-4 rounded-2xl font-bold hover:bg-white/20 transition-all backdrop-blur-sm">
+            <button 
+              onClick={() => scrollToSection('fleet', 100)}
+              className="bg-white/10 text-white border border-white/10 px-8 py-4 rounded-2xl font-bold hover:bg-white/20 transition-all backdrop-blur-sm"
+            >
               Lihat Armada
             </button>
           </div>
@@ -84,7 +92,10 @@ const Hero = () => {
                     </div>
                  </div>
 
-                 <button className="w-full bg-white text-slate-900 py-4 rounded-xl font-bold hover:bg-orange-50 transition-colors mt-4">
+                 <button 
+                   onClick={() => scrollToSection('booking', 120)}
+                   className="w-full bg-white text-slate-900 py-4 rounded-xl font-bold hover:bg-orange-50 transition-colors mt-4"
+                 >
                     Cek Ketersediaan
                  </button>
               </div>
@@ -97,3 +108,4 @@ const Hero = () => {
 };
 
 export default Hero;
+```
