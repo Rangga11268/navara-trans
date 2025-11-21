@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Mic2, Tv, Armchair, Star, Users, ArrowRight, Music, Wifi, Coffee, Battery, CalendarClock } from 'lucide-react';
-import { openWhatsApp, createGeneralInquiryMessage } from '../../utils/whatsapp';
-import FleetModal from './FleetModal';
+import { openWhatsApp, createGeneralInquiryMessage } from '../../utils/whatsapp.js';
+import FleetModal from './FleetModal.jsx';
 
 const fleetData = [
   {

@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { X, Users, Wifi, Music, Coffee, Tv, CheckCircle2, Phone } from 'lucide-react';
-import { openWhatsApp, createFleetBookingMessage } from '../../utils/whatsapp';
+import { openWhatsApp, createFleetBookingMessage } from '../../utils/whatsapp.js';
 
 const FleetModal = ({ isOpen, onClose, fleet }) => {
   // Close modal on ESC key

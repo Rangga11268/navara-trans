@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Bus, Map, MapPin, Calendar, Phone, Briefcase, ShieldCheck, Users, CheckCircle2, Loader2 } from 'lucide-react';
-import { openWhatsApp, createCharterBookingMessage, createTourInquiryMessage } from '../../utils/whatsapp';
+import { openWhatsApp, createCharterBookingMessage, createTourInquiryMessage } from '../../utils/whatsapp.js';
 
 const BookingWidget = () => {
   const [activeTab, setActiveTab] = useState('charter'); // 'charter' or 'tour'
