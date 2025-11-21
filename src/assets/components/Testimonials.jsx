@@ -28,7 +28,7 @@ const Testimonials = () => {
           {[...reviews, ...reviews].map((review, index) => (
             <div 
               key={index} 
-              className="w-[350px] bg-white p-6 rounded-2xl shadow-lg border border-slate-100 flex-shrink-0 hover:-translate-y-1 transition-transform duration-300"
+              className="w-[300px] md:w-[350px] bg-white p-6 rounded-2xl shadow-lg border border-slate-100 flex-shrink-0 hover:-translate-y-1 transition-transform duration-300"
             >
               <div className="flex gap-1 text-orange-400 mb-4">
                 {[...Array(5)].map((_, i) => <Star key={i} size={16} fill="currentColor" />)}

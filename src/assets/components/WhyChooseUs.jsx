@@ -24,7 +24,7 @@ const WhyChooseUs = () => {
         </div>
 
         {/* BENTO GRID */}
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-6 auto-rows-[180px]">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-6 auto-rows-auto md:auto-rows-[180px]">
           
           {/* 1. Main Highlight - Armada 2025 (Large: 2x2) */}
           <div className="md:col-span-2 md:row-span-2 bg-slate-900 rounded-[2.5rem] p-8 md:p-10 relative overflow-hidden group shadow-2xl hover:shadow-orange-900/20 transition-all duration-500">

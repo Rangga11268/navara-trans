@@ -63,18 +63,18 @@ const BookingWidget = () => {
     <div className="container mx-auto px-4 relative z-20 mt-0 lg:-mt-16 mb-20" id="booking">
       <div className="bg-white/90 backdrop-blur-xl rounded-3xl shadow-2xl shadow-black/20 p-2 border border-white/50 ring-1 ring-slate-200/50 max-w-6xl mx-auto">
         
-        <div className="bg-white rounded-2xl p-6 md:p-8 shadow-sm">
+        <div className="bg-white rounded-2xl p-4 md:p-8 shadow-sm">
           {/* Tabs */}
-          <div className="flex gap-6 mb-6 border-b border-slate-100 pb-4">
+          <div className="flex gap-6 mb-6 border-b border-slate-100 pb-4 overflow-x-auto scrollbar-hide">
             <button 
               onClick={() => setActiveTab('charter')}
-              className={`flex items-center gap-2 text-sm font-bold pb-4 -mb-4 border-b-2 transition-all ${activeTab === 'charter' ? 'text-orange-600 border-orange-600' : 'text-slate-400 border-transparent hover:text-slate-600'}`}
+              className={`flex items-center gap-2 text-sm font-bold pb-4 -mb-4 border-b-2 transition-all whitespace-nowrap ${activeTab === 'charter' ? 'text-orange-600 border-orange-600' : 'text-slate-400 border-transparent hover:text-slate-600'}`}
             >
               <Bus size={18} /> Sewa Bus Pariwisata
             </button>
             <button 
               onClick={() => setActiveTab('tour')}
-              className={`flex items-center gap-2 text-sm font-bold pb-4 -mb-4 border-b-2 transition-all ${activeTab === 'tour' ? 'text-orange-600 border-orange-600' : 'text-slate-400 border-transparent hover:text-slate-600'}`}
+              className={`flex items-center gap-2 text-sm font-bold pb-4 -mb-4 border-b-2 transition-all whitespace-nowrap ${activeTab === 'tour' ? 'text-orange-600 border-orange-600' : 'text-slate-400 border-transparent hover:text-slate-600'}`}
             >
               <Map size={18} /> Paket Open Trip
             </button>
@@ -204,7 +204,7 @@ const BookingWidget = () => {
       </div>
 
       {/* Trust Indicators */}
-      <div className="mt-8 flex flex-wrap justify-center gap-6 md:gap-12 text-slate-500 font-medium text-sm md:text-base">
+      <div className="mt-8 flex flex-wrap justify-center gap-4 md:gap-12 text-slate-500 font-medium text-sm md:text-base">
          <div className="flex items-center gap-2"><ShieldCheck className="text-green-500" size={18} /> Unit Tahun 2023-2025</div>
          <div className="flex items-center gap-2"><Users className="text-blue-500" size={18} /> Crew Pariwisata Berpengalaman</div>
          <div className="flex items-center gap-2"><CheckCircle2 className="text-orange-500" size={18} /> Izin Kemenhub Resmi</div>

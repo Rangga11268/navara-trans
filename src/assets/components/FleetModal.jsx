@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { createPortal } from 'react-dom';
 import { X, Users, Wifi, Music, Coffee, Tv, CheckCircle2, Phone } from 'lucide-react';
 import { openWhatsApp, createFleetBookingMessage } from '../../utils/whatsapp.js';
 
@@ -44,7 +45,7 @@ const FleetModal = ({ isOpen, onClose, fleet }) => {
     openWhatsApp(message);
   };
 
-  return (
+  return createPortal(
     <>
       {/* Backdrop */}
       <div 
@@ -53,13 +54,13 @@ const FleetModal = ({ isOpen, onClose, fleet }) => {
       />
       
       {/* Modal */}
-      <div className="fixed inset-0 z-[101] flex items-center justify-center p-4">
+      <div className="fixed inset-0 z-[9999] flex items-end md:items-center justify-center p-0 md:p-4">
         <div 
-          className="bg-white rounded-3xl max-w-4xl w-full max-h-[90vh] overflow-y-auto shadow-2xl animate-fade-in-up"
+          className="bg-white w-full md:w-full max-w-4xl max-h-[85vh] md:max-h-[90vh] overflow-y-auto shadow-2xl rounded-t-3xl rounded-b-none md:rounded-3xl flex flex-col animate-fade-in-up"
           onClick={(e) => e.stopPropagation()}
         >
           {/* Header with Image */}
-          <div className="relative h-64 md:h-80 rounded-t-3xl overflow-hidden">
+          <div className="relative h-56 md:h-80 shrink-0 overflow-hidden">
             <img 
               src={fleet.image} 
               alt={fleet.title}
@@ -212,7 +213,8 @@ const FleetModal = ({ isOpen, onClose, fleet }) => {
           </div>
         </div>
       </div>
-    </>
+    </>,
+    document.body
   );
 };
 

@@ -83,7 +83,7 @@ const Navbar = () => {
       {/* Mobile Slide-over Drawer */}
       {/* Backdrop */}
       <div 
-        className={`fixed inset-0 bg-black/60 backdrop-blur-sm z-[60] transition-opacity duration-500 ${
+        className={`fixed inset-0 bg-slate-950/60 backdrop-blur-sm z-[60] transition-all duration-500 ${
           isMobileMenuOpen ? 'opacity-100 visible' : 'opacity-0 invisible'
         }`}
         onClick={() => setIsMobileMenuOpen(false)}
@@ -95,49 +95,56 @@ const Navbar = () => {
           isMobileMenuOpen ? 'translate-x-0' : 'translate-x-full'
         }`}
       >
-        <div className="flex flex-col h-full p-6">
+        <div className="flex flex-col h-full p-6 relative overflow-hidden">
+          {/* Background decoration */}
+          <div className="absolute top-0 right-0 w-64 h-64 bg-orange-500/10 rounded-full blur-3xl -mr-20 -mt-20 pointer-events-none"></div>
+          <div className="absolute bottom-0 left-0 w-64 h-64 bg-blue-500/10 rounded-full blur-3xl -ml-20 -mb-20 pointer-events-none"></div>
+
           {/* Drawer Header */}
-          <div className="flex justify-between items-center mb-8">
+          <div className="flex justify-between items-center mb-8 relative z-10">
              <div className="flex items-center gap-3">
-                <img src="/assets/img/logoNoBg.png" alt="Logo" className="w-8 h-auto" />
-                <span className="text-lg font-black text-white tracking-tighter">NAVARA</span>
+                <img src="/assets/img/logoNoBg.png" alt="Logo" className="w-10 h-auto" />
+                <div className="flex flex-col">
+                  <span className="text-lg font-black text-white tracking-tighter leading-none">NAVARA</span>
+                  <span className="text-[8px] font-bold text-orange-500 tracking-[0.3em] uppercase">TRIP</span>
+                </div>
              </div>
              <button 
                 onClick={() => setIsMobileMenuOpen(false)}
-                className="p-2 bg-white/5 rounded-full text-slate-400 hover:text-white hover:bg-white/10 transition-colors"
+                className="p-2 bg-white/5 rounded-full text-slate-400 hover:text-white hover:bg-white/10 transition-colors border border-white/5"
              >
                 <X size={20} />
              </button>
           </div>
 
           {/* Drawer Links */}
-          <div className="flex-1 overflow-y-auto space-y-2">
+          <div className="flex-1 overflow-y-auto space-y-2 relative z-10">
             {navLinks.map((link, index) => (
               <a 
                 key={link.name} 
                 href={link.href}
                 onClick={() => setIsMobileMenuOpen(false)}
-                className="block p-4 rounded-xl text-lg font-bold text-slate-300 hover:text-white hover:bg-white/5 transition-all border border-transparent hover:border-white/5 group"
-                style={{ transitionDelay: `${index * 50}ms` }}
+                className={`block p-4 rounded-xl text-lg font-bold text-slate-300 hover:text-white hover:bg-white/5 transition-all border border-transparent hover:border-white/5 group transform ${isMobileMenuOpen ? 'translate-x-0 opacity-100' : 'translate-x-10 opacity-0'}`}
+                style={{ transitionDelay: `${100 + (index * 50)}ms`, transitionDuration: '500ms' }}
               >
                 <div className="flex justify-between items-center">
                   {link.name}
-                  <ChevronRight size={16} className="text-slate-600 group-hover:text-orange-500 transition-colors" />
+                  <ChevronRight size={16} className="text-slate-600 group-hover:text-orange-500 transition-colors group-hover:translate-x-1 duration-300" />
                 </div>
               </a>
             ))}
           </div>
 
           {/* Drawer Footer */}
-          <div className="mt-8 pt-8 border-t border-white/10 space-y-6">
-             <button className="w-full bg-orange-600 text-white py-4 rounded-xl font-bold shadow-lg shadow-orange-900/20 active:scale-95 transition-all flex items-center justify-center gap-2">
-                <Phone size={18} /> Hubungi Marketing
+          <div className="mt-8 pt-8 border-t border-white/10 space-y-6 relative z-10">
+             <button className="w-full bg-gradient-to-r from-orange-600 to-orange-700 text-white py-4 rounded-xl font-bold shadow-lg shadow-orange-900/20 active:scale-95 transition-all flex items-center justify-center gap-2 group">
+                <Phone size={18} className="group-hover:rotate-12 transition-transform" /> Hubungi Marketing
              </button>
              
-             <div className="flex justify-center gap-6 text-slate-500">
-                <a href="#" className="hover:text-white transition-colors"><Instagram size={20} /></a>
-                <a href="#" className="hover:text-white transition-colors"><Facebook size={20} /></a>
-                <a href="#" className="hover:text-white transition-colors"><Mail size={20} /></a>
+             <div className="flex justify-center gap-8 text-slate-500">
+                <a href="#" className="hover:text-white hover:scale-110 transition-all"><Instagram size={22} /></a>
+                <a href="#" className="hover:text-white hover:scale-110 transition-all"><Facebook size={22} /></a>
+                <a href="#" className="hover:text-white hover:scale-110 transition-all"><Mail size={22} /></a>
              </div>
              
              <p className="text-center text-[10px] text-slate-600 uppercase tracking-widest">

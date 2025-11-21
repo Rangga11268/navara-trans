@@ -14,11 +14,11 @@ const Promo = () => {
                  Dapatkan penawaran khusus untuk Corporate Gathering, Study Tour Sekolah, atau Ziarah Wali. 
                  Download Pricelist terbaru kami sekarang.
               </p>
-              <div className="flex gap-4">
-                 <button className="flex items-center gap-3 bg-white hover:bg-slate-200 text-slate-900 px-6 py-3 rounded-xl transition-colors font-bold">
+              <div className="flex flex-col sm:flex-row gap-4">
+                 <button className="flex items-center justify-center gap-3 bg-white hover:bg-slate-200 text-slate-900 px-6 py-3 rounded-xl transition-colors font-bold">
                     Download Pricelist (PDF)
                  </button>
-                 <a href="https://www.instagram.com/navara_trip/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 bg-transparent border border-slate-700 text-white hover:bg-slate-800 px-6 py-3 rounded-xl transition-colors font-bold">
+                 <a href="https://www.instagram.com/navara_trip/" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-3 bg-transparent border border-slate-700 text-white hover:bg-slate-800 px-6 py-3 rounded-xl transition-colors font-bold">
                     <Instagram /> @navara_trip
                  </a>
               </div>

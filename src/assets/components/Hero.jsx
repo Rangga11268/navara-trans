@@ -4,7 +4,7 @@ import { scrollToSection } from '../../utils/scroll.js';
 
 const Hero = () => {
   return (
-    <section className="relative min-h-screen flex items-center pt-20 pb-20 lg:pb-32 overflow-hidden bg-slate-900">
+    <section className="relative min-h-screen flex items-center pt-24 pb-12 md:pt-32 md:pb-32 overflow-hidden bg-slate-900">
       {/* Background Image with Parallax-like effect */}
       <div className="absolute inset-0 z-0">
         <img 
@@ -19,19 +19,19 @@ const Hero = () => {
       <div className="container mx-auto px-4 md:px-8 relative z-10 grid lg:grid-cols-2 gap-12 items-center">
         
         {/* Text Content */}
-        <div className="space-y-8">
+        <div className="space-y-6 md:space-y-8">
           <div className="inline-flex items-center gap-2 bg-orange-500/10 border border-orange-500/20 rounded-full px-4 py-1.5 backdrop-blur-sm animate-fade-in-up">
             <Star size={14} className="text-orange-500 fill-orange-500" />
-            <span className="text-orange-400 text-xs font-bold tracking-widest uppercase">Premium Bus Charter</span>
+            <span className="text-orange-400 text-[10px] md:text-xs font-bold tracking-widest uppercase">Premium Bus Charter</span>
           </div>
 
-          <h1 className="text-5xl md:text-7xl font-black text-white leading-tight tracking-tight animate-fade-in-up delay-100">
+          <h1 className="text-4xl sm:text-5xl md:text-7xl font-black text-white leading-tight tracking-tight animate-fade-in-up delay-100">
             Jelajahi <br/>
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-orange-600">Keindahan</span> <br/>
             Indonesia.
           </h1>
 
-          <p className="text-lg text-slate-300 max-w-lg leading-relaxed animate-fade-in-up delay-200">
+          <p className="text-base md:text-lg text-slate-300 max-w-lg leading-relaxed animate-fade-in-up delay-200">
             Nikmati perjalanan wisata yang aman dan nyaman dengan armada terbaru dari Navara Trip. Fasilitas lengkap, pelayanan ramah.
           </p>
 
@@ -53,22 +53,22 @@ const Hero = () => {
           {/* Stats */}
           <div className="pt-8 flex items-center gap-8 border-t border-white/10 animate-fade-in-up delay-500">
              <div>
-                <h4 className="text-3xl font-black text-white">4+</h4>
-                <p className="text-slate-400 text-sm">Unit Armada</p>
+                <h4 className="text-2xl md:text-3xl font-black text-white">4+</h4>
+                <p className="text-slate-400 text-xs md:text-sm">Unit Armada</p>
              </div>
              <div>
-                <h4 className="text-3xl font-black text-white">Ribuan</h4>
-                <p className="text-slate-400 text-sm">Pelanggan Happy</p>
+                <h4 className="text-2xl md:text-3xl font-black text-white">Ribuan</h4>
+                <p className="text-slate-400 text-xs md:text-sm">Pelanggan Happy</p>
              </div>
              <div>
-                <h4 className="text-3xl font-black text-white">24/7</h4>
-                <p className="text-slate-400 text-sm">Support</p>
+                <h4 className="text-2xl md:text-3xl font-black text-white">24/7</h4>
+                <p className="text-slate-400 text-xs md:text-sm">Support</p>
              </div>
           </div>
         </div>
 
         {/* Floating Booking Card (Desktop Only) */}
-        <div className="hidden md:block animate-fade-in-left delay-700">
+        <div className="hidden lg:block animate-fade-in-left delay-700">
            <div className="bg-white/5 backdrop-blur-xl border border-white/10 p-8 rounded-[2.5rem] shadow-2xl relative overflow-hidden">
               <div className="absolute top-0 right-0 w-64 h-64 bg-orange-500/20 rounded-full blur-3xl -mr-20 -mt-20"></div>
               

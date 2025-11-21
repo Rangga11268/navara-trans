@@ -3,22 +3,22 @@ import { Instagram, Facebook, Mail, Phone, MapPin, Smartphone } from 'lucide-rea
 
 const Footer = () => {
   return (
-    <footer className="bg-white pt-20 pb-10 border-t border-slate-100" id="contact">
+    <footer className="bg-white pt-12 pb-8 md:pt-20 md:pb-10 border-t border-slate-100" id="contact">
       <div className="container mx-auto px-4">
-         <div className="grid grid-cols-1 md:grid-cols-5 gap-12 mb-12">
+         <div className="grid grid-cols-1 md:grid-cols-5 gap-8 md:gap-12 mb-12">
             <div className="md:col-span-2 space-y-6">
                <div className="flex items-center gap-3">
                   <img 
                     src="/assets/img/logoNoBg.png" 
                     alt="Navara Trans Logo" 
-                    className="w-16 h-auto object-contain"
+                    className="w-14 md:w-16 h-auto object-contain"
                   />
                   <div className="flex flex-col">
-                     <span className="text-2xl font-black text-slate-900 leading-none">NAVARA</span>
-                     <span className="text-[10px] font-bold text-orange-500 uppercase tracking-widest">TRIP</span>
+                     <span className="text-xl md:text-2xl font-black text-slate-900 leading-none">NAVARA</span>
+                     <span className="text-[8px] md:text-[10px] font-bold text-orange-500 uppercase tracking-widest">TRIP</span>
                   </div>
                </div>
-               <p className="text-slate-500 leading-relaxed pr-4">
+               <p className="text-slate-500 leading-relaxed pr-4 text-sm md:text-base">
                   Partner transportasi wisata terpercaya di Jawa Timur. 
                   Garasi & Kantor pusat kami berlokasi strategis di Surabaya Selatan untuk melayani penjemputan area Gerbangkertosusila.
                </p>
@@ -36,8 +36,8 @@ const Footer = () => {
             </div>
             
             <div>
-               <h4 className="font-bold text-slate-900 mb-6">Unit Sewa</h4>
-               <ul className="space-y-4 text-sm text-slate-500">
+               <h4 className="font-bold text-slate-900 mb-4 md:mb-6">Unit Sewa</h4>
+               <ul className="space-y-3 md:space-y-4 text-sm text-slate-500">
                   <li><a href="#fleet" className="hover:text-orange-600">Big Bus SHD (45-59)</a></li>
                   <li><a href="#fleet" className="hover:text-orange-600">Medium Bus (30-35)</a></li>
                   <li><a href="#fleet" className="hover:text-orange-600">Hiace / Elf Long</a></li>
@@ -46,8 +46,8 @@ const Footer = () => {
             </div>
 
             <div>
-               <h4 className="font-bold text-slate-900 mb-6">Layanan</h4>
-               <ul className="space-y-4 text-sm text-slate-500">
+               <h4 className="font-bold text-slate-900 mb-4 md:mb-6">Layanan</h4>
+               <ul className="space-y-3 md:space-y-4 text-sm text-slate-500">
                   <li><a href="#booking" className="hover:text-orange-600">Sewa Harian</a></li>
                   <li><a href="#booking" className="hover:text-orange-600">Paket Study Tour</a></li>
                   <li><a href="#booking" className="hover:text-orange-600">Ziarah Wali</a></li>
@@ -56,8 +56,8 @@ const Footer = () => {
             </div>
 
             <div>
-               <h4 className="font-bold text-slate-900 mb-6">Kantor & Garasi</h4>
-               <ul className="space-y-4 text-sm text-slate-500">
+               <h4 className="font-bold text-slate-900 mb-4 md:mb-6">Kantor & Garasi</h4>
+               <ul className="space-y-3 md:space-y-4 text-sm text-slate-500">
                   <li className="flex items-start gap-2">
                      <MapPin size={16} className="text-orange-600 mt-1 shrink-0"/> 
                      <span>Jl. Merr Boulevard No. 22, Rungkut, Surabaya</span>
@@ -73,7 +73,7 @@ const Footer = () => {
                </ul>
             </div>
          </div>
-         <div className="border-t border-slate-100 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-slate-400 font-medium">
+         <div className="border-t border-slate-100 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-slate-400 font-medium text-center md:text-left">
             <p>&copy; 2025 PT Sasmito Navara Trip. All rights reserved.</p>
             <div className="flex gap-6">
                <a href="#" className="hover:text-slate-900">Privacy</a>
