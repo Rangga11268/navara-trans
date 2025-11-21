@@ -74,7 +74,7 @@ const Footer = () => {
             </div>
          </div>
          <div className="border-t border-slate-100 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-slate-400 font-medium">
-            <p>&copy; 2024 PT Navara Pariwisata Surabaya. All rights reserved.</p>
+            <p>&copy; 2025 PT Navara Pariwisata Surabaya. All rights reserved.</p>
             <div className="flex gap-6">
                <a href="#" className="hover:text-slate-900">Privacy</a>
                <a href="#" className="hover:text-slate-900">Terms</a>
