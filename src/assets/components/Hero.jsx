@@ -4,7 +4,7 @@ import { scrollToSection } from '../../utils/scroll.js';
 
 const Hero = () => {
   return (
-    <section className="relative min-h-screen flex items-center pt-24 pb-12 md:pt-32 md:pb-32 overflow-hidden bg-slate-900">
+    <section className="relative min-h-screen flex items-center pt-24 pb-12 md:pt-32 md:pb-32 lg:pb-64 overflow-hidden bg-slate-900">
       {/* Background Image with Parallax-like effect */}
       <div className="absolute inset-0 z-0">
         <img 

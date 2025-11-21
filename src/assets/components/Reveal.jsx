@@ -30,7 +30,7 @@ const Reveal = ({ children, width = "fit-content" }) => {
   }, []);
 
   return (
-    <div ref={ref} style={{ width }} className="relative overflow-hidden">
+    <div ref={ref} style={{ width }} className="relative">
       <div
         className={`transition-all duration-1000 ease-[cubic-bezier(0.17,0.55,0.55,1)] ${
           isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-20"
