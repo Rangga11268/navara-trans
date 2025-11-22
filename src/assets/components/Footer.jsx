@@ -23,13 +23,13 @@ const Footer = () => {
                   Garasi & Kantor pusat kami berlokasi strategis di Surabaya Selatan untuk melayani penjemputan area Gerbangkertosusila.
                </p>
                <div className="flex gap-4">
-                  <a href="https://www.instagram.com/navara_trip/" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-slate-50 flex items-center justify-center text-slate-600 hover:bg-slate-900 hover:text-white transition-colors">
+                  <a href="https://www.instagram.com/navara_trip/" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-slate-50 flex items-center justify-center text-slate-600 hover:bg-slate-900 hover:text-white transition-colors" aria-label="Instagram Navara Trip">
                      <Instagram size={18} />
                   </a>
-                  <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-slate-50 flex items-center justify-center text-slate-600 hover:bg-slate-900 hover:text-white transition-colors">
+                  <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-slate-50 flex items-center justify-center text-slate-600 hover:bg-slate-900 hover:text-white transition-colors" aria-label="Facebook Navara Trip">
                      <Facebook size={18} />
                   </a>
-                  <a href="mailto:info@navaratrip.com" className="w-10 h-10 rounded-full bg-slate-50 flex items-center justify-center text-slate-600 hover:bg-slate-900 hover:text-white transition-colors">
+                  <a href="mailto:info@navaratrip.com" className="w-10 h-10 rounded-full bg-slate-50 flex items-center justify-center text-slate-600 hover:bg-slate-900 hover:text-white transition-colors" aria-label="Email Navara Trip">
                      <Mail size={18} />
                   </a>
                </div>

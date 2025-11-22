@@ -39,12 +39,14 @@ const Hero = () => {
             <button 
               onClick={() => scrollToSection('booking', 120)}
               className="bg-orange-600 text-white px-8 py-4 rounded-2xl font-bold flex items-center justify-center gap-2 hover:bg-orange-700 transition-all transform hover:scale-105 shadow-lg shadow-orange-900/20"
+              aria-label="Booking bus pariwisata sekarang"
             >
               Booking Sekarang <ArrowRight size={20} />
             </button>
             <button 
               onClick={() => scrollToSection('fleet', 100)}
               className="bg-white/10 text-white border border-white/10 px-8 py-4 rounded-2xl font-bold hover:bg-white/20 transition-all backdrop-blur-sm"
+              aria-label="Lihat armada bus pariwisata"
             >
               Lihat Armada
             </button>
@@ -53,15 +55,15 @@ const Hero = () => {
           {/* Stats */}
           <div className="pt-8 flex items-center gap-8 border-t border-white/10 animate-fade-in-up delay-500">
              <div>
-                <h4 className="text-2xl md:text-3xl font-black text-white">4+</h4>
+                <h2 className="text-2xl md:text-3xl font-black text-white">4+</h2>
                 <p className="text-slate-400 text-xs md:text-sm">Unit Armada</p>
              </div>
              <div>
-                <h4 className="text-2xl md:text-3xl font-black text-white">Ribuan</h4>
+                <h2 className="text-2xl md:text-3xl font-black text-white">Ribuan</h2>
                 <p className="text-slate-400 text-xs md:text-sm">Pelanggan Happy</p>
              </div>
              <div>
-                <h4 className="text-2xl md:text-3xl font-black text-white">24/7</h4>
+                <h2 className="text-2xl md:text-3xl font-black text-white">24/7</h2>
                 <p className="text-slate-400 text-xs md:text-sm">Support</p>
              </div>
           </div>
@@ -94,6 +96,7 @@ const Hero = () => {
                  <button 
                    onClick={() => scrollToSection('booking', 120)}
                    className="w-full bg-white text-slate-900 py-4 rounded-xl font-bold hover:bg-orange-50 transition-colors mt-4"
+                   aria-label="Cek ketersediaan bus pariwisata"
                  >
                     Cek Ketersediaan
                  </button>

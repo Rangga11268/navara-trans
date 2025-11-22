@@ -74,6 +74,7 @@ const Navbar = () => {
           <button 
             className="md:hidden text-white z-50 p-2 bg-white/10 rounded-xl backdrop-blur-sm active:scale-95 transition-transform border border-white/10 hover:bg-white/20"
             onClick={() => setIsMobileMenuOpen(true)}
+            aria-label="Buka menu navigasi"
           >
             <Menu size={24} />
           </button>
@@ -112,6 +113,7 @@ const Navbar = () => {
              <button 
                 onClick={() => setIsMobileMenuOpen(false)}
                 className="p-2 bg-white/5 rounded-full text-slate-400 hover:text-white hover:bg-white/10 transition-colors border border-white/5"
+                aria-label="Tutup menu navigasi"
              >
                 <X size={20} />
              </button>
@@ -137,14 +139,17 @@ const Navbar = () => {
 
           {/* Drawer Footer */}
           <div className="mt-8 pt-8 border-t border-white/10 space-y-6 relative z-10">
-             <button className="w-full bg-gradient-to-r from-orange-600 to-orange-700 text-white py-4 rounded-xl font-bold shadow-lg shadow-orange-900/20 active:scale-95 transition-all flex items-center justify-center gap-2 group">
+             <button 
+               className="w-full bg-gradient-to-r from-orange-600 to-orange-700 text-white py-4 rounded-xl font-bold shadow-lg shadow-orange-900/20 active:scale-95 transition-all flex items-center justify-center gap-2 group"
+               aria-label="Hubungi marketing via WhatsApp"
+             >
                 <Phone size={18} className="group-hover:rotate-12 transition-transform" /> Hubungi Marketing
              </button>
              
              <div className="flex justify-center gap-8 text-slate-500">
-                <a href="#" className="hover:text-white hover:scale-110 transition-all"><Instagram size={22} /></a>
-                <a href="#" className="hover:text-white hover:scale-110 transition-all"><Facebook size={22} /></a>
-                <a href="#" className="hover:text-white hover:scale-110 transition-all"><Mail size={22} /></a>
+                <a href="https://www.instagram.com/navaratrip.id/" target="_blank" rel="noopener noreferrer" className="hover:text-white hover:scale-110 transition-all" aria-label="Instagram Navara Trip"><Instagram size={22} /></a>
+                <a href="#" className="hover:text-white hover:scale-110 transition-all" aria-label="Facebook Navara Trip"><Facebook size={22} /></a>
+                <a href="mailto:info@navaratrip.com" className="hover:text-white hover:scale-110 transition-all" aria-label="Email Navara Trip"><Mail size={22} /></a>
              </div>
              
              <p className="text-center text-[10px] text-slate-600 uppercase tracking-widest">

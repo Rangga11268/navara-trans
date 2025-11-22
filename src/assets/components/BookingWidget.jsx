@@ -86,13 +86,15 @@ const BookingWidget = () => {
               {/* Pick-up & Destination */}
               <div className="flex flex-col md:flex-row gap-4 w-full lg:w-auto flex-1">
                  <div className="bg-slate-50 hover:bg-orange-50/50 border border-slate-200 hover:border-orange-200 rounded-xl px-4 py-3 flex-1 transition-colors group cursor-pointer w-full">
-                    <label className="text-[10px] uppercase font-bold text-slate-400 group-hover:text-orange-500 block mb-1 tracking-wider">Jemput Di</label>
+                    <label htmlFor="pickup-location" className="text-[10px] uppercase font-bold text-slate-400 group-hover:text-orange-500 block mb-1 tracking-wider">Jemput Di</label>
                     <div className="flex items-center gap-3">
                        <MapPin size={20} className="text-slate-400 group-hover:text-orange-500" />
                        <select 
+                         id="pickup-location"
                          className="bg-transparent font-bold text-slate-800 w-full outline-none cursor-pointer appearance-none"
                          value={charterData.pickup}
                          onChange={(e) => handleCharterChange('pickup', e.target.value)}
+                         aria-label="Pilih lokasi penjemputan"
                        >
                           <option>Surabaya (Kota/Bandara)</option>
                           <option>Sidoarjo</option>
@@ -103,13 +105,15 @@ const BookingWidget = () => {
                  </div>
 
                  <div className="bg-slate-50 hover:bg-orange-50/50 border border-slate-200 hover:border-orange-200 rounded-xl px-4 py-3 flex-1 transition-colors group cursor-pointer w-full">
-                    <label className="text-[10px] uppercase font-bold text-slate-400 group-hover:text-orange-500 block mb-1 tracking-wider">Tujuan Wisata</label>
+                    <label htmlFor="destination" className="text-[10px] uppercase font-bold text-slate-400 group-hover:text-orange-500 block mb-1 tracking-wider">Tujuan Wisata</label>
                     <div className="flex items-center gap-3">
                        <Map size={20} className="text-orange-500" />
                        <select 
+                         id="destination"
                          className="bg-transparent font-bold text-slate-800 w-full outline-none cursor-pointer appearance-none"
                          value={charterData.destination}
                          onChange={(e) => handleCharterChange('destination', e.target.value)}
+                         aria-label="Pilih tujuan wisata"
                        >
                           <option>Bali (Overland)</option>
                           <option>Yogyakarta</option>
@@ -124,26 +128,30 @@ const BookingWidget = () => {
               {/* Date & Bus Type */}
               <div className="flex flex-col md:flex-row gap-4 w-full lg:w-auto lg:basis-1/3">
                  <div className="bg-slate-50 hover:bg-orange-50/50 border border-slate-200 hover:border-orange-200 rounded-xl px-4 py-3 flex-1 transition-colors group cursor-pointer">
-                    <label className="text-[10px] uppercase font-bold text-slate-400 group-hover:text-orange-500 block mb-1 tracking-wider">Tanggal</label>
+                    <label htmlFor="booking-date" className="text-[10px] uppercase font-bold text-slate-400 group-hover:text-orange-500 block mb-1 tracking-wider">Tanggal</label>
                     <div className="flex items-center gap-3">
                        <Calendar size={20} className="text-slate-400 group-hover:text-orange-500" />
                        <input 
+                         id="booking-date"
                          type="date" 
                          className="bg-transparent font-bold text-slate-800 w-full outline-none cursor-pointer text-sm"
                          value={charterData.date}
                          onChange={(e) => handleCharterChange('date', e.target.value)}
                          min={new Date().toISOString().split('T')[0]}
+                         aria-label="Pilih tanggal keberangkatan"
                        />
                     </div>
                  </div>
                  <div className="bg-slate-50 hover:bg-orange-50/50 border border-slate-200 hover:border-orange-200 rounded-xl px-4 py-3 flex-1 transition-colors group cursor-pointer">
-                    <label className="text-[10px] uppercase font-bold text-slate-400 group-hover:text-orange-500 block mb-1 tracking-wider">Unit</label>
+                    <label htmlFor="bus-unit" className="text-[10px] uppercase font-bold text-slate-400 group-hover:text-orange-500 block mb-1 tracking-wider">Unit</label>
                     <div className="flex items-center gap-3">
                        <Bus size={20} className="text-slate-400 group-hover:text-orange-500" />
                        <select 
+                         id="bus-unit"
                          className="bg-transparent font-bold text-slate-800 w-full outline-none cursor-pointer appearance-none"
                          value={charterData.unit}
                          onChange={(e) => handleCharterChange('unit', e.target.value)}
+                         aria-label="Pilih tipe bus"
                        >
                           <option>Big Bus (50/59 Seat)</option>
                           <option>Medium Bus (33 Seat)</option>
@@ -158,6 +166,7 @@ const BookingWidget = () => {
                 onClick={handleCharterBooking}
                 disabled={isLoading}
                 className="w-full lg:w-auto bg-slate-900 hover:bg-orange-600 text-white px-8 py-4 rounded-xl font-bold shadow-xl shadow-slate-900/10 transition-all hover:scale-[1.02] active:scale-95 flex items-center justify-center gap-2 h-full min-w-[180px] disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100"
+                aria-label="Hubungi kami untuk booking bus pariwisata"
               >
                  {isLoading ? (
                    <>
@@ -188,6 +197,7 @@ const BookingWidget = () => {
                  onClick={handleTourInquiry}
                  disabled={isLoading}
                  className="bg-orange-600 text-white px-8 py-3 rounded-xl font-bold shadow-lg hover:bg-orange-700 transition-colors w-full md:w-auto flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed"
+                 aria-label="Konsultasi gratis paket tour via WhatsApp"
                >
                   {isLoading ? (
                     <>
