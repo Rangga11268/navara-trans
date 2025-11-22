@@ -46,7 +46,7 @@ const fleetData = [
   },
   {
     id: 3,
-    title: "SHD 03",
+    title: "Agung",
     category: "Royal Series",
     capacity: "50 Seats",
     image: "/assets/img/Bus 3.jpg",
@@ -60,7 +60,7 @@ const fleetData = [
   },
   {
     id: 4,
-    title: "SHD 04",
+    title: "Ciremai",
     category: "Royal Series",
     capacity: "50 Seats",
     image: "/assets/img/bus1Dieng.webp",
