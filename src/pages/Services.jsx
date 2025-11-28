@@ -7,7 +7,7 @@ const Services = () => {
   return (
     <div className="pt-24">
       {/* Hero for Services */}
-      <div className="bg-navy-900 py-12 md:py-16 text-center text-white">
+      <div className="bg-navy-900 py-8 md:py-12 text-center text-white">
         <div className="container mx-auto px-4">
           <h1 className="text-4xl md:text-6xl font-serif font-black mb-6">
             Layanan & Paket
