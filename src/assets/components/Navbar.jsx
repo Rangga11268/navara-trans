@@ -32,11 +32,14 @@ const Navbar = () => {
     return location.pathname === path;
   };
 
+  // Check if we're on home page
+  const isHomePage = location.pathname === "/";
+
   return (
     <nav
       className={`fixed w-full z-50 transition-all duration-500 ease-[cubic-bezier(0.4,0,0.2,1)] ${
-        isScrolled || isMobileMenuOpen
-          ? "bg-navy-900/80 backdrop-blur-xl shadow-2xl py-3 border-b border-white/5"
+        isScrolled || isMobileMenuOpen || !isHomePage
+          ? "bg-navy-900/95 backdrop-blur-xl shadow-2xl py-3 border-b border-white/5"
           : "bg-transparent py-4 md:py-6"
       }`}
     >
