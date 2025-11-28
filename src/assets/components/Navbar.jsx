@@ -1,164 +1,158 @@
-import React, { useState, useEffect } from 'react';
-import { Bus, Menu, X, Phone, ChevronRight, Instagram, Facebook, Mail } from 'lucide-react';
+import React, { useState, useEffect } from "react";
+import { Menu, X, Phone, ChevronRight } from "lucide-react";
+import { Link, useLocation } from "react-router-dom";
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20);
     };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Prevent body scroll when menu is open
+  // Close mobile menu when route changes
   useEffect(() => {
-    if (isMobileMenuOpen) {
-      document.body.style.overflow = 'hidden';
-    } else {
-      document.body.style.overflow = 'unset';
-    }
-  }, [isMobileMenuOpen]);
+    setIsMobileMenuOpen(false);
+  }, [location]);
 
   const navLinks = [
-    { name: 'Beranda', href: '#' },
-    { name: 'Armada', href: '#fleet' },
-    { name: 'Destinasi', href: '#destinations' },
-    { name: 'Paket Wisata', href: '#packages' },
-    { name: 'Kontak', href: '#contact' },
+    { name: "Home", path: "/" },
+    { name: "About", path: "/about" },
+    { name: "Fleet", path: "/fleet" },
+    { name: "Services", path: "/services" },
+    { name: "Contact", path: "/contact" },
   ];
 
-  return (
-    <>
-      <nav 
-        className={`fixed w-full z-50 transition-all duration-500 ease-[cubic-bezier(0.4,0,0.2,1)] ${
-          isScrolled 
-            ? 'bg-slate-950/80 backdrop-blur-xl shadow-2xl py-3 border-b border-white/5' 
-            : 'bg-transparent py-4 md:py-6'
-        }`}
-      >
-        <div className="container mx-auto px-4 md:px-8 flex justify-between items-center">
-          {/* Logo Section */}
-          <div className="flex items-center gap-3 group cursor-pointer z-50 relative">
-            <img 
-              src="/assets/img/logoNoBg.png" 
-              alt="Navara Trip Logo" 
-              className="w-10 md:w-12 h-auto object-contain group-hover:scale-105 transition-transform duration-500"
-            />
-            <div className="flex flex-col">
-              <span className="text-xl md:text-2xl font-black tracking-tighter leading-none text-white drop-shadow-sm group-hover:tracking-normal transition-all duration-500">
-                NAVARA
-              </span>
-              <span className="text-[8px] md:text-[10px] font-bold tracking-[0.4em] uppercase text-orange-500 drop-shadow-sm group-hover:text-white transition-colors duration-300">
-                TRIP
-              </span>
-            </div>
-          </div>
+  const isActive = (path) => {
+    return location.pathname === path;
+  };
 
-          {/* Desktop Menu */}
-          <div className={`hidden md:flex items-center gap-1 bg-slate-950/50 backdrop-blur-2xl p-1.5 rounded-full border border-white/10 transition-all duration-500 ${isScrolled ? 'translate-y-0 opacity-100' : 'translate-y-0 opacity-100'}`}>
+  return (
+    <nav
+      className={`fixed w-full z-50 transition-all duration-500 ease-[cubic-bezier(0.4,0,0.2,1)] ${
+        isScrolled || isMobileMenuOpen
+          ? "bg-navy-900/80 backdrop-blur-xl shadow-2xl py-3 border-b border-white/5"
+          : "bg-transparent py-4 md:py-6"
+      }`}
+    >
+      <div className="container mx-auto px-4 md:px-8">
+        <div className="flex justify-between items-center">
+          {/* Logo */}
+          <Link
+            to="/"
+            className="group flex flex-col items-start z-50 relative"
+          >
+            <span className="text-xl md:text-2xl font-serif font-black tracking-tighter leading-none text-white drop-shadow-sm group-hover:tracking-normal transition-all duration-500">
+              NAVARA
+            </span>
+            <span className="text-[8px] md:text-[10px] font-bold tracking-[0.4em] uppercase text-gold-500 drop-shadow-sm group-hover:text-white transition-colors duration-300">
+              TRIP
+            </span>
+          </Link>
+
+          {/* Desktop Navigation */}
+          <div className="hidden md:flex items-center gap-1 bg-white/5 backdrop-blur-md p-1.5 rounded-full border border-white/10 shadow-lg shadow-black/5">
             {navLinks.map((link) => (
-              <a 
-                key={link.name} 
-                href={link.href}
-                className="px-5 py-2 rounded-full text-sm font-medium text-slate-300 hover:text-white hover:bg-white/10 transition-all relative group overflow-hidden"
+              <Link
+                key={link.name}
+                to={link.path}
+                className={`px-5 py-2 rounded-full text-sm font-bold transition-all duration-300 relative overflow-hidden group ${
+                  isActive(link.path)
+                    ? "text-navy-900 bg-white shadow-md"
+                    : "text-slate-300 hover:text-white hover:bg-white/10"
+                }`}
               >
                 <span className="relative z-10">{link.name}</span>
-              </a>
+              </Link>
             ))}
           </div>
 
-          {/* Mobile Menu Toggle */}
-          <button 
-            className="md:hidden text-white z-50 p-2 bg-white/10 rounded-xl backdrop-blur-sm active:scale-95 transition-transform border border-white/10 hover:bg-white/20"
-            onClick={() => setIsMobileMenuOpen(true)}
-            aria-label="Buka menu navigasi"
+          {/* CTA Button */}
+          <div className="hidden md:block">
+            <a
+              href="https://wa.me/6281113556799"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-gradient-to-r from-gold-600 to-gold-700 text-white px-6 py-2.5 rounded-full font-bold text-sm hover:shadow-lg hover:shadow-gold-500/20 transition-all duration-300 flex items-center gap-2 group border border-white/10"
+            >
+              <Phone
+                size={16}
+                className="group-hover:rotate-12 transition-transform"
+              />
+              <span>Book Now</span>
+            </a>
+          </div>
+
+          {/* Mobile Menu Button */}
+          <button
+            className="md:hidden relative z-50 w-10 h-10 flex items-center justify-center rounded-full bg-white/10 text-white hover:bg-white/20 transition-colors border border-white/10"
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           >
-            <Menu size={24} />
+            {isMobileMenuOpen ? <X size={20} /> : <Menu size={20} />}
           </button>
         </div>
-      </nav>
+      </div>
 
-      {/* Mobile Slide-over Drawer */}
-      {/* Backdrop */}
-      <div 
-        className={`fixed inset-0 bg-slate-950/60 backdrop-blur-sm z-[60] transition-all duration-500 ${
-          isMobileMenuOpen ? 'opacity-100 visible' : 'opacity-0 invisible'
-        }`}
-        onClick={() => setIsMobileMenuOpen(false)}
-      />
-
-      {/* Drawer Panel */}
-      <div 
-        className={`fixed top-0 right-0 h-full w-[85%] max-w-sm bg-slate-950 z-[70] shadow-2xl border-l border-white/10 transform transition-transform duration-500 ease-[cubic-bezier(0.32,0.72,0,1)] ${
-          isMobileMenuOpen ? 'translate-x-0' : 'translate-x-full'
+      {/* Mobile Menu Overlay */}
+      <div
+        className={`fixed inset-0 bg-navy-900/95 backdrop-blur-xl z-40 transition-all duration-500 md:hidden ${
+          isMobileMenuOpen
+            ? "opacity-100 visible"
+            : "opacity-0 invisible pointer-events-none"
         }`}
       >
-        <div className="flex flex-col h-full p-6 relative overflow-hidden">
-          {/* Background decoration */}
-          <div className="absolute top-0 right-0 w-64 h-64 bg-orange-500/10 rounded-full blur-3xl -mr-20 -mt-20 pointer-events-none"></div>
-          <div className="absolute bottom-0 left-0 w-64 h-64 bg-blue-500/10 rounded-full blur-3xl -ml-20 -mb-20 pointer-events-none"></div>
+        <div className="flex flex-col h-full justify-center px-8 relative overflow-hidden">
+          {/* Decorative Elements */}
+          <div className="absolute top-0 right-0 w-64 h-64 bg-gold-500/10 rounded-full blur-3xl -mr-32 -mt-32"></div>
+          <div className="absolute bottom-0 left-0 w-64 h-64 bg-blue-500/10 rounded-full blur-3xl -ml-32 -mb-32"></div>
 
-          {/* Drawer Header */}
-          <div className="flex justify-between items-center mb-8 relative z-10">
-             <div className="flex items-center gap-3">
-                <img src="/assets/img/logoNoBg.png" alt="Logo" className="w-10 h-auto" />
-                <div className="flex flex-col">
-                  <span className="text-lg font-black text-white tracking-tighter leading-none">NAVARA</span>
-                  <span className="text-[8px] font-bold text-orange-500 tracking-[0.3em] uppercase">TRIP</span>
-                </div>
-             </div>
-             <button 
+          <div className="space-y-4 relative z-10">
+            {navLinks.map((link, idx) => (
+              <Link
+                key={link.name}
+                to={link.path}
+                className={`block text-3xl font-serif font-black text-white/90 hover:text-gold-500 transition-all duration-300 transform ${
+                  isMobileMenuOpen
+                    ? "translate-x-0 opacity-100"
+                    : "translate-x-10 opacity-0"
+                }`}
+                style={{ transitionDelay: `${idx * 100}ms` }}
                 onClick={() => setIsMobileMenuOpen(false)}
-                className="p-2 bg-white/5 rounded-full text-slate-400 hover:text-white hover:bg-white/10 transition-colors border border-white/5"
-                aria-label="Tutup menu navigasi"
-             >
-                <X size={20} />
-             </button>
-          </div>
-
-          {/* Drawer Links */}
-          <div className="flex-1 overflow-y-auto space-y-2 relative z-10">
-            {navLinks.map((link, index) => (
-              <a 
-                key={link.name} 
-                href={link.href}
-                onClick={() => setIsMobileMenuOpen(false)}
-                className={`block p-4 rounded-xl text-lg font-bold text-slate-300 hover:text-white hover:bg-white/5 transition-all border border-transparent hover:border-white/5 group transform ${isMobileMenuOpen ? 'translate-x-0 opacity-100' : 'translate-x-10 opacity-0'}`}
-                style={{ transitionDelay: `${100 + (index * 50)}ms`, transitionDuration: '500ms' }}
               >
-                <div className="flex justify-between items-center">
+                <span className="flex items-center justify-between group border-b border-white/5 pb-4">
                   {link.name}
-                  <ChevronRight size={16} className="text-slate-600 group-hover:text-orange-500 transition-colors group-hover:translate-x-1 duration-300" />
-                </div>
-              </a>
+                  <ChevronRight
+                    size={24}
+                    className="opacity-0 -translate-x-4 group-hover:opacity-100 group-hover:translate-x-0 transition-all text-gold-500"
+                  />
+                </span>
+              </Link>
             ))}
-          </div>
 
-          {/* Drawer Footer */}
-          <div className="mt-8 pt-8 border-t border-white/10 space-y-6 relative z-10">
-             <button 
-               className="w-full bg-gradient-to-r from-orange-600 to-orange-700 text-white py-4 rounded-xl font-bold shadow-lg shadow-orange-900/20 active:scale-95 transition-all flex items-center justify-center gap-2 group"
-               aria-label="Hubungi marketing via WhatsApp"
-             >
-                <Phone size={18} className="group-hover:rotate-12 transition-transform" /> Hubungi Marketing
-             </button>
-             
-             <div className="flex justify-center gap-8 text-slate-500">
-                <a href="https://www.instagram.com/navaratrip.id/" target="_blank" rel="noopener noreferrer" className="hover:text-white hover:scale-110 transition-all" aria-label="Instagram Navara Trip"><Instagram size={22} /></a>
-                <a href="#" className="hover:text-white hover:scale-110 transition-all" aria-label="Facebook Navara Trip"><Facebook size={22} /></a>
-                <a href="mailto:info@navaratrip.com" className="hover:text-white hover:scale-110 transition-all" aria-label="Email Navara Trip"><Mail size={22} /></a>
-             </div>
-             
-             <p className="text-center text-[10px] text-slate-600 uppercase tracking-widest">
-                © 2025 Navara Trip
-             </p>
+            <div
+              className={`pt-8 transform transition-all duration-500 delay-500 ${
+                isMobileMenuOpen
+                  ? "translate-y-0 opacity-100"
+                  : "translate-y-10 opacity-0"
+              }`}
+            >
+              <a
+                href="https://wa.me/6281113556799"
+                className="w-full bg-gradient-to-r from-gold-600 to-gold-700 text-white py-4 rounded-2xl font-bold flex items-center justify-center gap-2 shadow-lg shadow-gold-900/20"
+              >
+                <Phone size={20} />
+                Hubungi Kami
+              </a>
+            </div>
           </div>
         </div>
       </div>
-    </>
+    </nav>
   );
 };
 

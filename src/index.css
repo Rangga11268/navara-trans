@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400&display=swap");
 
 @tailwind base;
 @tailwind components;
@@ -6,12 +6,22 @@
 
 @layer base {
   html {
-    font-family: 'Outfit', sans-serif;
+    font-family: "Outfit", sans-serif;
     scroll-behavior: smooth;
   }
-  
+
   body {
-    @apply antialiased bg-slate-50;
+    @apply antialiased bg-slate-50 text-slate-900;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.03'/%3E%3C/svg%3E");
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-serif;
   }
 }
 
@@ -19,7 +29,7 @@
   .animate-slow-zoom {
     animation: slowZoom 20s infinite alternate;
   }
-  
+
   .animate-fade-in-up {
     animation: fadeInUp 0.5s ease-out forwards;
   }
@@ -29,21 +39,35 @@
     opacity: 0;
     transform: translateX(20px);
   }
-  
+
   .animate-fade-in {
     animation: fadeIn 0.3s ease-in-out forwards;
   }
-  
-  .delay-100 { animation-delay: 0.1s; }
-  .delay-200 { animation-delay: 0.2s; }
-  .delay-300 { animation-delay: 0.3s; }
-  .delay-500 { animation-delay: 0.5s; }
-  .delay-700 { animation-delay: 0.7s; }
+
+  .delay-100 {
+    animation-delay: 0.1s;
+  }
+  .delay-200 {
+    animation-delay: 0.2s;
+  }
+  .delay-300 {
+    animation-delay: 0.3s;
+  }
+  .delay-500 {
+    animation-delay: 0.5s;
+  }
+  .delay-700 {
+    animation-delay: 0.7s;
+  }
 }
 
 @keyframes slowZoom {
-  from { transform: scale(1); }
-  to { transform: scale(1.1); }
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.1);
+  }
 }
 
 @keyframes fadeInUp {
@@ -74,8 +98,12 @@
 }
 
 @keyframes marquee {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
 }
 
 .animate-marquee {
