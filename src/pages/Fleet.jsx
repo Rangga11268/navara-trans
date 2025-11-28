@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { fleetData } from "../data/fleetData";
 import { ArrowRight, Filter } from "lucide-react";
-import FleetModal from "./assets/components/FleetModal";
+import FleetModal from "../assets/components/FleetModal";
 
 const Fleet = () => {
   const [activeCategory, setActiveCategory] = useState("All");
