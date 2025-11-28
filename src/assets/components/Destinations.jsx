@@ -56,7 +56,7 @@ const Destinations = () => {
           {destinationList.map((dest, idx) => (
             <div
               key={idx}
-              className="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 cursor-pointer border border-slate-100 relative"
+              className="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 cursor-pointer border border-slate-100 relative hover-lift"
             >
               <div className="h-64 overflow-hidden relative">
                 <div className="absolute top-3 left-3 bg-navy-900/80 backdrop-blur px-3 py-1 rounded-lg text-xs font-bold text-white z-10">

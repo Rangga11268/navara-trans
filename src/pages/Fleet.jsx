@@ -45,10 +45,10 @@ const Fleet = () => {
             <button
               key={cat}
               onClick={() => setActiveCategory(cat)}
-              className={`px-6 py-2 rounded-full font-bold transition-all ${
+              className={`px-6 py-2 rounded-full font-bold transition-all duration-300 ${
                 activeCategory === cat
-                  ? "bg-navy-900 text-white shadow-lg scale-105"
-                  : "bg-white text-slate-500 hover:bg-slate-100"
+                  ? "bg-navy-900 text-white shadow-lg shadow-navy-900/30 scale-105"
+                  : "bg-white text-slate-500 hover:bg-slate-100 hover:scale-105"
               }`}
             >
               {cat}
@@ -62,7 +62,7 @@ const Fleet = () => {
             <div
               key={item.id}
               onClick={() => handleFleetClick(item)}
-              className="group bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 cursor-pointer border border-slate-100"
+              className="group bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 cursor-pointer border border-slate-100 hover-lift"
             >
               <div className="relative h-64 overflow-hidden">
                 <img
@@ -95,7 +95,7 @@ const Fleet = () => {
                   {item.tags.map((tag) => (
                     <span
                       key={tag}
-                      className="text-xs bg-slate-100 text-slate-500 px-2 py-1 rounded-md"
+                      className="text-xs bg-slate-100 text-slate-500 px-2 py-1 rounded-md group-hover:bg-gold-50 group-hover:text-gold-700 transition-colors"
                     >
                       {tag}
                     </span>

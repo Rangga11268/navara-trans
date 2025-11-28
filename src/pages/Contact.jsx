@@ -17,7 +17,7 @@ const Contact = () => {
 
         <div className="grid lg:grid-cols-3 gap-8 mb-20">
           {/* Contact Info Cards */}
-          <div className="bg-white p-8 rounded-3xl shadow-lg border border-slate-100 text-center hover:-translate-y-2 transition-transform duration-300">
+          <div className="bg-white p-8 rounded-3xl shadow-lg border border-slate-100 text-center hover-lift animate-scale-in delay-100">
             <div className="w-16 h-16 bg-gold-100 rounded-full flex items-center justify-center text-gold-600 mx-auto mb-6">
               <Phone size={32} />
             </div>
@@ -33,7 +33,7 @@ const Contact = () => {
             </a>
           </div>
 
-          <div className="bg-white p-8 rounded-3xl shadow-lg border border-slate-100 text-center hover:-translate-y-2 transition-transform duration-300">
+          <div className="bg-white p-8 rounded-3xl shadow-lg border border-slate-100 text-center hover-lift animate-scale-in delay-200">
             <div className="w-16 h-16 bg-gold-100 rounded-full flex items-center justify-center text-gold-600 mx-auto mb-6">
               <MapPin size={32} />
             </div>
@@ -46,7 +46,7 @@ const Contact = () => {
             </p>
           </div>
 
-          <div className="bg-white p-8 rounded-3xl shadow-lg border border-slate-100 text-center hover:-translate-y-2 transition-transform duration-300">
+          <div className="bg-white p-8 rounded-3xl shadow-lg border border-slate-100 text-center hover-lift animate-scale-in delay-300">
             <div className="w-16 h-16 bg-gold-100 rounded-full flex items-center justify-center text-gold-600 mx-auto mb-6">
               <Mail size={32} />
             </div>
@@ -92,7 +92,7 @@ const Contact = () => {
                   </label>
                   <input
                     type="text"
-                    className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-gold-500 focus:ring-2 focus:ring-gold-200 outline-none transition-all"
+                    className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-gold-500 focus:ring-2 focus:ring-gold-200 focus:outline-none transition-all"
                     placeholder="Nama Anda"
                   />
                 </div>
@@ -102,7 +102,7 @@ const Contact = () => {
                   </label>
                   <input
                     type="tel"
-                    className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-gold-500 focus:ring-2 focus:ring-gold-200 outline-none transition-all"
+                    className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-gold-500 focus:ring-2 focus:ring-gold-200 focus:outline-none transition-all"
                     placeholder="0812..."
                   />
                 </div>
@@ -113,7 +113,7 @@ const Contact = () => {
                 </label>
                 <input
                   type="text"
-                  className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-gold-500 focus:ring-2 focus:ring-gold-200 outline-none transition-all"
+                  className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-gold-500 focus:ring-2 focus:ring-gold-200 focus:outline-none transition-all"
                   placeholder="Tanya Harga / Booking"
                 />
               </div>
@@ -123,13 +123,13 @@ const Contact = () => {
                 </label>
                 <textarea
                   rows="4"
-                  className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-gold-500 focus:ring-2 focus:ring-gold-200 outline-none transition-all"
+                  className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-gold-500 focus:ring-2 focus:ring-gold-200 focus:outline-none transition-all resize-none"
                   placeholder="Tulis pesan Anda disini..."
                 ></textarea>
               </div>
               <button
                 type="button"
-                className="w-full bg-navy-900 text-white py-4 rounded-xl font-bold hover:bg-gold-600 transition-colors flex items-center justify-center gap-2"
+                className="w-full bg-navy-900 text-white py-4 rounded-xl font-bold hover:bg-gold-600 hover:scale-[1.02] transition-all flex items-center justify-center gap-2 shadow-lg hover:shadow-xl"
               >
                 <Send size={18} />
                 Kirim Pesan

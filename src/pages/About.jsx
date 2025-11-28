@@ -7,14 +7,14 @@ const About = () => {
       {/* Hero Section */}
       <div className="container mx-auto px-4 mb-20">
         <div className="text-center max-w-4xl mx-auto">
-          <span className="text-gold-600 font-bold tracking-widest uppercase text-sm mb-4 block">
+          <span className="text-gold-600 font-bold tracking-widest uppercase text-sm mb-4 block animate-fade-in-up">
             Tentang Kami
           </span>
-          <h1 className="text-4xl md:text-6xl font-serif font-black text-navy-900 mb-8">
+          <h1 className="text-4xl md:text-6xl font-serif font-black text-navy-900 mb-8 animate-fade-in-up delay-100">
             Partner Perjalanan <br />{" "}
             <span className="text-gold-600">Terpercaya Anda</span>
           </h1>
-          <p className="text-slate-600 text-lg leading-relaxed">
+          <p className="text-slate-600 text-lg leading-relaxed animate-fade-in-up delay-200">
             Navara Trans adalah perusahaan penyedia layanan transportasi
             pariwisata yang berbasis di Surabaya. Kami berdedikasi untuk
             memberikan pengalaman perjalanan yang aman, nyaman, dan tak
@@ -27,7 +27,7 @@ const About = () => {
       <div className="bg-navy-900 py-16 mb-20">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
-            <div className="p-6">
+            <div className="p-6 animate-fade-in-up delay-100">
               <Shield className="w-12 h-12 text-gold-500 mx-auto mb-4" />
               <h3 className="text-white font-bold text-xl mb-2">
                 Aman & Nyaman
@@ -36,7 +36,7 @@ const About = () => {
                 Armada terawat dan driver berpengalaman.
               </p>
             </div>
-            <div className="p-6">
+            <div className="p-6 animate-fade-in-up delay-200">
               <Award className="w-12 h-12 text-gold-500 mx-auto mb-4" />
               <h3 className="text-white font-bold text-xl mb-2">
                 Pelayanan Premium
@@ -45,7 +45,7 @@ const About = () => {
                 Fasilitas lengkap untuk kenyamanan Anda.
               </p>
             </div>
-            <div className="p-6">
+            <div className="p-6 animate-fade-in-up delay-300">
               <Users className="w-12 h-12 text-gold-500 mx-auto mb-4" />
               <h3 className="text-white font-bold text-xl mb-2">
                 Tim Profesional
@@ -54,7 +54,7 @@ const About = () => {
                 Siap membantu kebutuhan perjalanan Anda.
               </p>
             </div>
-            <div className="p-6">
+            <div className="p-6 animate-fade-in-up delay-400">
               <Clock className="w-12 h-12 text-gold-500 mx-auto mb-4" />
               <h3 className="text-white font-bold text-xl mb-2">Tepat Waktu</h3>
               <p className="text-slate-400 text-sm">
@@ -80,7 +80,7 @@ const About = () => {
               Visi & Misi
             </h2>
             <div className="space-y-4">
-              <div className="bg-white p-6 rounded-2xl shadow-sm border border-slate-100">
+              <div className="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 hover-lift animate-scale-in delay-100">
                 <h3 className="font-bold text-gold-600 mb-2">Visi</h3>
                 <p className="text-slate-600">
                   Menjadi perusahaan transportasi pariwisata terdepan di
@@ -88,7 +88,7 @@ const About = () => {
                   kepuasan pelanggan.
                 </p>
               </div>
-              <div className="bg-white p-6 rounded-2xl shadow-sm border border-slate-100">
+              <div className="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 hover-lift animate-scale-in delay-200">
                 <h3 className="font-bold text-gold-600 mb-2">Misi</h3>
                 <ul className="list-disc list-inside text-slate-600 space-y-2">
                   <li>Menyediakan armada yang berkualitas dan terawat.</li>

@@ -7,7 +7,7 @@ const Services = () => {
   return (
     <div className="pt-24">
       {/* Hero for Services */}
-      <div className="bg-navy-900 py-20 text-center text-white">
+      <div className="bg-navy-900 py-12 md:py-16 text-center text-white">
         <div className="container mx-auto px-4">
           <h1 className="text-4xl md:text-6xl font-serif font-black mb-6">
             Layanan & Paket
@@ -24,7 +24,7 @@ const Services = () => {
       {/* Corporate Services Section */}
       <section className="py-20 bg-slate-50">
         <div className="container mx-auto px-4">
-          <div className="bg-white rounded-[2.5rem] p-8 md:p-16 shadow-xl border border-slate-100 text-center">
+          <div className="bg-white rounded-[2.5rem] p-8 md:p-16 shadow-xl border border-slate-100 text-center hover-lift animate-scale-in">
             <h2 className="text-3xl md:text-4xl font-serif font-black text-navy-900 mb-6">
               Layanan Korporat
             </h2>
@@ -39,7 +39,7 @@ const Services = () => {
                   "Halo Navara Trip, saya ingin menanyakan layanan untuk korporat/perusahaan."
                 )
               }
-              className="bg-navy-900 text-white px-8 py-4 rounded-xl font-bold hover:bg-navy-800 transition-colors inline-flex items-center gap-2"
+              className="bg-navy-900 text-white px-8 py-4 rounded-xl font-bold hover:bg-navy-800 hover:scale-105 transition-all inline-flex items-center gap-2 shadow-lg hover:shadow-xl animate-pulse hover:animate-none"
             >
               <Phone size={20} />
               Hubungi Tim Corporate
