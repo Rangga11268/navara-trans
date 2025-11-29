@@ -191,3 +191,16 @@
     transform: translateY(0);
   }
 }
+
+@keyframes slowSpin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-slow-spin {
+  animation: slowSpin 20s linear infinite;
+}
