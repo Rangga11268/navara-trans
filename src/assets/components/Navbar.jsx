@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
-import { Menu, X, Phone, ChevronRight } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
+import { motion, AnimatePresence } from "framer-motion";
+import { Menu, X, ArrowUpRight } from "lucide-react";
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -15,148 +16,138 @@ const Navbar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Close mobile menu when route changes
-  useEffect(() => {
-    setIsMobileMenuOpen(false);
-  }, [location]);
-
   const navLinks = [
-    { name: "Home", path: "/" },
-    { name: "About", path: "/about" },
-    { name: "Fleet", path: "/fleet" },
-    { name: "Services", path: "/services" },
-    { name: "Contact", path: "/contact" },
+    { name: "Beranda", path: "/" },
+    { name: "Armada", path: "/fleet" },
+    { name: "Layanan", path: "/services" },
+    { name: "Tentang", path: "/about" },
+    { name: "Kontak", path: "/contact" },
   ];
-
-  const isActive = (path) => {
-    return location.pathname === path;
-  };
-
-  // Check if we're on home page
-  const isHomePage = location.pathname === "/";
 
   return (
     <>
-      <nav
-        className={`fixed w-full z-50 transition-all duration-500 ease-[cubic-bezier(0.4,0,0.2,1)] ${
-          isScrolled || isMobileMenuOpen || !isHomePage
-            ? "bg-navy-900/95 backdrop-blur-xl shadow-2xl py-3 border-b border-white/5"
-            : "bg-transparent py-4 md:py-6"
+      <motion.nav
+        initial={{ y: -100 }}
+        animate={{ y: 0 }}
+        transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
+          isScrolled || isMobileMenuOpen
+            ? "bg-white/90 backdrop-blur-xl border-b border-black/5 py-4"
+            : "bg-transparent py-6"
         }`}
       >
-        <div className="container mx-auto px-4 md:px-8">
-          <div className="flex justify-between items-center">
-            {/* Logo */}
-            <Link
-              to="/"
-              className="group flex flex-col items-start z-50 relative"
-            >
-              <span className="text-xl md:text-2xl font-serif font-black tracking-tighter leading-none text-white drop-shadow-sm group-hover:tracking-normal transition-all duration-500">
+        <div className="container mx-auto px-6 md:px-12 flex justify-between items-center">
+          {/* Logo */}
+          <Link to="/" className="z-50 relative group">
+            <div className="flex flex-col leading-none">
+              <span
+                className={`font-display font-black text-2xl tracking-tighter transition-colors duration-300 ${
+                  isScrolled || isMobileMenuOpen
+                    ? "text-brand-black"
+                    : "text-brand-black md:text-brand-black"
+                  /* Note: Assuming Hero usually needs dark logo unless hero is dark. 
+                   For now, defaulting to black logo for 'Clean White' aesthetic. 
+                   If Hero is dark, we might need to toggle this. */
+                }`}
+              >
                 NAVARA
               </span>
-              <span className="text-[8px] md:text-[10px] font-bold tracking-[0.4em] uppercase text-gold-500 drop-shadow-sm group-hover:text-white transition-colors duration-300">
-                TRIP
+              <span className="font-sans text-[10px] font-bold tracking-[0.3em] text-brand-red uppercase">
+                Transport
               </span>
-            </Link>
-
-            {/* Desktop Navigation */}
-            <div className="hidden md:flex items-center gap-1 bg-white/5 backdrop-blur-md p-1.5 rounded-full border border-white/10 shadow-lg shadow-black/5">
-              {navLinks.map((link) => (
-                <Link
-                  key={link.name}
-                  to={link.path}
-                  className={`px-5 py-2 rounded-full text-sm font-bold transition-all duration-300 relative overflow-hidden group ${
-                    isActive(link.path)
-                      ? "text-navy-900 bg-white shadow-md"
-                      : "text-slate-300 hover:text-white hover:bg-white/10"
-                  }`}
-                >
-                  <span className="relative z-10">{link.name}</span>
-                </Link>
-              ))}
             </div>
+          </Link>
 
-            {/* CTA Button */}
-            <div className="hidden md:block">
-              <a
-                href="https://wa.me/6281113556799"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="bg-gradient-to-r from-gold-600 to-gold-700 text-white px-6 py-2.5 rounded-full font-bold text-sm hover:shadow-lg hover:shadow-gold-500/20 transition-all duration-300 flex items-center gap-2 group border border-white/10"
-              >
-                <Phone
-                  size={16}
-                  className="group-hover:rotate-12 transition-transform"
-                />
-                <span>Book Now</span>
-              </a>
-            </div>
-
-            {/* Mobile Menu Button */}
-            <button
-              className="md:hidden relative z-50 w-10 h-10 flex items-center justify-center rounded-full bg-white/10 text-white hover:bg-white/20 transition-colors border border-white/10"
-              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            >
-              {isMobileMenuOpen ? <X size={20} /> : <Menu size={20} />}
-            </button>
-          </div>
-        </div>
-      </nav>
-
-      {/* Mobile Menu Overlay */}
-      <div
-        className={`fixed inset-0 bg-navy-900/95 backdrop-blur-xl z-40 transition-all duration-500 md:hidden overflow-y-auto ${
-          isMobileMenuOpen
-            ? "opacity-100 visible"
-            : "opacity-0 invisible pointer-events-none"
-        }`}
-      >
-        <div className="flex flex-col min-h-full justify-start pt-24 pb-10 px-8 relative">
-          {/* Decorative Elements */}
-          <div className="absolute top-0 right-0 w-64 h-64 bg-gold-500/10 rounded-full blur-3xl -mr-32 -mt-32"></div>
-          <div className="absolute bottom-0 left-0 w-64 h-64 bg-blue-500/10 rounded-full blur-3xl -ml-32 -mb-32"></div>
-
-          <div className="space-y-4 relative z-10">
-            {navLinks.map((link, idx) => (
+          {/* Desktop Nav */}
+          <div className="hidden md:flex items-center gap-12">
+            {navLinks.map((link) => (
               <Link
                 key={link.name}
                 to={link.path}
-                className={`block text-3xl font-serif font-black text-white/90 hover:text-gold-500 transition-all duration-300 transform ${
-                  isMobileMenuOpen
-                    ? "translate-x-0 opacity-100"
-                    : "translate-x-10 opacity-0"
-                }`}
-                style={{ transitionDelay: `${idx * 100}ms` }}
-                onClick={() => setIsMobileMenuOpen(false)}
+                className="relative group overflow-hidden"
               >
-                <span className="flex items-center justify-between group border-b border-white/5 pb-4">
+                <span
+                  className={`font-sans font-medium text-sm tracking-wide transition-colors duration-300 ${
+                    isScrolled ? "text-brand-black" : "text-brand-black"
+                  }`}
+                >
                   {link.name}
-                  <ChevronRight
-                    size={24}
-                    className="opacity-0 -translate-x-4 group-hover:opacity-100 group-hover:translate-x-0 transition-all text-gold-500"
-                  />
                 </span>
+                <span className="absolute bottom-0 left-0 w-full h-[1px] bg-brand-red transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></span>
               </Link>
             ))}
 
-            <div
-              className={`pt-8 transform transition-all duration-500 delay-500 ${
-                isMobileMenuOpen
-                  ? "translate-y-0 opacity-100"
-                  : "translate-y-10 opacity-0"
-              }`}
+            <a
+              href="https://wa.me/6281113556799"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-6 py-2.5 bg-brand-black text-white rounded-full font-display text-xs font-bold uppercase tracking-wider hover:bg-brand-red transition-colors duration-300 flex items-center gap-2 group"
             >
-              <a
-                href="https://wa.me/6281113556799"
-                className="w-full bg-gradient-to-r from-gold-600 to-gold-700 text-white py-4 rounded-2xl font-bold flex items-center justify-center gap-2 shadow-lg shadow-gold-900/20"
-              >
-                <Phone size={20} />
-                Hubungi Kami
-              </a>
-            </div>
+              <span>Pesan Sekarang</span>
+              <ArrowUpRight
+                size={16}
+                className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform"
+              />
+            </a>
           </div>
+
+          {/* Mobile Toggle */}
+          <button
+            className="md:hidden z-50 p-2 text-brand-black"
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+          >
+            {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+          </button>
         </div>
-      </div>
+      </motion.nav>
+
+      {/* Mobile Menu */}
+      <AnimatePresence>
+        {isMobileMenuOpen && (
+          <motion.div
+            initial={{ opacity: 0, clipPath: "circle(0% at 100% 0%)" }}
+            animate={{ opacity: 1, clipPath: "circle(150% at 100% 0%)" }}
+            exit={{ opacity: 0, clipPath: "circle(0% at 100% 0%)" }}
+            transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
+            className="fixed inset-0 bg-white z-40 flex flex-col justify-center px-8 md:hidden"
+          >
+            <div className="flex flex-col gap-6">
+              {navLinks.map((link, i) => (
+                <motion.div
+                  key={link.name}
+                  initial={{ opacity: 0, y: 40 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.1 + i * 0.1, duration: 0.5 }}
+                >
+                  <Link
+                    to={link.path}
+                    onClick={() => setIsMobileMenuOpen(false)}
+                    className="font-display font-black text-5xl text-brand-black hover:text-transparent hover:text-stroke hover:text-stroke-black transition-all duration-300"
+                  >
+                    {link.name}
+                  </Link>
+                </motion.div>
+              ))}
+              <motion.div
+                initial={{ opacity: 0, y: 40 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.6, duration: 0.5 }}
+                className="mt-8"
+              >
+                <a
+                  href="https://wa.me/6281113556799"
+                  className="inline-flex items-center gap-2 border-b-2 border-brand-red pb-1 text-xl font-bold font-display"
+                >
+                  Yuk Ngobrol <ArrowUpRight />
+                </a>
+              </motion.div>
+            </div>
+
+            {/* Background Decoration */}
+            <div className="absolute bottom-0 right-0 w-64 h-64 bg-brand-red/5 rounded-full blur-3xl -mr-20 -mb-20 pointer-events-none" />
+          </motion.div>
+        )}
+      </AnimatePresence>
     </>
   );
 };

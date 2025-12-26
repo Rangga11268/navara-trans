@@ -6,172 +6,200 @@ import {
   Phone,
   MapPin,
   Smartphone,
+  ArrowUpRight,
 } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
     <footer
-      className="bg-navy-900 pt-12 pb-8 md:pt-20 md:pb-10 border-t border-white/5"
+      className="bg-brand-black pt-20 pb-10 border-t border-white/10"
       id="contact"
     >
-      <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 md:grid-cols-5 gap-8 md:gap-12 mb-12">
-          <div className="md:col-span-2 space-y-6">
+      <div className="container mx-auto px-6">
+        <div className="grid grid-cols-1 md:grid-cols-5 gap-12 md:gap-16 mb-16">
+          <div className="md:col-span-2 space-y-8">
             <div className="flex items-center gap-3">
-              <img
-                src="/assets/img/logoNoBg.png"
-                alt="Navara Trans Logo"
-                className="w-14 md:w-16 h-auto object-contain"
-              />
               <div className="flex flex-col">
-                <span className="text-xl md:text-2xl font-serif font-black text-white leading-none">
+                <span className="text-3xl font-display font-black text-white leading-none tracking-tighter uppercase">
                   NAVARA
                 </span>
-                <span className="text-[8px] md:text-[10px] font-bold text-gold-500 uppercase tracking-widest">
-                  TRIP
+                <span className="text-[10px] font-bold text-brand-red uppercase tracking-[0.3em]">
+                  Transport
                 </span>
               </div>
             </div>
-            <p className="text-slate-400 leading-relaxed pr-4 text-sm md:text-base">
-              Partner transportasi wisata terpercaya di Jawa Timur. Garasi &
-              Kantor pusat kami berlokasi strategis di Surabaya Selatan untuk
-              melayani penjemputan area Gerbangkertosusila.
+            <p className="text-white/50 leading-relaxed pr-4 text-sm font-medium max-w-sm">
+              Your trusted tourism transport partner in East Java. Our central
+              garage & office is strategically located in Surabaya to serve the
+              greater region.
             </p>
             <div className="flex gap-4">
               <a
                 href="https://www.instagram.com/navara_trip/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-slate-400 hover:bg-gold-500 hover:text-white transition-colors"
+                className="w-12 h-12 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-white hover:bg-brand-red hover:border-brand-red hover:scale-110 transition-all duration-300"
                 aria-label="Instagram Navara Trip"
               >
-                <Instagram size={18} />
+                <Instagram size={20} />
               </a>
               <a
                 href="https://facebook.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-slate-400 hover:bg-gold-500 hover:text-white transition-colors"
+                className="w-12 h-12 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-white hover:bg-brand-red hover:border-brand-red hover:scale-110 transition-all duration-300"
                 aria-label="Facebook Navara Trip"
               >
-                <Facebook size={18} />
+                <Facebook size={20} />
               </a>
               <a
                 href="mailto:info@navaratrip.com"
-                className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-slate-400 hover:bg-gold-500 hover:text-white transition-colors"
+                className="w-12 h-12 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-white hover:bg-brand-red hover:border-brand-red hover:scale-110 transition-all duration-300"
                 aria-label="Email Navara Trip"
               >
-                <Mail size={18} />
+                <Mail size={20} />
               </a>
             </div>
           </div>
 
           <div>
-            <h4 className="font-serif font-bold text-white mb-4 md:mb-6">
-              Unit Sewa
+            <h4 className="font-display font-bold text-white mb-6 uppercase tracking-wider text-sm">
+              Our Fleet
             </h4>
-            <ul className="space-y-3 md:space-y-4 text-sm text-slate-400">
+            <ul className="space-y-4 text-sm text-white/60 font-medium">
               <li>
                 <Link
                   to="/fleet"
-                  className="hover:text-gold-500 transition-colors"
+                  className="hover:text-brand-red transition-colors flex items-center gap-2 group"
                 >
                   Big Bus SHD (45-59)
+                  <ArrowUpRight
+                    size={14}
+                    className="opacity-0 group-hover:opacity-100 transition-opacity"
+                  />
                 </Link>
               </li>
               <li>
                 <Link
                   to="/fleet"
-                  className="hover:text-gold-500 transition-colors"
+                  className="hover:text-brand-red transition-colors flex items-center gap-2 group"
                 >
                   Medium Bus (30-35)
+                  <ArrowUpRight
+                    size={14}
+                    className="opacity-0 group-hover:opacity-100 transition-opacity"
+                  />
                 </Link>
               </li>
               <li>
                 <Link
                   to="/fleet"
-                  className="hover:text-gold-500 transition-colors"
+                  className="hover:text-brand-red transition-colors flex items-center gap-2 group"
                 >
                   Hiace / Elf Long
+                  <ArrowUpRight
+                    size={14}
+                    className="opacity-0 group-hover:opacity-100 transition-opacity"
+                  />
                 </Link>
               </li>
               <li>
                 <Link
                   to="/fleet"
-                  className="hover:text-gold-500 transition-colors"
+                  className="hover:text-brand-red transition-colors flex items-center gap-2 group"
                 >
                   Luxury Bus
+                  <ArrowUpRight
+                    size={14}
+                    className="opacity-0 group-hover:opacity-100 transition-opacity"
+                  />
                 </Link>
               </li>
             </ul>
           </div>
 
           <div>
-            <h4 className="font-serif font-bold text-white mb-4 md:mb-6">
-              Layanan
+            <h4 className="font-display font-bold text-white mb-6 uppercase tracking-wider text-sm">
+              Services
             </h4>
-            <ul className="space-y-3 md:space-y-4 text-sm text-slate-400">
+            <ul className="space-y-4 text-sm text-white/60 font-medium">
               <li>
                 <Link
                   to="/services"
-                  className="hover:text-gold-500 transition-colors"
+                  className="hover:text-brand-red transition-colors flex items-center gap-2 group"
                 >
-                  Sewa Harian
+                  Daily Charter
+                  <ArrowUpRight
+                    size={14}
+                    className="opacity-0 group-hover:opacity-100 transition-opacity"
+                  />
                 </Link>
               </li>
               <li>
                 <Link
                   to="/services"
-                  className="hover:text-gold-500 transition-colors"
+                  className="hover:text-brand-red transition-colors flex items-center gap-2 group"
                 >
-                  Paket Study Tour
+                  Study Tour
+                  <ArrowUpRight
+                    size={14}
+                    className="opacity-0 group-hover:opacity-100 transition-opacity"
+                  />
                 </Link>
               </li>
               <li>
                 <Link
                   to="/services"
-                  className="hover:text-gold-500 transition-colors"
+                  className="hover:text-brand-red transition-colors flex items-center gap-2 group"
                 >
-                  Ziarah Wali
+                  Religious Trip
+                  <ArrowUpRight
+                    size={14}
+                    className="opacity-0 group-hover:opacity-100 transition-opacity"
+                  />
                 </Link>
               </li>
               <li>
                 <Link
                   to="/services"
-                  className="hover:text-gold-500 transition-colors"
+                  className="hover:text-brand-red transition-colors flex items-center gap-2 group"
                 >
-                  Antar Jemput Bandara
+                  Airport Transfer
+                  <ArrowUpRight
+                    size={14}
+                    className="opacity-0 group-hover:opacity-100 transition-opacity"
+                  />
                 </Link>
               </li>
             </ul>
           </div>
 
           <div>
-            <h4 className="font-serif font-bold text-white mb-4 md:mb-6">
-              Kantor & Garasi
+            <h4 className="font-display font-bold text-white mb-6 uppercase tracking-wider text-sm">
+              Office & Garage
             </h4>
-            <ul className="space-y-3 md:space-y-4 text-sm text-slate-400">
-              <li className="flex items-start gap-2">
-                <MapPin size={16} className="text-gold-500 mt-1 shrink-0" />
+            <ul className="space-y-4 text-sm text-white/60 font-medium">
+              <li className="flex items-start gap-3">
+                <MapPin size={18} className="text-brand-red mt-0.5 shrink-0" />
                 <span>Jl. Merr Boulevard No. 22, Rungkut, Surabaya</span>
               </li>
-              <li className="flex items-center gap-2">
-                <Smartphone size={16} className="text-gold-500" />
+              <li className="flex items-center gap-3">
+                <Smartphone size={18} className="text-brand-red shrink-0" />
                 <a
                   href="https://wa.me/6281113556799"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="hover:text-gold-500 transition-colors"
+                  className="hover:text-white transition-colors"
                 >
                   0811-3556-799 (WA)
                 </a>
               </li>
-              <li className="flex items-center gap-2">
-                <Mail size={16} className="text-gold-500" />
+              <li className="flex items-center gap-3">
+                <Mail size={18} className="text-brand-red shrink-0" />
                 <a
                   href="mailto:info@navaratrip.com"
-                  className="hover:text-gold-500 transition-colors"
+                  className="hover:text-white transition-colors"
                 >
                   info@navaratrip.com
                 </a>
@@ -179,14 +207,18 @@ const Footer = () => {
             </ul>
           </div>
         </div>
-        <div className="border-t border-white/5 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-slate-500 font-medium text-center md:text-left">
+
+        <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-white/30 font-bold uppercase tracking-widest text-center md:text-left">
           <p>&copy; 2025 PT Sasmito Navara Trip. All rights reserved.</p>
-          <div className="flex gap-6">
+          <div className="flex gap-8">
             <Link to="/about" className="hover:text-white transition-colors">
               Privacy
             </Link>
             <Link to="/about" className="hover:text-white transition-colors">
               Terms
+            </Link>
+            <Link to="/sitemap" className="hover:text-white transition-colors">
+              Sitemap
             </Link>
           </div>
         </div>

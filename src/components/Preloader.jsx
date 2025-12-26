@@ -26,40 +26,41 @@ const Preloader = ({ onComplete }) => {
 
   return (
     <div
-      className={`fixed inset-0 z-50 flex flex-col items-center justify-center bg-slate-950 transition-transform duration-1000 ease-in-out ${
+      className={`fixed inset-0 z-[99999] flex flex-col items-center justify-center bg-brand-black transition-transform duration-1000 ease-in-out ${
         isExiting ? "-translate-y-full" : "translate-y-0"
       }`}
     >
       {/* Background Effects */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-[-50%] left-[-50%] w-[200%] h-[200%] bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-slate-900/20 via-slate-950/50 to-slate-950 animate-slow-spin opacity-50"></div>
+        <div className="absolute top-[-50%] left-[-50%] w-[200%] h-[200%] bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-brand-red/10 via-brand-black/50 to-brand-black animate-slow-spin opacity-40"></div>
       </div>
 
       <div className="relative z-10 flex flex-col items-center">
         {/* Main Text */}
-        <div className="overflow-hidden mb-4">
-          <h1 className="font-serif text-4xl md:text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-amber-200 via-amber-500 to-amber-200 tracking-widest animate-fade-in-up">
-            NAVARA TRANS
+        <div className="overflow-hidden mb-6">
+          <h1 className="font-display text-5xl md:text-8xl font-black text-white tracking-tighter animate-fade-in-up">
+            NAVARA
+            <span className="text-brand-red">.</span>
           </h1>
         </div>
 
         {/* Subtitle / Slogan */}
-        <div className="overflow-hidden mb-8">
-          <p className="font-sans text-slate-400 text-sm md:text-base tracking-[0.3em] uppercase animate-fade-in-up delay-200">
-            Premium Bus Services
+        <div className="overflow-hidden mb-12">
+          <p className="font-sans text-white/50 text-sm md:text-base tracking-[0.4em] uppercase animate-fade-in-up delay-200 font-bold">
+            Transportasi Premium
           </p>
         </div>
 
         {/* Progress Line */}
-        <div className="w-48 h-[1px] bg-slate-800 relative overflow-hidden">
+        <div className="w-64 h-[2px] bg-white/10 relative overflow-hidden rounded-full">
           <div
-            className="absolute top-0 left-0 h-full bg-amber-500 transition-all duration-300 ease-out"
+            className="absolute top-0 left-0 h-full bg-brand-red transition-all duration-300 ease-out shadow-[0_0_15px_rgba(255,46,0,0.8)]"
             style={{ width: `${progress}%` }}
           ></div>
         </div>
 
         {/* Percentage */}
-        <div className="mt-2 font-mono text-amber-500/80 text-xs">
+        <div className="mt-4 font-display font-bold text-brand-red text-xl">
           {progress}%
         </div>
       </div>

@@ -1,144 +1,209 @@
-import React from "react";
-import { MapPin, Phone, Mail, Clock, Send } from "lucide-react";
+import React, { useState } from "react";
+import { Phone, Mail, MapPin, Send, ArrowUpRight } from "lucide-react";
+import { motion } from "framer-motion";
+import SEO from "../components/SEO";
 
 const Contact = () => {
+  const [formData, setFormData] = useState({
+    name: "",
+    phone: "",
+    subject: "",
+    message: "",
+  });
+
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const { name, phone, subject, message } = formData;
+
+    const whatsappMessage = `
+*New Inquiry via Website*
+------------------------
+*Name:* ${name}
+*Phone:* ${phone}
+*Subject:* ${subject}
+------------------------
+*Message:*
+${message}
+        `.trim();
+
+    const encodedMessage = encodeURIComponent(whatsappMessage);
+    window.open(`https://wa.me/6281113556799?text=${encodedMessage}`, "_blank");
+  };
+
   return (
-    <div className="pt-24 pb-20 bg-slate-50">
-      <div className="container mx-auto px-4">
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <h1 className="text-4xl md:text-6xl font-serif font-black text-navy-900 mb-6">
-            Hubungi Kami
-          </h1>
-          <p className="text-slate-600 text-lg">
-            Siap merencanakan perjalanan Anda? Hubungi kami untuk konsultasi
-            gratis atau kunjungi kantor kami.
-          </p>
-        </div>
+    <>
+      <SEO
+        title="Contact Us"
+        description="Get in touch with Navara Trans for premium bus charter services in Surabaya and beyond."
+      />
 
-        <div className="grid lg:grid-cols-3 gap-8 mb-20">
-          {/* Contact Info Cards */}
-          <div className="bg-white p-8 rounded-3xl shadow-lg border border-slate-100 text-center hover-lift animate-scale-in delay-100">
-            <div className="w-16 h-16 bg-gold-100 rounded-full flex items-center justify-center text-gold-600 mx-auto mb-6">
-              <Phone size={32} />
+      <div className="pt-32 pb-20 bg-brand-gray min-h-screen">
+        <div className="container mx-auto px-6 md:px-12">
+          <div className="grid lg:grid-cols-2 gap-16 lg:gap-24">
+            {/* Text & Info */}
+            <div className="space-y-12">
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8 }}
+              >
+                <h1 className="font-display font-black text-6xl md:text-8xl text-brand-black leading-none mb-6">
+                  YUK <br />
+                  <span className="text-brand-red">NGOBROL.</span>
+                </h1>
+                <p className="text-xl text-brand-black/70 font-medium max-w-md">
+                  Siap buat jalan-jalan? Kita siap bantu rencanain tripmu biar
+                  makin asik.
+                </p>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 0.4, duration: 0.8 }}
+                className="space-y-8"
+              >
+                <div className="group">
+                  <a
+                    href="https://wa.me/6281113556799"
+                    target="_blank"
+                    className="block p-6 bg-white border border-brand-black/5 rounded-2xl hover:border-brand-black/20 transition-all duration-300"
+                  >
+                    <div className="flex justify-between items-start mb-4">
+                      <div className="p-3 bg-brand-gray rounded-full">
+                        <Phone className="text-brand-black" size={24} />
+                      </div>
+                      <ArrowUpRight className="text-brand-black/30 group-hover:text-brand-red transition-colors" />
+                    </div>
+                    <h3 className="font-display font-bold text-xl mb-1">
+                      WhatsApp / Call
+                    </h3>
+                    <p className="text-brand-black/60 text-sm">0811-3556-799</p>
+                  </a>
+                </div>
+
+                <div className="grid sm:grid-cols-2 gap-6">
+                  <div className="p-6 bg-white border border-brand-black/5 rounded-2xl">
+                    <div className="p-3 bg-brand-gray w-fit rounded-full mb-4">
+                      <MapPin className="text-brand-black" size={24} />
+                    </div>
+                    <h3 className="font-display font-bold text-lg mb-1">
+                      Kantor
+                    </h3>
+                    <p className="text-brand-black/60 text-sm">
+                      Jl. Merr Boulevard No. 22, Rungkut, Surabaya
+                    </p>
+                  </div>
+
+                  <a
+                    href="mailto:info@navaratrip.com"
+                    className="p-6 bg-white border border-brand-black/5 rounded-2xl group hover:border-brand-black/20 transition-all"
+                  >
+                    <div className="flex justify-between items-start mb-4">
+                      <div className="p-3 bg-brand-gray w-fit rounded-full">
+                        <Mail className="text-brand-black" size={24} />
+                      </div>
+                      <ArrowUpRight className="text-brand-black/30 group-hover:text-brand-red transition-colors" />
+                    </div>
+
+                    <h3 className="font-display font-bold text-lg mb-1">
+                      Email
+                    </h3>
+                    <p className="text-brand-black/60 text-sm">
+                      info@navaratrip.com
+                    </p>
+                  </a>
+                </div>
+              </motion.div>
             </div>
-            <h3 className="font-serif font-bold text-xl text-navy-900 mb-2">
-              Telepon / WhatsApp
-            </h3>
-            <p className="text-slate-500 mb-4">Siap melayani 24 Jam</p>
-            <a
-              href="https://wa.me/6281113556799"
-              className="text-gold-600 font-bold hover:underline"
+
+            {/* Form */}
+            <motion.div
+              initial={{ opacity: 0, x: 50 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ delay: 0.2, duration: 0.8 }}
+              className="bg-white p-8 md:p-12 rounded-[2rem] shadow-xl border border-brand-black/5 h-fit"
             >
-              0811-3556-799
-            </a>
-          </div>
+              <h3 className="font-display font-bold text-2xl mb-8">
+                Kirim Pesan
+              </h3>
+              <form onSubmit={handleSubmit} className="space-y-6">
+                <div className="grid md:grid-cols-2 gap-6">
+                  <div className="space-y-2">
+                    <label className="text-xs font-bold uppercase tracking-wider text-brand-black/50">
+                      Nama
+                    </label>
+                    <input
+                      type="text"
+                      name="name"
+                      required
+                      value={formData.name}
+                      onChange={handleChange}
+                      placeholder="Nama Kamu"
+                      className="w-full bg-brand-gray border-none rounded-xl px-4 py-3 font-medium focus:ring-2 focus:ring-brand-red/20 focus:text-brand-black transition-all"
+                    />
+                  </div>
+                  <div className="space-y-2">
+                    <label className="text-xs font-bold uppercase tracking-wider text-brand-black/50">
+                      WhatsApp
+                    </label>
+                    <input
+                      type="tel"
+                      name="phone"
+                      required
+                      value={formData.phone}
+                      onChange={handleChange}
+                      placeholder="081..."
+                      className="w-full bg-brand-gray border-none rounded-xl px-4 py-3 font-medium focus:ring-2 focus:ring-brand-red/20 focus:text-brand-black transition-all"
+                    />
+                  </div>
+                </div>
 
-          <div className="bg-white p-8 rounded-3xl shadow-lg border border-slate-100 text-center hover-lift animate-scale-in delay-200">
-            <div className="w-16 h-16 bg-gold-100 rounded-full flex items-center justify-center text-gold-600 mx-auto mb-6">
-              <MapPin size={32} />
-            </div>
-            <h3 className="font-serif font-bold text-xl text-navy-900 mb-2">
-              Alamat Kantor
-            </h3>
-            <p className="text-slate-500 mb-4">Kunjungi kami di Surabaya</p>
-            <p className="text-navy-900 font-medium">
-              Jl. Merr Boulevard No. 22, Rungkut, Surabaya
-            </p>
-          </div>
-
-          <div className="bg-white p-8 rounded-3xl shadow-lg border border-slate-100 text-center hover-lift animate-scale-in delay-300">
-            <div className="w-16 h-16 bg-gold-100 rounded-full flex items-center justify-center text-gold-600 mx-auto mb-6">
-              <Mail size={32} />
-            </div>
-            <h3 className="font-serif font-bold text-xl text-navy-900 mb-2">
-              Email
-            </h3>
-            <p className="text-slate-500 mb-4">
-              Kirim penawaran atau pertanyaan
-            </p>
-            <a
-              href="mailto:info@navaratrip.com"
-              className="text-gold-600 font-bold hover:underline"
-            >
-              info@navaratrip.com
-            </a>
-          </div>
-        </div>
-
-        <div className="grid lg:grid-cols-2 gap-12">
-          {/* Map */}
-          <div className="bg-white p-4 rounded-3xl shadow-lg border border-slate-100 h-[500px]">
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3957.385502669263!2d112.77587637500055!3d-7.310506692696956!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd7fa5160000001%3A0x5677610000000000!2sSurabaya!5e0!3m2!1sen!2sid!4v1700000000000!5m2!1sen!2sid"
-              width="100%"
-              height="100%"
-              style={{ border: 0, borderRadius: "1.5rem" }}
-              allowFullScreen=""
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-            ></iframe>
-          </div>
-
-          {/* Form */}
-          <div className="bg-white p-8 md:p-12 rounded-3xl shadow-lg border border-slate-100">
-            <h3 className="text-2xl font-serif font-bold text-navy-900 mb-6">
-              Kirim Pesan
-            </h3>
-            <form className="space-y-6">
-              <div className="grid md:grid-cols-2 gap-6">
-                <div>
-                  <label className="block text-sm font-bold text-slate-700 mb-2">
-                    Nama Lengkap
+                <div className="space-y-2">
+                  <label className="text-xs font-bold uppercase tracking-wider text-brand-black/50">
+                    Subjek
                   </label>
                   <input
                     type="text"
-                    className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-gold-500 focus:ring-2 focus:ring-gold-200 focus:outline-none transition-all"
-                    placeholder="Nama Anda"
+                    name="subject"
+                    value={formData.subject}
+                    onChange={handleChange}
+                    placeholder="Tanya harga / Booking"
+                    className="w-full bg-brand-gray border-none rounded-xl px-4 py-3 font-medium focus:ring-2 focus:ring-brand-red/20 focus:text-brand-black transition-all"
                   />
                 </div>
-                <div>
-                  <label className="block text-sm font-bold text-slate-700 mb-2">
-                    No. WhatsApp
+
+                <div className="space-y-2">
+                  <label className="text-xs font-bold uppercase tracking-wider text-brand-black/50">
+                    Pesan
                   </label>
-                  <input
-                    type="tel"
-                    className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-gold-500 focus:ring-2 focus:ring-gold-200 focus:outline-none transition-all"
-                    placeholder="0812..."
-                  />
+                  <textarea
+                    rows="5"
+                    name="message"
+                    required
+                    value={formData.message}
+                    onChange={handleChange}
+                    placeholder="Ceritain rencana trip kamu..."
+                    className="w-full bg-brand-gray border-none rounded-xl px-4 py-3 font-medium focus:ring-2 focus:ring-brand-red/20 focus:text-brand-black transition-all resize-none"
+                  ></textarea>
                 </div>
-              </div>
-              <div>
-                <label className="block text-sm font-bold text-slate-700 mb-2">
-                  Subjek
-                </label>
-                <input
-                  type="text"
-                  className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-gold-500 focus:ring-2 focus:ring-gold-200 focus:outline-none transition-all"
-                  placeholder="Tanya Harga / Booking"
-                />
-              </div>
-              <div>
-                <label className="block text-sm font-bold text-slate-700 mb-2">
-                  Pesan
-                </label>
-                <textarea
-                  rows="4"
-                  className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-gold-500 focus:ring-2 focus:ring-gold-200 focus:outline-none transition-all resize-none"
-                  placeholder="Tulis pesan Anda disini..."
-                ></textarea>
-              </div>
-              <button
-                type="button"
-                className="w-full bg-navy-900 text-white py-4 rounded-xl font-bold hover:bg-gold-600 hover:scale-[1.02] transition-all flex items-center justify-center gap-2 shadow-lg hover:shadow-xl"
-              >
-                <Send size={18} />
-                Kirim Pesan
-              </button>
-            </form>
+
+                <button
+                  type="submit"
+                  className="w-full py-4 bg-brand-black text-white font-display font-bold uppercase tracking-widest rounded-xl hover:bg-brand-red transition-colors duration-300 shadow-lg shadow-brand-red/20"
+                >
+                  Kirim Pesan
+                </button>
+              </form>
+            </motion.div>
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 
