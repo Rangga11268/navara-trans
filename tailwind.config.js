@@ -9,7 +9,7 @@ export default {
       },
       colors: {
         brand: {
-          primary: "#06B6D4", // Luminous Teal / Cyber Blue
+          primary: "#C19349", // Navara Gold / Luminous Bronze (Refined from #8d622d)
           black: "#0A0A0A", // Deepest Black
           gray: "#F4F4F5", // Clean Surface
           white: "#FFFFFF",
