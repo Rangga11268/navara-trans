@@ -41,12 +41,34 @@
     -moz-osx-font-smoothing: grayscale;
     overflow-x: hidden;
   }
+
+  /* Custom Scrollbar */
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-brand-black rounded-full border-2 border-white;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-brand-red;
+  }
+
+  /* Custom Selection */
+  ::selection {
+    @apply bg-brand-red text-white;
+  }
 }
 
 @layer components {
   .btn-primary {
     @apply px-8 py-4 bg-brand-black text-white font-display font-medium text-sm uppercase tracking-wider 
-    hover:bg-brand-red transition-colors duration-300 rounded-full flex items-center justify-center gap-2;
+    hover:bg-brand-red transition-all duration-300 rounded-full flex items-center justify-center gap-2 active:scale-95;
   }
 
   .glass-nav {

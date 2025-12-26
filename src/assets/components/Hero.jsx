@@ -108,7 +108,7 @@ const Hero = () => {
             >
               <Link
                 to="/fleet"
-                className="px-8 py-4 bg-brand-black text-white font-display font-bold text-sm uppercase tracking-widest hover:bg-brand-red transition-colors duration-300 rounded-full flex items-center gap-4 group"
+                className="px-8 py-4 bg-brand-black text-white font-display font-bold text-sm uppercase tracking-widest hover:bg-brand-red transition-all duration-300 rounded-full flex items-center gap-4 group active:scale-95"
               >
                 Explore Fleet
                 <ArrowRight className="group-hover:translate-x-1 transition-transform" />

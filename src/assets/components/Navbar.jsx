@@ -81,7 +81,7 @@ const Navbar = () => {
               href="https://wa.me/6281113556799"
               target="_blank"
               rel="noopener noreferrer"
-              className="px-6 py-2.5 bg-brand-black text-white rounded-full font-display text-xs font-bold uppercase tracking-wider hover:bg-brand-red transition-colors duration-300 flex items-center gap-2 group"
+              className="px-6 py-2.5 bg-brand-black text-white rounded-full font-display text-xs font-bold uppercase tracking-wider hover:bg-brand-red transition-all duration-300 flex items-center gap-2 group active:scale-95"
             >
               <span>Pesan Sekarang</span>
               <ArrowUpRight

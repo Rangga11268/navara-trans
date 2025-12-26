@@ -85,7 +85,7 @@ const FleetModal = ({ isOpen, onClose, fleet }) => {
             {/* Close Button */}
             <button
               onClick={onClose}
-              className="absolute top-6 right-6 z-50 cursor-pointer w-12 h-12 bg-black/40 backdrop-blur-xl border border-white/20 rounded-full flex items-center justify-center text-white hover:bg-brand-red hover:border-brand-red hover:rotate-90 transition-all duration-300 shadow-lg"
+              className="absolute top-6 right-6 z-50 cursor-pointer w-12 h-12 bg-black/40 backdrop-blur-xl border border-white/20 rounded-full flex items-center justify-center text-white hover:bg-brand-red hover:border-brand-red hover:rotate-90 transition-all duration-300 shadow-lg active:scale-90"
             >
               <X size={24} />
             </button>
@@ -248,14 +248,14 @@ const FleetModal = ({ isOpen, onClose, fleet }) => {
             <div className="flex flex-col sm:flex-row gap-4 pt-4 border-t border-brand-black/5">
               <button
                 onClick={handleBooking}
-                className="flex-1 bg-brand-red text-white py-5 rounded-full font-bold font-display uppercase tracking-wider shadow-xl hover:bg-red-700 hover:scale-[1.02] transition-all flex items-center justify-center gap-3 text-sm"
+                className="flex-1 bg-brand-red text-white py-5 rounded-full font-bold font-display uppercase tracking-wider shadow-xl hover:bg-red-700 hover:scale-[1.02] transition-all flex items-center justify-center gap-3 text-sm active:scale-95"
               >
                 <Phone size={20} />
                 Book via WhatsApp
               </button>
               <button
                 onClick={onClose}
-                className="sm:w-auto px-10 bg-white text-brand-black border border-brand-black/10 py-5 rounded-full font-bold font-display uppercase tracking-wider text-sm hover:bg-brand-black hover:text-white transition-all"
+                className="sm:w-auto px-10 bg-white text-brand-black border border-brand-black/10 py-5 rounded-full font-bold font-display uppercase tracking-wider text-sm hover:bg-brand-black hover:text-white transition-all active:scale-95"
               >
                 Tutup
               </button>

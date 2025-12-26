@@ -231,7 +231,7 @@ const BookingWidget = () => {
               <button
                 onClick={handleTourInquiry}
                 disabled={isLoading}
-                className="bg-brand-red text-white px-8 py-4 rounded-xl font-display font-bold uppercase tracking-widest shadow-lg shadow-brand-red/20 hover:bg-red-700 transition-colors w-full md:w-auto flex items-center justify-center gap-2"
+                className="bg-brand-red text-white px-8 py-4 rounded-xl font-display font-bold uppercase tracking-widest shadow-lg shadow-brand-red/20 hover:bg-red-700 transition-all w-full md:w-auto flex items-center justify-center gap-2 active:scale-95"
               >
                 {isLoading ? "PROCESSING..." : "CONSULT VIA WA"}{" "}
                 <ArrowRight size={18} />
