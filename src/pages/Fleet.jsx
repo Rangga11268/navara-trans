@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { fleetData } from "../data/fleetData";
 import { ArrowUpRight, Filter, Car } from "lucide-react";
-import FleetModal from "../assets/components/FleetModal";
+import FleetModal from "../assets/sections/FleetModal";
 import { motion, AnimatePresence } from "framer-motion";
 import SEO from "../components/SEO";
 

@@ -1,5 +1,5 @@
 import React from "react";
-import TourPackages from "../assets/components/TourPackages";
+import TourPackages from "../assets/sections/TourPackages";
 import { Phone, Briefcase, Users, Layout, Map } from "lucide-react";
 import { openWhatsApp } from "../utils/whatsapp";
 import SEO from "../components/SEO";

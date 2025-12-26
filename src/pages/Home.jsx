@@ -1,12 +1,12 @@
 import React from "react";
-import Hero from "../assets/components/Hero";
-import BookingWidget from "../assets/components/BookingWidget";
-import Destinations from "../assets/components/Destinations";
-import Testimonials from "../assets/components/Testimonials";
-import Fleet from "../assets/components/Fleet";
-import Promo from "../assets/components/Promo";
-import FAQ from "../assets/components/FAQ";
-import TrustedMarquee from "../assets/components/TrustedMarquee";
+import Hero from "../assets/sections/Hero";
+import BookingWidget from "../assets/sections/BookingWidget";
+import Destinations from "../assets/sections/Destinations";
+import Testimonials from "../assets/sections/Testimonials";
+import Fleet from "../assets/sections/Fleet";
+import Promo from "../assets/sections/Promo";
+import FAQ from "../assets/sections/FAQ";
+import TrustedMarquee from "../assets/sections/TrustedMarquee";
 
 const Home = () => {
   return (
