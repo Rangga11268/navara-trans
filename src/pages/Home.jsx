@@ -5,6 +5,7 @@ import Destinations from "../assets/components/Destinations";
 import Testimonials from "../assets/components/Testimonials";
 import Fleet from "../assets/components/Fleet";
 import Promo from "../assets/components/Promo";
+import FAQ from "../assets/components/FAQ";
 
 const Home = () => {
   return (
@@ -15,6 +16,7 @@ const Home = () => {
       <Promo />
       <Fleet />
       <Testimonials />
+      <FAQ />
     </main>
   );
 };
