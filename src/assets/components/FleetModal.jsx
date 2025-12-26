@@ -82,15 +82,16 @@ const FleetModal = ({ isOpen, onClose, fleet }) => {
             <div className="absolute inset-0 bg-gradient-to-t from-brand-black via-brand-black/40 to-transparent" />
 
             {/* Close Button */}
+            {/* Close Button */}
             <button
               onClick={onClose}
-              className="absolute top-4 right-4 w-12 h-12 bg-black/20 backdrop-blur-xl border border-white/10 rounded-full flex items-center justify-center text-white hover:bg-brand-red hover:border-brand-red hover:rotate-90 transition-all duration-300"
+              className="absolute top-6 right-6 z-50 cursor-pointer w-12 h-12 bg-black/40 backdrop-blur-xl border border-white/20 rounded-full flex items-center justify-center text-white hover:bg-brand-red hover:border-brand-red hover:rotate-90 transition-all duration-300 shadow-lg"
             >
               <X size={24} />
             </button>
 
             {/* Title Overlay */}
-            <div className="absolute bottom-0 left-0 right-0 p-8 md:p-10">
+            <div className="absolute bottom-0 left-0 right-0 p-6 md:p-10">
               <div className="flex items-end justify-between flex-wrap gap-4">
                 <div>
                   <h2 className="text-4xl md:text-5xl font-display font-black text-white mb-2 uppercase tracking-tight">

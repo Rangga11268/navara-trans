@@ -122,7 +122,7 @@ const Navbar = () => {
                   <Link
                     to={link.path}
                     onClick={() => setIsMobileMenuOpen(false)}
-                    className="font-display font-black text-5xl text-brand-black hover:text-transparent hover:text-stroke hover:text-stroke-black transition-all duration-300"
+                    className="font-display font-black text-3xl md:text-5xl text-brand-black hover:text-transparent hover:text-stroke hover:text-stroke-black transition-all duration-300"
                   >
                     {link.name}
                   </Link>

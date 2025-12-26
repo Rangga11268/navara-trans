@@ -41,9 +41,9 @@ ${message}
         description="Get in touch with Navara Trans for premium bus charter services in Surabaya and beyond."
       />
 
-      <div className="pt-32 pb-20 bg-brand-gray min-h-screen">
+      <div className="pt-24 md:pt-32 pb-20 bg-brand-gray min-h-screen">
         <div className="container mx-auto px-6 md:px-12">
-          <div className="grid lg:grid-cols-2 gap-16 lg:gap-24">
+          <div className="grid lg:grid-cols-2 gap-12 lg:gap-24">
             {/* Text & Info */}
             <div className="space-y-12">
               <motion.div
@@ -51,11 +51,11 @@ ${message}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8 }}
               >
-                <h1 className="font-display font-black text-6xl md:text-8xl text-brand-black leading-none mb-6">
+                <h1 className="font-display font-black text-5xl md:text-8xl text-brand-black leading-none mb-6">
                   YUK <br />
                   <span className="text-brand-red">NGOBROL.</span>
                 </h1>
-                <p className="text-xl text-brand-black/70 font-medium max-w-md">
+                <p className="text-lg md:text-xl text-brand-black/70 font-medium max-w-md">
                   Siap buat jalan-jalan? Kita siap bantu rencanain tripmu biar
                   makin asik.
                 </p>
@@ -65,7 +65,7 @@ ${message}
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.4, duration: 0.8 }}
-                className="space-y-8"
+                className="space-y-6 md:space-y-8"
               >
                 <div className="group">
                   <a
@@ -126,7 +126,7 @@ ${message}
               initial={{ opacity: 0, x: 50 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: 0.2, duration: 0.8 }}
-              className="bg-white p-8 md:p-12 rounded-[2rem] shadow-xl border border-brand-black/5 h-fit"
+              className="bg-white p-6 md:p-12 rounded-[2rem] shadow-xl border border-brand-black/5 h-fit"
             >
               <h3 className="font-display font-bold text-2xl mb-8">
                 Kirim Pesan

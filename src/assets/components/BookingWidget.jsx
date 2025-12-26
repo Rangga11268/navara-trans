@@ -84,7 +84,7 @@ const BookingWidget = () => {
       <div className="bg-white/80 backdrop-blur-xl rounded-[2.5rem] shadow-xl border border-white/40 p-2 max-w-6xl mx-auto">
         <div className="bg-white rounded-[2rem] p-6 md:p-8 shadow-sm border border-brand-black/5">
           {/* Tabs */}
-          <div className="flex gap-2 mb-8 p-1 bg-brand-gray rounded-xl w-fit">
+          <div className="flex gap-2 mb-8 p-1 bg-brand-gray rounded-xl w-full md:w-fit overflow-x-auto no-scrollbar">
             <button
               onClick={() => setActiveTab("charter")}
               className={`flex items-center gap-2 text-xs font-bold px-6 py-3 rounded-lg transition-all uppercase tracking-wider ${

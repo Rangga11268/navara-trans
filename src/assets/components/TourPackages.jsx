@@ -126,7 +126,7 @@ const TourPackages = () => {
 
   return (
     <section
-      className="py-24 bg-brand-gray relative overflow-hidden"
+      className="py-16 md:py-24 bg-brand-gray relative overflow-hidden"
       id="packages"
     >
       <div className="container mx-auto px-6 relative z-10">

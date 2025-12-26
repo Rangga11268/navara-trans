@@ -82,7 +82,7 @@ const Services = () => {
                     "Halo Navara Trip, saya ingin tanya soal layanan korporat."
                   )
                 }
-                className="bg-brand-black text-white px-8 py-4 rounded-full font-bold font-display uppercase tracking-wider hover:bg-brand-red hover:scale-105 transition-all inline-flex items-center gap-3 shadow-lg shadow-brand-black/20"
+                className="bg-brand-black text-white px-8 py-4 rounded-full font-bold font-display uppercase tracking-wider hover:bg-brand-red hover:scale-105 transition-all w-full md:w-auto flex justify-center items-center gap-3 shadow-lg shadow-brand-black/20"
               >
                 <Phone size={20} />
                 Hubungi Tim Korporat
