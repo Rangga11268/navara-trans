@@ -35,20 +35,8 @@ const Destinations = () => {
       id="destinations"
     >
       {/* Decorative Background */}
-      <div className="absolute top-0 right-0 z-0 opacity-50 pointer-events-none">
-        <img
-          src="/assets/img/Dieng/Vector1.png"
-          alt=""
-          className="w-[300px] md:w-[500px] object-contain"
-        />
-      </div>
-      <div className="absolute bottom-0 left-0 z-0 opacity-50 pointer-events-none">
-        <img
-          src="/assets/img/Dieng/Vector2.png"
-          alt=""
-          className="w-[300px] md:w-[600px] object-contain"
-        />
-      </div>
+      <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-brand-red/5 rounded-full blur-[100px] -mr-40 -mt-40 pointer-events-none"></div>
+      <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-brand-gray rounded-full blur-[100px] -ml-40 -mb-40 pointer-events-none"></div>
 
       <div className="container mx-auto px-6 relative z-10">
         <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-6 border-b border-brand-black/10 pb-12">
