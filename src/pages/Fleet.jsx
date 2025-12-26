@@ -34,37 +34,61 @@ const Fleet = () => {
         description="Explore our premium bus charter fleet. From Luxury Big Buses to comfortable Hiace commuters."
       />
 
-      <div className="pt-24 pb-24 bg-brand-gray min-h-screen">
+      <div className="pt-24 pb-16 md:pb-24 bg-brand-gray min-h-screen">
         <div className="container mx-auto px-6 md:px-12">
-          {/* Header */}
-          <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-8">
-            <div>
-              <h1 className="font-display font-black text-5xl md:text-7xl text-brand-black leading-none mb-4">
-                ARMADA <br /> <span className="text-brand-red">PREMIUM.</span>
-              </h1>
-              <p className="text-brand-black/60 font-medium max-w-lg">
-                Pilih kendaraan yang pas buat perjalananmu itu penting banget.
-                Kita punya banyak pilihan unit premium yang bisa disesuaikan
-                sama kebutuhanmu.
-              </p>
+          {/* Header & Filter */}
+          <div className="flex flex-col xl:flex-row xl:items-end justify-between mb-16 gap-10">
+            <div className="max-w-2xl">
+              <motion.span
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                className="inline-block py-1 px-3 rounded-full bg-brand-black/5 border border-brand-black/10 text-brand-black text-xs font-bold uppercase tracking-widest mb-6"
+              >
+                Our Collection
+              </motion.span>
+              <motion.h1
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.1 }}
+                className="font-display font-black text-5xl md:text-7xl text-brand-black leading-tight mb-6"
+              >
+                ARMADA <br />{" "}
+                <span className="text-brand-primary">PREMIUM.</span>
+              </motion.h1>
+              <motion.p
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.2 }}
+                className="text-brand-black/60 font-medium text-lg leading-relaxed max-w-lg"
+              >
+                Setiap perjalanan punya cerita. Pilih kendaraan terbaik kami
+                untuk menemani setiap kilometer momen berhargamu.
+              </motion.p>
             </div>
 
             {/* Filter */}
-            <div className="flex flex-wrap gap-2">
-              {categories.map((cat) => (
-                <button
-                  key={cat}
-                  onClick={() => setActiveCategory(cat)}
-                  className={`px-5 py-2.5 rounded-full font-bold text-xs uppercase tracking-wider border transition-all duration-300 ${
-                    activeCategory === cat
-                      ? "bg-brand-black text-white border-brand-black"
-                      : "bg-transparent text-brand-black/50 border-brand-black/10 hover:border-brand-black/40 hover:text-brand-black"
-                  }`}
-                >
-                  {cat}
-                </button>
-              ))}
-            </div>
+            <motion.div
+              initial={{ opacity: 0, x: 20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ delay: 0.3 }}
+              className="w-full md:w-auto"
+            >
+              <div className="flex flex-wrap justify-center md:justify-start gap-3 bg-white p-2 rounded-3xl md:rounded-full border border-brand-black/5 shadow-sm w-full md:w-fit">
+                {categories.map((cat) => (
+                  <button
+                    key={cat}
+                    onClick={() => setActiveCategory(cat)}
+                    className={`px-5 py-3 rounded-full font-bold text-xs uppercase tracking-wider transition-all duration-300 flex-grow md:flex-grow-0 ${
+                      activeCategory === cat
+                        ? "bg-brand-black text-white shadow-lg shadow-brand-black/20"
+                        : "bg-transparent text-brand-black/50 hover:bg-brand-gray hover:text-brand-black"
+                    }`}
+                  >
+                    {cat}
+                  </button>
+                ))}
+              </div>
+            </motion.div>
           </div>
 
           {/* Grid */}
@@ -85,18 +109,18 @@ const Fleet = () => {
                   className="group cursor-pointer"
                 >
                   {/* Card */}
-                  <div className="bg-white rounded-[2rem] overflow-hidden border border-brand-black/5 hover:border-brand-black/10 transition-all duration-500 hover:shadow-2xl relative">
+                  <div className="bg-white rounded-[2.5rem] overflow-hidden border border-brand-black/5 hover:border-brand-primary/20 transition-all duration-500 hover:shadow-[0_15px_30px_rgba(0,0,0,0.05)] hover:-translate-y-2 relative h-full flex flex-col">
                     {/* Image Container */}
-                    <div className="relative h-[280px] overflow-hidden bg-gray-100">
+                    <div className="relative h-[320px] overflow-hidden bg-brand-gray/50">
                       <img
                         src={item.image}
                         alt={item.title}
                         className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                       />
-                      <div className="absolute inset-0 bg-black/ opacity-0 group-hover:opacity-20 transition-opacity duration-500" />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
                       {/* Tag */}
-                      <div className="absolute top-4 left-4 bg-white/90 backdrop-blur-md px-3 py-1.5 rounded-full z-10">
+                      <div className="absolute top-6 left-6 bg-white/90 backdrop-blur-md px-4 py-2 rounded-full z-10 shadow-sm border border-white/20">
                         <span className="text-[10px] font-bold uppercase tracking-widest text-brand-black">
                           {item.category}
                         </span>
@@ -104,31 +128,36 @@ const Fleet = () => {
                     </div>
 
                     {/* Content */}
-                    <div className="p-8">
-                      <div className="flex justify-between items-end mb-4">
+                    <div className="p-8 flex-1 flex flex-col">
+                      <div className="flex justify-between items-start mb-4">
                         <div>
-                          <h3 className="font-display font-bold text-2xl text-brand-black mb-1">
+                          <h3 className="font-display font-bold text-2xl text-brand-black mb-2 leading-tight group-hover:text-brand-primary transition-colors">
                             {item.title}
                           </h3>
-                          <div className="flex items-center gap-2 text-brand-black/50 text-sm font-medium">
-                            <Car size={14} />
+                          <div className="flex items-center gap-2 text-brand-black/50 text-sm font-bold uppercase tracking-wide">
+                            <Car size={16} className="text-brand-primary" />
                             <span>{item.capacity}</span>
                           </div>
                         </div>
-                        <div className="w-10 h-10 rounded-full bg-brand-gray flex items-center justify-center group-hover:bg-brand-red group-hover:text-white transition-colors duration-300">
-                          <ArrowUpRight size={20} />
+                        <div className="w-12 h-12 rounded-2xl bg-brand-gray flex items-center justify-center group-hover:bg-brand-primary group-hover:text-white transition-all duration-300 shadow-sm group-hover:rotate-45">
+                          <ArrowUpRight size={22} />
                         </div>
                       </div>
 
-                      <div className="flex flex-wrap gap-2 mt-4 pt-4 border-t border-brand-black/5">
+                      <div className="mt-auto pt-6 border-t border-brand-black/5 flex flex-wrap gap-2">
                         {item.tags.slice(0, 3).map((tag) => (
                           <span
                             key={tag}
-                            className="text-[10px] font-bold uppercase bg-brand-gray text-brand-black/60 px-2 py-1 rounded"
+                            className="text-[10px] font-bold uppercase bg-brand-gray text-brand-black/60 px-3 py-1.5 rounded-lg border border-brand-black/5"
                           >
                             {tag}
                           </span>
                         ))}
+                        {item.tags.length > 3 && (
+                          <span className="text-[10px] font-bold uppercase bg-brand-gray text-brand-black/60 px-3 py-1.5 rounded-lg border border-brand-black/5">
+                            +{item.tags.length - 3}
+                          </span>
+                        )}
                       </div>
                     </div>
                   </div>

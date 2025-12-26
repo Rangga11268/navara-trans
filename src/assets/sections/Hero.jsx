@@ -8,7 +8,7 @@ const Hero = () => {
   const y = useTransform(scrollY, [0, 500], [0, 200]);
 
   return (
-    <section className="relative min-h-screen flex flex-col pt-24 pb-12 overflow-hidden bg-brand-gray">
+    <section className="relative min-h-screen flex flex-col pt-24 pb-8 md:pb-12 overflow-hidden bg-brand-gray">
       {/* Decorative Grid Background */}
       <div className="absolute inset-0 z-0 opacity-40 bg-grid-pattern bg-[length:40px_40px]"></div>
 

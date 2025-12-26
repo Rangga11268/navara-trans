@@ -36,7 +36,7 @@ const TourPackages = () => {
       duration: "3 Hari 2 Malam",
       destination: "Jawa Tengah & Jawa Timur",
       price: "Mulai 2.8jt",
-      image: "/assets/img/ziarahwali5.webp",
+      image: "/assets/img/ziarahwali5.jpg",
       rating: 5.0,
       participants: "Min. 25 pax",
       highlights: [

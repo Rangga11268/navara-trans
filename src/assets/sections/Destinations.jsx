@@ -7,7 +7,7 @@ const Destinations = () => {
       name: "Ziarah Wali 5",
       type: "Religious",
       price: "Call for Price",
-      img: "/assets/img/ziarahwali5.webp",
+      img: "/assets/img/ziarahwali5.jpg",
     },
     {
       name: "Malang & Batu",

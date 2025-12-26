@@ -123,7 +123,7 @@ const Fleet = () => {
 
   return (
     <>
-      <section className="py-24 bg-brand-gray" id="fleet">
+      <section className="py-16 md:py-24 bg-brand-gray" id="fleet">
         <div className="container mx-auto px-6">
           <div className="text-center max-w-3xl mx-auto mb-20">
             <span className="text-brand-primary font-bold tracking-[0.2em] uppercase text-xs bg-brand-primary/10 px-4 py-2 rounded-full border border-brand-primary/20">

@@ -37,7 +37,7 @@ const Services = () => {
         <TourPackages />
 
         {/* Corporate Services Section */}
-        <section className="py-24 bg-brand-gray relative">
+        <section className="py-16 md:py-24 bg-brand-gray relative">
           <div className="container mx-auto px-6">
             <div className="bg-white rounded-[2.5rem] p-8 md:p-16 shadow-xl border border-brand-black/5 text-center relative overflow-hidden group hover:border-brand-black/10 transition-all duration-500">
               <div className="absolute top-0 right-0 w-64 h-64 bg-brand-red/5 rounded-full -mr-16 -mt-16 blur-3xl group-hover:bg-brand-red/10 transition-colors"></div>

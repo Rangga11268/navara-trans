@@ -31,7 +31,7 @@ const About = () => {
       />
       <div className="bg-brand-gray min-h-screen">
         {/* Hero Section */}
-        <section className="relative pt-32 pb-20 overflow-hidden">
+        <section className="relative pt-24 pb-12 md:pt-32 md:pb-20 overflow-hidden">
           <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-brand-primary/5 rounded-full blur-[100px] -mr-32 -mt-32 pointer-events-none" />
 
           <div className="container mx-auto px-6 relative z-10 text-center">
@@ -50,9 +50,9 @@ const About = () => {
               whileInView="visible"
               viewport={{ once: true }}
               variants={fadeInUp}
-              className="font-display font-black text-5xl md:text-7xl text-brand-black mb-8 uppercase tracking-tight leading-none"
+              className="font-display font-black text-4xl md:text-7xl text-brand-black mb-6 md:mb-8 uppercase tracking-tight leading-none"
             >
-              Partner Perjalanan <br />
+              Partner Perjalanan <br className="hidden md:block" />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-primary to-brand-black">
                 Terpercaya Kamu.
               </span>
@@ -63,7 +63,7 @@ const About = () => {
               whileInView="visible"
               viewport={{ once: true }}
               variants={fadeInUp}
-              className="text-brand-black/60 text-lg md:text-xl leading-relaxed max-w-3xl mx-auto font-medium"
+              className="text-brand-black/60 text-lg md:text-xl leading-relaxed max-w-3xl mx-auto font-medium text-justify md:text-center px-2"
             >
               Navara Trans adalah penyedia layanan transportasi pariwisata
               berbasis di Surabaya. Kami berdedikasi untuk memberikan pengalaman
