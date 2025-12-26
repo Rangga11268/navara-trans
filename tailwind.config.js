@@ -9,7 +9,7 @@ export default {
       },
       colors: {
         brand: {
-          red: "#FF2E00", // International Orange / Race Red
+          primary: "#06B6D4", // Luminous Teal / Cyber Blue
           black: "#0A0A0A", // Deepest Black
           gray: "#F4F4F5", // Clean Surface
           white: "#FFFFFF",

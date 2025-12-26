@@ -52,7 +52,7 @@ const Navbar = () => {
               >
                 NAVARA
               </span>
-              <span className="font-sans text-[10px] font-bold tracking-[0.3em] text-brand-red uppercase">
+              <span className="font-sans text-[10px] font-bold tracking-[0.3em] text-brand-primary uppercase">
                 Transport
               </span>
             </div>
@@ -73,7 +73,7 @@ const Navbar = () => {
                 >
                   {link.name}
                 </span>
-                <span className="absolute bottom-0 left-0 w-full h-[1px] bg-brand-red transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></span>
+                <span className="absolute bottom-0 left-0 w-full h-[1px] bg-brand-primary transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></span>
               </Link>
             ))}
 
@@ -81,7 +81,7 @@ const Navbar = () => {
               href="https://wa.me/6281113556799"
               target="_blank"
               rel="noopener noreferrer"
-              className="px-6 py-2.5 bg-brand-black text-white rounded-full font-display text-xs font-bold uppercase tracking-wider hover:bg-brand-red transition-all duration-300 flex items-center gap-2 group active:scale-95"
+              className="px-6 py-2.5 bg-brand-black text-white rounded-full font-display text-xs font-bold uppercase tracking-wider hover:bg-brand-primary transition-all duration-300 flex items-center gap-2 group active:scale-95"
             >
               <span>Pesan Sekarang</span>
               <ArrowUpRight
@@ -136,7 +136,7 @@ const Navbar = () => {
               >
                 <a
                   href="https://wa.me/6281113556799"
-                  className="inline-flex items-center gap-2 border-b-2 border-brand-red pb-1 text-xl font-bold font-display"
+                  className="inline-flex items-center gap-2 border-b-2 border-brand-primary pb-1 text-xl font-bold font-display"
                 >
                   Yuk Ngobrol <ArrowUpRight />
                 </a>
@@ -144,7 +144,7 @@ const Navbar = () => {
             </div>
 
             {/* Background Decoration */}
-            <div className="absolute bottom-0 right-0 w-64 h-64 bg-brand-red/5 rounded-full blur-3xl -mr-20 -mb-20 pointer-events-none" />
+            <div className="absolute bottom-0 right-0 w-64 h-64 bg-brand-primary/5 rounded-full blur-3xl -mr-20 -mb-20 pointer-events-none" />
           </motion.div>
         )}
       </AnimatePresence>

@@ -85,7 +85,7 @@ const FleetModal = ({ isOpen, onClose, fleet }) => {
             {/* Close Button */}
             <button
               onClick={onClose}
-              className="absolute top-6 right-6 z-50 cursor-pointer w-12 h-12 bg-black/40 backdrop-blur-xl border border-white/20 rounded-full flex items-center justify-center text-white hover:bg-brand-red hover:border-brand-red hover:rotate-90 transition-all duration-300 shadow-lg active:scale-90"
+              className="absolute top-6 right-6 z-50 cursor-pointer w-12 h-12 bg-black/40 backdrop-blur-xl border border-white/20 rounded-full flex items-center justify-center text-white hover:bg-brand-primary hover:border-brand-primary hover:rotate-90 transition-all duration-300 shadow-lg active:scale-90"
             >
               <X size={24} />
             </button>
@@ -97,7 +97,7 @@ const FleetModal = ({ isOpen, onClose, fleet }) => {
                   <h2 className="text-4xl md:text-5xl font-display font-black text-white mb-2 uppercase tracking-tight">
                     {fleet.title}
                   </h2>
-                  <p className="text-brand-red font-display font-bold text-xl uppercase tracking-widest">
+                  <p className="text-brand-primary font-display font-bold text-xl uppercase tracking-widest">
                     {fleet.capacity}
                   </p>
                 </div>
@@ -109,7 +109,7 @@ const FleetModal = ({ isOpen, onClose, fleet }) => {
                     <span
                       className={`px-4 py-1.5 rounded-full text-[10px] font-bold uppercase tracking-widest ${
                         fleet.note.includes("June")
-                          ? "bg-brand-red text-white"
+                          ? "bg-brand-primary text-white"
                           : "bg-green-500 text-white"
                       }`}
                     >
@@ -145,9 +145,9 @@ const FleetModal = ({ isOpen, onClose, fleet }) => {
                 {facilities.map((facility, index) => (
                   <div
                     key={index}
-                    className="flex flex-col items-center justify-center p-6 bg-white rounded-2xl border border-brand-black/5 hover:border-brand-red/20 hover:shadow-lg transition-all gap-3 text-center group"
+                    className="flex flex-col items-center justify-center p-6 bg-white rounded-2xl border border-brand-black/5 hover:border-brand-primary/20 hover:shadow-lg transition-all gap-3 text-center group"
                   >
-                    <div className="text-brand-black group-hover:text-brand-red transition-colors">
+                    <div className="text-brand-black group-hover:text-brand-primary transition-colors">
                       {React.cloneElement(facility.icon, { size: 24 })}
                     </div>
                     <span className="text-xs font-bold text-brand-black uppercase tracking-wider">
@@ -160,7 +160,7 @@ const FleetModal = ({ isOpen, onClose, fleet }) => {
 
             {/* Specs */}
             <div className="bg-brand-black p-8 rounded-[2rem] relative overflow-hidden">
-              <div className="absolute top-0 right-0 w-64 h-64 bg-brand-red/10 rounded-full blur-3xl -mr-16 -mt-16"></div>
+              <div className="absolute top-0 right-0 w-64 h-64 bg-brand-primary/10 rounded-full blur-3xl -mr-16 -mt-16"></div>
               <h3 className="text-xl font-display font-black text-white mb-6 uppercase tracking-wide relative z-10">
                 Specifications
               </h3>
@@ -193,7 +193,7 @@ const FleetModal = ({ isOpen, onClose, fleet }) => {
                   <p className="text-white/40 text-xs font-bold uppercase tracking-widest mb-2">
                     Condition
                   </p>
-                  <p className="font-display font-bold text-brand-red text-lg">
+                  <p className="font-display font-bold text-brand-primary text-lg">
                     Prime Condition
                   </p>
                 </div>
@@ -248,7 +248,7 @@ const FleetModal = ({ isOpen, onClose, fleet }) => {
             <div className="flex flex-col sm:flex-row gap-4 pt-4 border-t border-brand-black/5">
               <button
                 onClick={handleBooking}
-                className="flex-1 bg-brand-red text-white py-5 rounded-full font-bold font-display uppercase tracking-wider shadow-xl hover:bg-red-700 hover:scale-[1.02] transition-all flex items-center justify-center gap-3 text-sm active:scale-95"
+                className="flex-1 bg-brand-primary text-white py-5 rounded-full font-bold font-display uppercase tracking-wider shadow-xl hover:bg-cyan-700 hover:scale-[1.02] transition-all flex items-center justify-center gap-3 text-sm active:scale-95"
               >
                 <Phone size={20} />
                 Book via WhatsApp

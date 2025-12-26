@@ -38,7 +38,7 @@ const Testimonials = () => {
   return (
     <section className="py-24 bg-brand-gray overflow-hidden">
       <div className="container mx-auto px-6 mb-12 text-center">
-        <span className="text-brand-red font-bold tracking-widest uppercase text-xs">
+        <span className="text-brand-primary font-bold tracking-widest uppercase text-xs">
           Testimonials
         </span>
         <h2 className="text-3xl md:text-5xl font-display font-black text-brand-black mt-2 uppercase">
@@ -58,7 +58,7 @@ const Testimonials = () => {
               key={index}
               className="w-[300px] md:w-[350px] bg-white p-8 rounded-3xl shadow-sm border border-brand-black/5 flex-shrink-0 hover:border-brand-black/20 transition-all duration-300"
             >
-              <div className="flex gap-1 text-brand-red mb-6">
+              <div className="flex gap-1 text-brand-primary mb-6">
                 {[...Array(5)].map((_, i) => (
                   <Star key={i} size={14} fill="currentColor" />
                 ))}

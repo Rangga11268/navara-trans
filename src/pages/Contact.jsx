@@ -53,7 +53,7 @@ ${message}
               >
                 <h1 className="font-display font-black text-5xl md:text-8xl text-brand-black leading-none mb-6">
                   YUK <br />
-                  <span className="text-brand-red">NGOBROL.</span>
+                  <span className="text-brand-primary">NGOBROL.</span>
                 </h1>
                 <p className="text-lg md:text-xl text-brand-black/70 font-medium max-w-md">
                   Siap buat jalan-jalan? Kita siap bantu rencanain tripmu biar
@@ -77,7 +77,7 @@ ${message}
                       <div className="p-3 bg-brand-gray rounded-full">
                         <Phone className="text-brand-black" size={24} />
                       </div>
-                      <ArrowUpRight className="text-brand-black/30 group-hover:text-brand-red transition-colors" />
+                      <ArrowUpRight className="text-brand-black/30 group-hover:text-brand-primary transition-colors" />
                     </div>
                     <h3 className="font-display font-bold text-xl mb-1">
                       WhatsApp / Call
@@ -107,7 +107,7 @@ ${message}
                       <div className="p-3 bg-brand-gray w-fit rounded-full">
                         <Mail className="text-brand-black" size={24} />
                       </div>
-                      <ArrowUpRight className="text-brand-black/30 group-hover:text-brand-red transition-colors" />
+                      <ArrowUpRight className="text-brand-black/30 group-hover:text-brand-primary transition-colors" />
                     </div>
 
                     <h3 className="font-display font-bold text-lg mb-1">
@@ -144,7 +144,7 @@ ${message}
                       value={formData.name}
                       onChange={handleChange}
                       placeholder="Nama Kamu"
-                      className="w-full bg-brand-gray border-none rounded-xl px-4 py-3 font-medium focus:ring-2 focus:ring-brand-red/20 focus:text-brand-black transition-all"
+                      className="w-full bg-brand-gray border-none rounded-xl px-4 py-3 font-medium focus:ring-2 focus:ring-brand-primary/20 focus:text-brand-black transition-all"
                     />
                   </div>
                   <div className="space-y-2">
@@ -158,7 +158,7 @@ ${message}
                       value={formData.phone}
                       onChange={handleChange}
                       placeholder="081..."
-                      className="w-full bg-brand-gray border-none rounded-xl px-4 py-3 font-medium focus:ring-2 focus:ring-brand-red/20 focus:text-brand-black transition-all"
+                      className="w-full bg-brand-gray border-none rounded-xl px-4 py-3 font-medium focus:ring-2 focus:ring-brand-primary/20 focus:text-brand-black transition-all"
                     />
                   </div>
                 </div>
@@ -173,7 +173,7 @@ ${message}
                     value={formData.subject}
                     onChange={handleChange}
                     placeholder="Tanya harga / Booking"
-                    className="w-full bg-brand-gray border-none rounded-xl px-4 py-3 font-medium focus:ring-2 focus:ring-brand-red/20 focus:text-brand-black transition-all"
+                    className="w-full bg-brand-gray border-none rounded-xl px-4 py-3 font-medium focus:ring-2 focus:ring-brand-primary/20 focus:text-brand-black transition-all"
                   />
                 </div>
 
@@ -188,13 +188,13 @@ ${message}
                     value={formData.message}
                     onChange={handleChange}
                     placeholder="Ceritain rencana trip kamu..."
-                    className="w-full bg-brand-gray border-none rounded-xl px-4 py-3 font-medium focus:ring-2 focus:ring-brand-red/20 focus:text-brand-black transition-all resize-none"
+                    className="w-full bg-brand-gray border-none rounded-xl px-4 py-3 font-medium focus:ring-2 focus:ring-brand-primary/20 focus:text-brand-black transition-all resize-none"
                   ></textarea>
                 </div>
 
                 <button
                   type="submit"
-                  className="w-full py-4 bg-brand-black text-white font-display font-bold uppercase tracking-widest rounded-xl hover:bg-brand-red transition-colors duration-300 shadow-lg shadow-brand-red/20"
+                  className="w-full py-4 bg-brand-black text-white font-display font-bold uppercase tracking-widest rounded-xl hover:bg-brand-primary transition-colors duration-300 shadow-lg shadow-brand-primary/20"
                 >
                   Kirim Pesan
                 </button>

@@ -32,7 +32,7 @@ const Preloader = ({ onComplete }) => {
     >
       {/* Background Effects */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-[-50%] left-[-50%] w-[200%] h-[200%] bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-brand-red/10 via-brand-black/50 to-brand-black animate-slow-spin opacity-40"></div>
+        <div className="absolute top-[-50%] left-[-50%] w-[200%] h-[200%] bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-brand-primary/10 via-brand-black/50 to-brand-black animate-slow-spin opacity-40"></div>
       </div>
 
       <div className="relative z-10 flex flex-col items-center">
@@ -40,7 +40,7 @@ const Preloader = ({ onComplete }) => {
         <div className="overflow-hidden mb-6">
           <h1 className="font-display text-5xl md:text-8xl font-black text-white tracking-tighter animate-fade-in-up">
             NAVARA
-            <span className="text-brand-red">.</span>
+            <span className="text-brand-primary">.</span>
           </h1>
         </div>
 
@@ -54,13 +54,13 @@ const Preloader = ({ onComplete }) => {
         {/* Progress Line */}
         <div className="w-64 h-[2px] bg-white/10 relative overflow-hidden rounded-full">
           <div
-            className="absolute top-0 left-0 h-full bg-brand-red transition-all duration-300 ease-out shadow-[0_0_15px_rgba(255,46,0,0.8)]"
+            className="absolute top-0 left-0 h-full bg-brand-primary transition-all duration-300 ease-out shadow-[0_0_15px_rgba(6,182,212,0.8)]"
             style={{ width: `${progress}%` }}
           ></div>
         </div>
 
         {/* Percentage */}
-        <div className="mt-4 font-display font-bold text-brand-red text-xl">
+        <div className="mt-4 font-display font-bold text-brand-primary text-xl">
           {progress}%
         </div>
       </div>

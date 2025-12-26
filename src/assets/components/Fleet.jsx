@@ -126,11 +126,11 @@ const Fleet = () => {
       <section className="py-24 bg-brand-gray" id="fleet">
         <div className="container mx-auto px-6">
           <div className="text-center max-w-3xl mx-auto mb-20">
-            <span className="text-brand-red font-bold tracking-[0.2em] uppercase text-xs bg-brand-red/10 px-4 py-2 rounded-full border border-brand-red/20">
+            <span className="text-brand-primary font-bold tracking-[0.2em] uppercase text-xs bg-brand-primary/10 px-4 py-2 rounded-full border border-brand-primary/20">
               Navara Collection
             </span>
             <h2 className="text-4xl md:text-6xl font-display font-black text-brand-black mt-6 mb-6 tracking-tight uppercase">
-              Premium <span className="text-brand-red">Fleet</span>
+              Premium <span className="text-brand-primary">Fleet</span>
             </h2>
             <p className="text-brand-black/70 text-lg leading-relaxed max-w-2xl mx-auto">
               The perfect combination of premium Big Bus comfort and Hiace
@@ -153,7 +153,7 @@ const Fleet = () => {
               <div className="absolute inset-0 bg-gradient-to-t from-brand-black/90 via-brand-black/20 to-transparent"></div>
               <div className="absolute bottom-0 left-0 p-10 w-full">
                 <div className="flex items-center gap-3 mb-4">
-                  <div className="w-12 h-12 rounded-full bg-brand-red flex items-center justify-center text-white">
+                  <div className="w-12 h-12 rounded-full bg-brand-primary flex items-center justify-center text-white">
                     <Music size={20} />
                   </div>
                   <span className="text-white/80 font-bold uppercase tracking-widest text-xs">
@@ -233,7 +233,7 @@ const Fleet = () => {
             {/* CTA Card */}
             <div
               onClick={handleCTAClick}
-              className="relative rounded-[2rem] overflow-hidden group shadow-xl bg-brand-red flex flex-col items-center justify-center text-center p-8 cursor-pointer hover:bg-red-700 transition-all"
+              className="relative rounded-[2rem] overflow-hidden group shadow-xl bg-brand-primary flex flex-col items-center justify-center text-center p-8 cursor-pointer hover:bg-cyan-700 transition-all"
             >
               <div className="w-16 h-16 rounded-full bg-white/20 flex items-center justify-center text-white mb-4">
                 <CalendarClock size={32} />
@@ -244,7 +244,7 @@ const Fleet = () => {
               <p className="text-white/80 text-sm mb-6 font-medium">
                 Secure your preferred unit for upcoming holidays.
               </p>
-              <button className="bg-white text-brand-red px-6 py-2 rounded-full font-bold font-display uppercase tracking-wider text-sm hover:bg-brand-gray transition-colors">
+              <button className="bg-white text-brand-primary px-6 py-2 rounded-full font-bold font-display uppercase tracking-wider text-sm hover:bg-brand-gray transition-colors">
                 Contact Us
               </button>
             </div>
@@ -285,7 +285,7 @@ const FleetCard = ({ item, activeCard, setActiveCard, onClick }) => (
         <div
           className={`px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider ${
             item.note.includes("June")
-              ? "bg-brand-red text-white"
+              ? "bg-brand-primary text-white"
               : "bg-green-500 text-white"
           }`}
         >
@@ -298,7 +298,7 @@ const FleetCard = ({ item, activeCard, setActiveCard, onClick }) => (
       <h3 className="text-3xl font-display font-black text-white mb-1 uppercase">
         {item.title}
       </h3>
-      <p className="text-brand-red font-bold text-sm mb-4 uppercase tracking-wider">
+      <p className="text-brand-primary font-bold text-sm mb-4 uppercase tracking-wider">
         {item.capacity}
       </p>
 

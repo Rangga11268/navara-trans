@@ -117,7 +117,7 @@ const BookingWidget = () => {
                     Pick Up
                   </label>
                   <div className="flex items-center gap-3">
-                    <MapPin size={18} className="text-brand-red" />
+                    <MapPin size={18} className="text-brand-primary" />
                     <select
                       className="bg-transparent font-bold text-brand-black w-full outline-none appearance-none text-sm"
                       value={charterData.pickup}
@@ -138,7 +138,7 @@ const BookingWidget = () => {
                     Destination
                   </label>
                   <div className="flex items-center gap-3">
-                    <Map size={18} className="text-brand-red" />
+                    <Map size={18} className="text-brand-primary" />
                     <select
                       className="bg-transparent font-bold text-brand-black w-full outline-none appearance-none text-sm"
                       value={charterData.destination}
@@ -163,7 +163,7 @@ const BookingWidget = () => {
                     Date
                   </label>
                   <div className="flex items-center gap-3">
-                    <Calendar size={18} className="text-brand-red" />
+                    <Calendar size={18} className="text-brand-primary" />
                     <input
                       type="date"
                       className="bg-transparent font-bold text-brand-black w-full outline-none text-sm uppercase"
@@ -180,7 +180,7 @@ const BookingWidget = () => {
                     Unit
                   </label>
                   <div className="flex items-center gap-3">
-                    <Bus size={18} className="text-brand-red" />
+                    <Bus size={18} className="text-brand-primary" />
                     <select
                       className="bg-transparent font-bold text-brand-black w-full outline-none appearance-none text-sm"
                       value={charterData.unit}
@@ -200,7 +200,7 @@ const BookingWidget = () => {
               <button
                 onClick={handleCharterBooking}
                 disabled={isLoading}
-                className="w-full lg:w-auto bg-brand-black hover:bg-brand-red text-white px-8 py-4 rounded-xl font-display font-medium uppercase tracking-widest shadow-lg shadow-brand-black/20 transition-all hover:scale-[1.02] active:scale-95 flex items-center justify-center gap-2 h-full min-w-[180px]"
+                className="w-full lg:w-auto bg-brand-black hover:bg-brand-primary text-white px-8 py-4 rounded-xl font-display font-medium uppercase tracking-widest shadow-lg shadow-brand-black/20 transition-all hover:scale-[1.02] active:scale-95 flex items-center justify-center gap-2 h-full min-w-[180px]"
               >
                 {isLoading ? (
                   <>
@@ -216,7 +216,7 @@ const BookingWidget = () => {
             // Tour Package Form
             <div className="flex flex-col md:flex-row gap-8 items-center justify-between p-6 bg-brand-gray rounded-2xl border border-brand-black/5">
               <div className="flex items-center gap-6">
-                <div className="bg-white p-4 rounded-full text-brand-red shadow-sm">
+                <div className="bg-white p-4 rounded-full text-brand-primary shadow-sm">
                   <Briefcase size={28} />
                 </div>
                 <div>
@@ -231,7 +231,7 @@ const BookingWidget = () => {
               <button
                 onClick={handleTourInquiry}
                 disabled={isLoading}
-                className="bg-brand-red text-white px-8 py-4 rounded-xl font-display font-bold uppercase tracking-widest shadow-lg shadow-brand-red/20 hover:bg-red-700 transition-all w-full md:w-auto flex items-center justify-center gap-2 active:scale-95"
+                className="bg-brand-primary text-white px-8 py-4 rounded-xl font-display font-bold uppercase tracking-widest shadow-lg shadow-brand-primary/20 hover:bg-cyan-700 transition-all w-full md:w-auto flex items-center justify-center gap-2 active:scale-95"
               >
                 {isLoading ? "PROCESSING..." : "CONSULT VIA WA"}{" "}
                 <ArrowRight size={18} />

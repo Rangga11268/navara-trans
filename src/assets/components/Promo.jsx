@@ -5,11 +5,11 @@ const Promo = () => {
   return (
     <section className="py-20 bg-brand-black relative overflow-hidden">
       {/* New Grid Background */}
-      <div className="absolute inset-x-0 top-0 h-64 bg-gradient-to-b from-brand-red/20 to-transparent opacity-20" />
+      <div className="absolute inset-x-0 top-0 h-64 bg-gradient-to-b from-brand-primary/20 to-transparent opacity-20" />
 
       <div className="container mx-auto px-6 md:px-12 flex flex-col md:flex-row items-center gap-16 relative z-10">
         <div className="md:w-1/2">
-          <div className="inline-flex items-center gap-2 text-brand-red font-bold mb-6 bg-brand-red/10 px-4 py-2 rounded-full text-xs uppercase tracking-widest border border-brand-red/20">
+          <div className="inline-flex items-center gap-2 text-brand-primary font-bold mb-6 bg-brand-primary/10 px-4 py-2 rounded-full text-xs uppercase tracking-widest border border-brand-primary/20">
             <Briefcase size={16} /> Navara Corporate
           </div>
           <h2 className="text-4xl md:text-6xl font-display font-black text-white mb-6 uppercase">

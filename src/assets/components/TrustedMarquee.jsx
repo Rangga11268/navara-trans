@@ -10,15 +10,15 @@ const TrustedMarquee = () => {
             <span className="text-white/50 font-display font-bold uppercase tracking-[0.2em] text-sm whitespace-nowrap">
               Trusted by Thousands
             </span>
-            <Star size={12} className="text-brand-red fill-brand-red" />
+            <Star size={12} className="text-brand-primary fill-brand-primary" />
             <span className="text-white/50 font-display font-bold uppercase tracking-[0.2em] text-sm whitespace-nowrap">
               Premium Service
             </span>
-            <Star size={12} className="text-brand-red fill-brand-red" />
+            <Star size={12} className="text-brand-primary fill-brand-primary" />
             <span className="text-white/50 font-display font-bold uppercase tracking-[0.2em] text-sm whitespace-nowrap">
               Best in Class
             </span>
-            <Star size={12} className="text-brand-red fill-brand-red" />
+            <Star size={12} className="text-brand-primary fill-brand-primary" />
           </div>
         ))}
       </div>

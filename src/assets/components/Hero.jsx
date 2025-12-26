@@ -49,7 +49,7 @@ const Hero = () => {
             transition={{ duration: 0.8, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
             className="overflow-hidden"
           >
-            <h1 className="font-display font-black text-[12vw] leading-[0.85] tracking-tighter text-brand-red uppercase">
+            <h1 className="font-display font-black text-[12vw] leading-[0.85] tracking-tighter text-brand-primary uppercase">
               LIMITS<span className="text-brand-black">.</span>
             </h1>
           </motion.div>
@@ -75,7 +75,7 @@ const Hero = () => {
                 className="absolute bottom-6 left-6 bg-white/10 backdrop-blur-md border border-white/20 p-4 rounded-xl"
               >
                 <div className="flex items-center gap-3 text-white">
-                  <div className="p-2 bg-brand-red rounded-full">
+                  <div className="p-2 bg-brand-primary rounded-full">
                     <Play size={16} fill="white" />
                   </div>
                   <span className="font-display font-bold text-sm tracking-wider">
@@ -108,7 +108,7 @@ const Hero = () => {
             >
               <Link
                 to="/fleet"
-                className="px-8 py-4 bg-brand-black text-white font-display font-bold text-sm uppercase tracking-widest hover:bg-brand-red transition-all duration-300 rounded-full flex items-center gap-4 group active:scale-95"
+                className="px-8 py-4 bg-brand-black text-white font-display font-bold text-sm uppercase tracking-widest hover:bg-brand-primary transition-all duration-300 rounded-full flex items-center gap-4 group active:scale-95"
               >
                 Explore Fleet
                 <ArrowRight className="group-hover:translate-x-1 transition-transform" />

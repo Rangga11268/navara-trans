@@ -35,17 +35,17 @@ const Destinations = () => {
       id="destinations"
     >
       {/* Decorative Background */}
-      <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-brand-red/5 rounded-full blur-[100px] -mr-40 -mt-40 pointer-events-none"></div>
+      <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-brand-primary/5 rounded-full blur-[100px] -mr-40 -mt-40 pointer-events-none"></div>
       <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-brand-gray rounded-full blur-[100px] -ml-40 -mb-40 pointer-events-none"></div>
 
       <div className="container mx-auto px-6 relative z-10">
         <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-6 border-b border-brand-black/10 pb-12">
           <div>
-            <span className="text-brand-red font-bold tracking-[0.2em] uppercase text-xs mb-4 block">
+            <span className="text-brand-primary font-bold tracking-[0.2em] uppercase text-xs mb-4 block">
               Start Surabaya
             </span>
             <h2 className="text-4xl md:text-6xl font-display font-black text-brand-black mb-4 uppercase tracking-tight">
-              Trip <span className="text-brand-red">Populer</span>
+              Trip <span className="text-brand-primary">Populer</span>
             </h2>
             <p className="text-brand-black/60 text-lg max-w-xl leading-relaxed">
               Ide liburan pilihan yang lagi hits di kalangan customer kami bulan
@@ -54,7 +54,7 @@ const Destinations = () => {
           </div>
           <a
             href="/services"
-            className="group flex items-center gap-3 bg-brand-black text-white px-8 py-4 rounded-full font-display font-bold uppercase tracking-wider text-sm hover:bg-brand-red transition-all duration-300 shadow-xl"
+            className="group flex items-center gap-3 bg-brand-black text-white px-8 py-4 rounded-full font-display font-bold uppercase tracking-wider text-sm hover:bg-brand-primary transition-all duration-300 shadow-xl"
           >
             Lihat Semua Katalog
             <ArrowRight
@@ -85,7 +85,7 @@ const Destinations = () => {
               <div className="absolute inset-0 bg-gradient-to-t from-brand-black/90 via-brand-black/20 to-transparent opacity-80 group-hover:opacity-100 transition-opacity"></div>
 
               <div className="absolute bottom-0 left-0 w-full p-8">
-                <h3 className="text-2xl font-display font-black text-white mb-2 uppercase leading-none group-hover:text-brand-red transition-colors">
+                <h3 className="text-2xl font-display font-black text-white mb-2 uppercase leading-none group-hover:text-brand-primary transition-colors">
                   {dest.name}
                 </h3>
                 <div className="flex justify-between items-end border-t border-white/20 pt-4">
@@ -97,7 +97,7 @@ const Destinations = () => {
                       {dest.price}
                     </span>
                   </div>
-                  <div className="w-10 h-10 rounded-full bg-white text-brand-black flex items-center justify-center group-hover:bg-brand-red group-hover:text-white transition-all duration-300 transform group-hover:-rotate-45">
+                  <div className="w-10 h-10 rounded-full bg-white text-brand-black flex items-center justify-center group-hover:bg-brand-primary group-hover:text-white transition-all duration-300 transform group-hover:-rotate-45">
                     <ArrowRight size={20} />
                   </div>
                 </div>

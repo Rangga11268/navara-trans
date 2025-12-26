@@ -56,19 +56,19 @@
   }
 
   ::-webkit-scrollbar-thumb:hover {
-    @apply bg-brand-red;
+    @apply bg-brand-primary;
   }
 
   /* Custom Selection */
   ::selection {
-    @apply bg-brand-red text-white;
+    @apply bg-brand-primary text-white;
   }
 }
 
 @layer components {
   .btn-primary {
     @apply px-8 py-4 bg-brand-black text-white font-display font-medium text-sm uppercase tracking-wider 
-    hover:bg-brand-red transition-all duration-300 rounded-full flex items-center justify-center gap-2 active:scale-95;
+    hover:bg-brand-primary transition-all duration-300 rounded-full flex items-center justify-center gap-2 active:scale-95;
   }
 
   .glass-nav {
@@ -92,8 +92,8 @@
     color: transparent;
   }
 
-  .text-stroke-red {
-    -webkit-text-stroke: 1px #ff2e00;
+  .text-stroke-primary {
+    -webkit-text-stroke: 1px #06b6d4;
     color: transparent;
   }
 

@@ -38,19 +38,19 @@ const FAQ = () => {
       {/* Background Decoration */}
       <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
         <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-brand-gray rounded-full blur-[120px] -mr-64 -mt-64"></div>
-        <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-brand-red/5 rounded-full blur-[120px] -ml-64 -mb-64"></div>
+        <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-brand-primary/5 rounded-full blur-[120px] -ml-64 -mb-64"></div>
       </div>
 
       <div className="container mx-auto px-6 relative z-10">
         <div className="grid md:grid-cols-12 gap-12 items-start">
           {/* Header Section */}
           <div className="md:col-span-4">
-            <div className="inline-flex items-center gap-2 text-brand-red font-bold mb-6 bg-brand-red/10 px-4 py-2 rounded-full text-xs uppercase tracking-widest border border-brand-red/20">
+            <div className="inline-flex items-center gap-2 text-brand-primary font-bold mb-6 bg-brand-primary/10 px-4 py-2 rounded-full text-xs uppercase tracking-widest border border-brand-primary/20">
               <HelpCircle size={16} /> FAQ
             </div>
             <h2 className="text-4xl md:text-5xl font-display font-black text-brand-black mb-6 uppercase leading-tight">
               Paling Sering <br />{" "}
-              <span className="text-brand-red">Ditanyakan.</span>
+              <span className="text-brand-primary">Ditanyakan.</span>
             </h2>
             <p className="text-brand-black/60 text-lg mb-8 leading-relaxed">
               Masih bingung? Cek pertanyaan umum di sini atau langsung chat
@@ -60,7 +60,7 @@ const FAQ = () => {
               href="https://wa.me/6281113556799"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 border-b-2 border-brand-red pb-1 text-xl font-bold font-display hover:text-brand-red transition-colors"
+              className="inline-flex items-center gap-2 border-b-2 border-brand-primary pb-1 text-xl font-bold font-display hover:text-brand-primary transition-colors"
             >
               Hubungi Kami via WA
             </a>
@@ -73,7 +73,7 @@ const FAQ = () => {
                 key={index}
                 className={`bg-brand-gray border transition-all duration-300 rounded-2xl overflow-hidden ${
                   activeIndex === index
-                    ? "border-brand-red/20 shadow-lg bg-white"
+                    ? "border-brand-primary/20 shadow-lg bg-white"
                     : "border-transparent hover:border-brand-black/10"
                 }`}
               >
@@ -86,7 +86,7 @@ const FAQ = () => {
                   <span
                     className={`font-display font-bold text-lg uppercase tracking-wide transition-colors ${
                       activeIndex === index
-                        ? "text-brand-red"
+                        ? "text-brand-primary"
                         : "text-brand-black"
                     }`}
                   >
@@ -95,7 +95,7 @@ const FAQ = () => {
                   <div
                     className={`w-8 h-8 rounded-full flex items-center justify-center transition-all duration-300 ${
                       activeIndex === index
-                        ? "bg-brand-red text-white rotate-180"
+                        ? "bg-brand-primary text-white rotate-180"
                         : "bg-brand-black/5 text-brand-black"
                     }`}
                   >

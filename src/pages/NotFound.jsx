@@ -12,7 +12,7 @@ const NotFound = () => {
       />
       <div className="min-h-screen bg-brand-gray flex items-center justify-center p-6 relative overflow-hidden">
         {/* Decorative Background */}
-        <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-brand-red/5 rounded-full blur-[100px] -mr-40 -mt-40 pointer-events-none"></div>
+        <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-brand-primary/5 rounded-full blur-[100px] -mr-40 -mt-40 pointer-events-none"></div>
         <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-brand-black/5 rounded-full blur-[100px] -ml-40 -mb-40 pointer-events-none"></div>
 
         <div className="text-center relative z-10">
@@ -29,7 +29,7 @@ const NotFound = () => {
             </p>
             <Link
               to="/"
-              className="inline-flex items-center gap-3 bg-brand-black text-white px-8 py-4 rounded-full font-display font-bold uppercase tracking-wider hover:bg-brand-red transition-all duration-300 shadow-xl"
+              className="inline-flex items-center gap-3 bg-brand-black text-white px-8 py-4 rounded-full font-display font-bold uppercase tracking-wider hover:bg-brand-primary transition-all duration-300 shadow-xl"
             >
               <Home size={18} />
               Balik ke Beranda
