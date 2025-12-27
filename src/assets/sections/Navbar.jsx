@@ -41,6 +41,7 @@ const Navbar = () => {
             <button
               className="p-2 text-brand-black hover:bg-black/5 rounded-full transition-colors"
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              aria-label="Toggle mobile menu"
             >
               {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
             </button>

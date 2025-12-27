@@ -113,12 +113,16 @@ const BookingWidget = () => {
               {/* Pick-up & Destination */}
               <div className="flex flex-col md:flex-row gap-4 w-full lg:w-auto flex-1">
                 <div className="bg-brand-gray border border-transparent focus-within:border-brand-black/10 focus-within:bg-white rounded-xl px-4 py-3 flex-1 transition-all group w-full">
-                  <label className="text-[10px] uppercase font-bold text-brand-black/40 mb-1 tracking-wider block">
+                  <label
+                    htmlFor="pickup-select"
+                    className="text-[10px] uppercase font-bold text-brand-black/70 mb-1 tracking-wider block"
+                  >
                     Pick Up
                   </label>
                   <div className="flex items-center gap-3">
                     <MapPin size={18} className="text-brand-primary" />
                     <select
+                      id="pickup-select"
                       className="bg-transparent font-bold text-brand-black w-full outline-none appearance-none text-sm"
                       value={charterData.pickup}
                       onChange={(e) =>
@@ -134,12 +138,16 @@ const BookingWidget = () => {
                 </div>
 
                 <div className="bg-brand-gray border border-transparent focus-within:border-brand-black/10 focus-within:bg-white rounded-xl px-4 py-3 flex-1 transition-all group w-full">
-                  <label className="text-[10px] uppercase font-bold text-brand-black/40 mb-1 tracking-wider block">
+                  <label
+                    htmlFor="destination-select"
+                    className="text-[10px] uppercase font-bold text-brand-black/70 mb-1 tracking-wider block"
+                  >
                     Destination
                   </label>
                   <div className="flex items-center gap-3">
                     <Map size={18} className="text-brand-primary" />
                     <select
+                      id="destination-select"
                       className="bg-transparent font-bold text-brand-black w-full outline-none appearance-none text-sm"
                       value={charterData.destination}
                       onChange={(e) =>
@@ -159,12 +167,16 @@ const BookingWidget = () => {
               {/* Date & Bus Type */}
               <div className="flex flex-col md:flex-row gap-4 w-full lg:w-auto lg:basis-1/3">
                 <div className="bg-brand-gray border border-transparent focus-within:border-brand-black/10 focus-within:bg-white rounded-xl px-4 py-3 flex-1 transition-all group">
-                  <label className="text-[10px] uppercase font-bold text-brand-black/40 mb-1 tracking-wider block">
+                  <label
+                    htmlFor="date-input"
+                    className="text-[10px] uppercase font-bold text-brand-black/70 mb-1 tracking-wider block"
+                  >
                     Date
                   </label>
                   <div className="flex items-center gap-3">
                     <Calendar size={18} className="text-brand-primary" />
                     <input
+                      id="date-input"
                       type="date"
                       className="bg-transparent font-bold text-brand-black w-full outline-none text-sm uppercase"
                       value={charterData.date}
@@ -176,12 +188,16 @@ const BookingWidget = () => {
                   </div>
                 </div>
                 <div className="bg-brand-gray border border-transparent focus-within:border-brand-black/10 focus-within:bg-white rounded-xl px-4 py-3 flex-1 transition-all group">
-                  <label className="text-[10px] uppercase font-bold text-brand-black/40 mb-1 tracking-wider block">
+                  <label
+                    htmlFor="unit-select"
+                    className="text-[10px] uppercase font-bold text-brand-black/70 mb-1 tracking-wider block"
+                  >
                     Unit
                   </label>
                   <div className="flex items-center gap-3">
                     <Bus size={18} className="text-brand-primary" />
                     <select
+                      id="unit-select"
                       className="bg-transparent font-bold text-brand-black w-full outline-none appearance-none text-sm"
                       value={charterData.unit}
                       onChange={(e) =>

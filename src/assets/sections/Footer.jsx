@@ -44,7 +44,7 @@ const Footer = () => {
                 </span>
               </div>
             </div>
-            <p className="text-white/50 leading-relaxed pr-4 text-sm font-medium max-w-sm">
+            <p className="text-white/70 leading-relaxed pr-4 text-sm font-medium max-w-sm">
               Your trusted tourism transport partner in East Java. Our central
               garage & office is strategically located in Surabaya to serve the
               greater region.

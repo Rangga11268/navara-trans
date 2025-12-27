@@ -68,6 +68,9 @@ const Hero = () => {
                 src="/assets/img/hero2.jpg"
                 alt="Luxury Travel"
                 className="w-full h-full object-cover"
+                fetchPriority="high"
+                width="800"
+                height="600"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
               <motion.div
