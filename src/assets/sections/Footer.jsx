@@ -7,6 +7,7 @@ import {
   MapPin,
   Smartphone,
   ArrowUpRight,
+  Terminal,
 } from "lucide-react";
 import { Link } from "react-router-dom";
 
@@ -226,8 +227,28 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-white/30 font-bold uppercase tracking-widest text-center md:text-left">
-          <p>&copy; 2025 PT Sasmito Navara Trip. All rights reserved.</p>
+        <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-6 text-xs text-white/30 font-bold uppercase tracking-widest text-center md:text-left">
+          <div className="flex flex-col md:flex-row items-center gap-4 md:gap-8">
+            <p>&copy; 2025 PT Sasmito Navara Trip. All rights reserved.</p>
+            <a
+              href="https://github.com/Rangga11268?tab=overview&from=2025-12-01&to=2025-12-31"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group flex items-center gap-3 px-4 py-2 bg-white/5 border border-white/10 rounded-full hover:bg-brand-primary/10 hover:border-brand-primary/30 transition-all duration-500 backdrop-blur-sm"
+            >
+              <Terminal
+                size={12}
+                className="text-brand-primary transition-transform group-hover:rotate-12"
+              />
+              <span className="text-[10px] text-white/50 group-hover:text-white transition-colors">
+                Digitally Crafted by{" "}
+                <span className="text-brand-primary font-black">
+                  Darell Rangga
+                </span>
+              </span>
+              <div className="w-1 h-1 rounded-full bg-brand-primary/50 group-hover:animate-ping" />
+            </a>
+          </div>
           <div className="flex gap-8">
             <Link to="/about" className="hover:text-white transition-colors">
               Privacy
