@@ -7,19 +7,19 @@ const Destinations = () => {
       name: "Ziarah Wali 5",
       type: "Religious",
       price: "Call for Price",
-      img: "/assets/img/ziarahwali5.jpg",
+      img: "/assets/img/ziarahwali5.webp",
     },
     {
       name: "Malang & Batu",
       type: "City Tour",
       price: "Best Deal",
-      img: "/assets/img/malangbatu.jpg",
+      img: "/assets/img/malangbatu.webp",
     },
     {
       name: "Mount Bromo",
       type: "Adventure",
       price: "Popular",
-      img: "/assets/img/BromoWisata.jpg",
+      img: "/assets/img/BromoWisata.webp",
     },
     {
       name: "Bali Overland",

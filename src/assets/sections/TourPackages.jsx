@@ -36,7 +36,7 @@ const TourPackages = () => {
       duration: "3 Hari 2 Malam",
       destination: "Jawa Tengah & Jawa Timur",
       price: "Mulai 2.8jt",
-      image: "/assets/img/ziarahwali5.jpg",
+      image: "/assets/img/ziarahwali5.webp",
       rating: 5.0,
       participants: "Min. 25 pax",
       highlights: [
@@ -53,7 +53,7 @@ const TourPackages = () => {
       duration: "2 Hari 1 Malam",
       destination: "Gunung Bromo",
       price: "Mulai 1.5jt",
-      image: "/assets/img/BromoWisata.jpg",
+      image: "/assets/img/BromoWisata.webp",
       rating: 4.8,
       participants: "Min. 15 pax",
       highlights: [
@@ -70,7 +70,7 @@ const TourPackages = () => {
       duration: "3 Hari 2 Malam",
       destination: "Yogyakarta",
       price: "Mulai 2.2jt",
-      image: "/assets/img/jogja.jpg",
+      image: "/assets/img/jogja.webp",
       rating: 4.7,
       participants: "Min. 20 pax",
       highlights: [
@@ -87,7 +87,7 @@ const TourPackages = () => {
       duration: "3 Hari 2 Malam",
       destination: "Malang & Batu",
       price: "Mulai 2.5jt",
-      image: "/assets/img/malangbatu.jpg",
+      image: "/assets/img/malangbatu.webp",
       rating: 4.8,
       participants: "Min. 20 pax",
       highlights: [

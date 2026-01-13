@@ -146,7 +146,7 @@ const About = () => {
               >
                 <div className="relative rounded-[3rem] overflow-hidden aspect-[4/5] shadow-2xl border border-white/10">
                   <img
-                    src="/assets/img/hero2.jpg"
+                    src="/assets/img/hero2.webp"
                     alt="Navara Team"
                     className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700 scale-105 hover:scale-100"
                   />

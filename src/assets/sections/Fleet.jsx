@@ -61,7 +61,7 @@ const fleetData = [
     title: "Agung",
     category: "Royal Series",
     capacity: "50 Seats",
-    image: "/assets/img/Bus 3.jpg",
+    image: "/assets/img/Bus 3.webp",
     tags: ["Captain Seat", "Private", "Luxury"],
     note: "Ready Now",
     year: "2025",
@@ -89,7 +89,7 @@ const fleetData = [
     title: "Hiace Commuter",
     category: "Minibus Series",
     capacity: "14 Seats",
-    image: "/assets/img/hiace.jpg",
+    image: "/assets/img/hiace.webp",
     tags: ["Compact", "City Tour", "Family"],
     note: "Ready Now",
     year: "2023-2024",
@@ -99,7 +99,7 @@ const fleetData = [
     title: "Hiace Premio",
     category: "Luxury Minibus",
     capacity: "12 Seats",
-    image: "/assets/img/hiace.jpg",
+    image: "/assets/img/hiace.webp",
     tags: ["Luxury", "Spacious", "VIP"],
     note: "Ready Now",
     year: "2023-2024",
@@ -193,7 +193,7 @@ const Fleet = () => {
             {/* Interior Card */}
             <div className="relative rounded-[2rem] overflow-hidden group shadow-xl ring-1 ring-brand-black/5 bg-brand-black">
               <img
-                src="/assets/img/Seat.jpg"
+                src="/assets/img/Seat.webp"
                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-70 group-hover:opacity-50"
                 alt="Interior Comfort"
               />

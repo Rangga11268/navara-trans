@@ -34,7 +34,7 @@ const Services = () => {
       <div className="pt-24 min-h-screen bg-brand-gray">
         {/* Hero for Services */}
         <section className="bg-brand-black py-20 text-center relative overflow-hidden">
-          <div className="absolute inset-0 bg-[url('/assets/img/hero2.jpg')] bg-cover bg-center opacity-40"></div>
+          <div className="absolute inset-0 bg-[url('/assets/img/hero2.webp')] bg-cover bg-center opacity-40"></div>
           <div className="absolute inset-0 bg-gradient-to-t from-brand-black via-brand-black/80 to-transparent"></div>
 
           <div className="container mx-auto px-6 relative z-10">

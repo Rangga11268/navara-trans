@@ -66,7 +66,7 @@ const Promo = () => {
           <div className="relative w-full max-w-md">
             <div className="absolute -inset-4 bg-brand-red/20 rounded-[2.5rem] blur-3xl -z-10 animate-pulse"></div>
             <img
-              src="/assets/img/Reservasi.jpg"
+              src="/assets/img/Reservasi.webp"
               alt="Reservasi Navara Trip"
               className="w-full h-auto rounded-[2rem] shadow-2xl rotate-3 hover:rotate-0 transition-all duration-500 border border-white/10 grayscale hover:grayscale-0"
             />

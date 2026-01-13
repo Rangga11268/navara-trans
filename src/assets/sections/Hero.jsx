@@ -65,7 +65,7 @@ const Hero = () => {
               className="relative rounded-2xl overflow-hidden aspect-[4/3] shadow-2xl"
             >
               <img
-                src="/assets/img/hero2.jpg"
+                src="/assets/img/hero2.webp"
                 alt="Luxury Travel"
                 className="w-full h-full object-cover"
                 fetchPriority="high"
