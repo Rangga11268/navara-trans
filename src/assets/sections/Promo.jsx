@@ -68,6 +68,7 @@ const Promo = () => {
             <img
               src="/assets/img/Reservasi.webp"
               alt="Reservasi Navara Trip"
+              loading="lazy"
               className="w-full h-auto rounded-[2rem] shadow-2xl rotate-3 hover:rotate-0 transition-all duration-500 border border-white/10 grayscale hover:grayscale-0"
             />
           </div>
