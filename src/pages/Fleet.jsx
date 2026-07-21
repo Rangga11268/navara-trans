@@ -92,18 +92,14 @@ const Fleet = () => {
           </div>
 
           {/* Grid */}
-          <motion.div
-            layout
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
-          >
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <AnimatePresence mode="popLayout">
               {filteredFleet.map((item) => (
                 <motion.div
-                  layout
                   initial={{ opacity: 0, scale: 0.9 }}
                   animate={{ opacity: 1, scale: 1 }}
                   exit={{ opacity: 0, scale: 0.9 }}
-                  transition={{ duration: 0.4 }}
+                  transition={{ duration: 0.3 }}
                   key={item.id}
                   onClick={() => handleFleetClick(item)}
                   className="group cursor-pointer"
@@ -164,7 +160,7 @@ const Fleet = () => {
                 </motion.div>
               ))}
             </AnimatePresence>
-          </motion.div>
+          </div>
         </div>
 
         <FleetModal

@@ -107,7 +107,6 @@ const fleetData = [
 ];
 
 const Fleet = () => {
-  const [activeCard, setActiveCard] = useState(null);
   const [selectedFleet, setSelectedFleet] = useState(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
@@ -145,10 +144,11 @@ const Fleet = () => {
               <video
                 src="/assets/video/Dieng.mp4"
                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-80 group-hover:opacity-60"
-                autoPlay
                 muted
                 loop
                 playsInline
+                preload="none"
+                poster="/assets/img/Dieng/diengBus.webp"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-brand-black/90 via-brand-black/20 to-transparent"></div>
               <div className="absolute bottom-0 left-0 p-10 w-full">
@@ -173,20 +173,14 @@ const Fleet = () => {
             {/* Fleet Cards */}
             <FleetCard
               item={fleetData[0]}
-              activeCard={activeCard}
-              setActiveCard={setActiveCard}
               onClick={() => handleFleetClick(fleetData[0])}
             />
             <FleetCard
               item={fleetData[1]}
-              activeCard={activeCard}
-              setActiveCard={setActiveCard}
               onClick={() => handleFleetClick(fleetData[1])}
             />
             <FleetCard
               item={fleetData[2]}
-              activeCard={activeCard}
-              setActiveCard={setActiveCard}
               onClick={() => handleFleetClick(fleetData[2])}
             />
 
@@ -213,20 +207,14 @@ const Fleet = () => {
 
             <FleetCard
               item={fleetData[3]}
-              activeCard={activeCard}
-              setActiveCard={setActiveCard}
               onClick={() => handleFleetClick(fleetData[3])}
             />
             <FleetCard
               item={fleetData[4]}
-              activeCard={activeCard}
-              setActiveCard={setActiveCard}
               onClick={() => handleFleetClick(fleetData[4])}
             />
             <FleetCard
               item={fleetData[5]}
-              activeCard={activeCard}
-              setActiveCard={setActiveCard}
               onClick={() => handleFleetClick(fleetData[5])}
             />
 
@@ -262,16 +250,15 @@ const Fleet = () => {
   );
 };
 
-const FleetCard = ({ item, activeCard, setActiveCard, onClick }) => (
+const FleetCard = ({ item, onClick }) => (
   <div
     className="relative rounded-[2rem] overflow-hidden group cursor-pointer shadow-xl ring-1 ring-brand-black/5 transition-all duration-500 hover:-translate-y-2 bg-brand-black"
-    onMouseEnter={() => setActiveCard(item.id)}
-    onMouseLeave={() => setActiveCard(null)}
     onClick={onClick}
   >
     <img
       src={item.image}
       loading="lazy"
+      decoding="async"
       className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-60 group-hover:opacity-40"
       alt={item.title}
     />
@@ -282,13 +269,7 @@ const FleetCard = ({ item, activeCard, setActiveCard, onClick }) => (
         {item.category}
       </div>
       {item.note && (
-        <div
-          className={`px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider ${
-            item.note.includes("June")
-              ? "bg-brand-primary text-white"
-              : "bg-green-500 text-white"
-          }`}
-        >
+        <div className="px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider bg-green-500 text-white">
           {item.note}
         </div>
       )}
@@ -313,13 +294,7 @@ const FleetCard = ({ item, activeCard, setActiveCard, onClick }) => (
         ))}
       </div>
 
-      <div
-        className={`flex items-center gap-2 text-white font-bold text-sm uppercase tracking-wider transition-all duration-300 ${
-          activeCard === item.id
-            ? "translate-x-0 opacity-100"
-            : "-translate-x-4 opacity-0"
-        }`}
-      >
+      <div className="flex items-center gap-2 text-white font-bold text-sm uppercase tracking-wider transition-all duration-300 translate-x-0 opacity-0 group-hover:translate-x-0 group-hover:opacity-100">
         View Details <ArrowRight size={16} />
       </div>
     </div>

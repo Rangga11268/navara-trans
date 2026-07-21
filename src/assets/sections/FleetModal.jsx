@@ -77,7 +77,7 @@ const FleetModal = ({ isOpen, onClose, fleet }) => {
             <img
               src={fleet.image}
               alt={fleet.title}
-              className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700"
+              className="w-full h-full object-cover"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-brand-black via-brand-black/40 to-transparent" />
 
@@ -235,6 +235,8 @@ const FleetModal = ({ isOpen, onClose, fleet }) => {
                       <img
                         src={img}
                         alt={`${fleet.title} ${idx + 1}`}
+                        loading="lazy"
+                        decoding="async"
                         className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                       />
                       <div className="absolute inset-0 bg-brand-black/0 group-hover:bg-brand-black/20 transition-colors" />
