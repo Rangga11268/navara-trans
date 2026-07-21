@@ -62,7 +62,7 @@ const FleetModal = ({ isOpen, onClose, fleet }) => {
     <>
       {/* Backdrop */}
       <div
-        className="fixed inset-0 bg-brand-black/90 backdrop-blur-md z-[100] animate-fade-in"
+        className="fixed inset-0 bg-brand-black/90 z-[100] animate-fade-in"
         onClick={onClose}
       />
 
@@ -85,7 +85,7 @@ const FleetModal = ({ isOpen, onClose, fleet }) => {
             {/* Close Button */}
             <button
               onClick={onClose}
-              className="absolute top-6 right-6 z-50 cursor-pointer w-12 h-12 bg-black/40 backdrop-blur-xl border border-white/20 rounded-full flex items-center justify-center text-white hover:bg-brand-primary hover:border-brand-primary hover:rotate-90 transition-all duration-300 shadow-lg active:scale-90"
+              className="absolute top-6 right-6 z-50 cursor-pointer w-12 h-12 bg-black/40 border border-white/20 rounded-full flex items-center justify-center text-white hover:bg-brand-primary hover:border-brand-primary transition-colors duration-300 shadow-lg active:scale-90"
             >
               <X size={24} />
             </button>
@@ -145,7 +145,7 @@ const FleetModal = ({ isOpen, onClose, fleet }) => {
                 {facilities.map((facility, index) => (
                   <div
                     key={index}
-                    className="flex flex-col items-center justify-center p-6 bg-white rounded-2xl border border-brand-black/5 hover:border-brand-primary/20 hover:shadow-lg transition-all gap-3 text-center group"
+                    className="flex flex-col items-center justify-center p-6 bg-white rounded-2xl border border-brand-black/5 hover:border-brand-primary/20 gap-3 text-center group"
                   >
                     <div className="text-brand-black group-hover:text-brand-primary transition-colors">
                       {React.cloneElement(facility.icon, { size: 24 })}
@@ -230,7 +230,7 @@ const FleetModal = ({ isOpen, onClose, fleet }) => {
                   {fleet.gallery.map((img, idx) => (
                     <div
                       key={idx}
-                      className="rounded-2xl overflow-hidden h-40 md:h-56 group relative shadow-md hover:shadow-xl transition-all cursor-pointer"
+                      className="rounded-2xl overflow-hidden h-40 md:h-56 group relative shadow-md cursor-pointer"
                     >
                       <img
                         src={img}
@@ -250,14 +250,14 @@ const FleetModal = ({ isOpen, onClose, fleet }) => {
             <div className="flex flex-col sm:flex-row gap-4 pt-4 border-t border-brand-black/5">
               <button
                 onClick={handleBooking}
-                className="flex-1 bg-brand-primary text-white py-5 rounded-full font-bold font-display uppercase tracking-wider shadow-xl hover:bg-cyan-700 hover:scale-[1.02] transition-all flex items-center justify-center gap-3 text-sm active:scale-95"
+                className="flex-1 bg-brand-primary text-white py-5 rounded-full font-bold font-display uppercase tracking-wider shadow-xl hover:bg-cyan-700 flex items-center justify-center gap-3 text-sm active:scale-95"
               >
                 <Phone size={20} />
                 Book via WhatsApp
               </button>
               <button
                 onClick={onClose}
-                className="sm:w-auto px-10 bg-white text-brand-black border border-brand-black/10 py-5 rounded-full font-bold font-display uppercase tracking-wider text-sm hover:bg-brand-black hover:text-white transition-all active:scale-95"
+                className="sm:w-auto px-10 bg-white text-brand-black border border-brand-black/10 py-5 rounded-full font-bold font-display uppercase tracking-wider text-sm hover:bg-brand-black hover:text-white active:scale-95"
               >
                 Tutup
               </button>

@@ -1,12 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { ArrowRight, Star, Play } from "lucide-react";
-import { motion, useScroll, useTransform } from "framer-motion";
+import { motion } from "framer-motion";
 
 const Hero = () => {
-  const { scrollY } = useScroll();
-  const y = useTransform(scrollY, [0, 500], [0, 200]);
-
   return (
     <section className="relative min-h-screen flex flex-col pt-24 pb-8 md:pb-12 overflow-hidden bg-brand-gray">
       {/* Decorative Grid Background */}
@@ -35,12 +32,7 @@ const Hero = () => {
               BEYOND
             </h1>
             <div className="hidden md:block h-[1px] flex-grow bg-brand-black/20 relative overflow-hidden">
-              <motion.div
-                initial={{ x: "-100%" }}
-                animate={{ x: "100%" }}
-                transition={{ repeat: Infinity, duration: 2, ease: "linear" }}
-                className="absolute inset-0 bg-brand-black w-1/2"
-              />
+              <div className="absolute inset-0 bg-brand-black/10" />
             </div>
           </motion.div>
           <motion.div
@@ -73,10 +65,7 @@ const Hero = () => {
                 height="600"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
-              <motion.div
-                style={{ y }}
-                className="absolute bottom-6 left-6 bg-white/10 backdrop-blur-md border border-white/20 p-4 rounded-xl"
-              >
+              <div className="absolute bottom-6 left-6 bg-white/10 border border-white/20 p-4 rounded-xl">
                 <div className="flex items-center gap-3 text-white">
                   <div className="p-2 bg-brand-primary rounded-full">
                     <Play size={16} fill="white" />
@@ -85,7 +74,7 @@ const Hero = () => {
                     WATCH THE FILM
                   </span>
                 </div>
-              </motion.div>
+              </div>
             </motion.div>
           </div>
 
@@ -111,7 +100,7 @@ const Hero = () => {
             >
               <Link
                 to="/fleet"
-                className="px-8 py-4 bg-brand-black text-white font-display font-bold text-sm uppercase tracking-widest hover:bg-brand-primary transition-all duration-300 rounded-full flex items-center gap-4 group active:scale-95"
+                className="px-8 py-4 bg-brand-black text-white font-display font-bold text-sm uppercase tracking-widest hover:bg-brand-primary rounded-full flex items-center gap-4 group active:scale-95"
               >
                 Explore Fleet
                 <ArrowRight className="group-hover:translate-x-1 transition-transform" />

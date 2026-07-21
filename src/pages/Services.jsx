@@ -84,7 +84,7 @@ const Services = () => {
               whileInView="visible"
               viewport={{ once: true }}
               variants={fadeInUp}
-              className="bg-white rounded-[2.5rem] p-8 md:p-16 shadow-2xl border border-brand-black/5 text-center relative overflow-hidden group hover:shadow-[0_20px_50px_rgba(0,0,0,0.1)] transition-all duration-700"
+              className="bg-white rounded-[2.5rem] p-8 md:p-16 shadow-2xl border border-brand-black/5 text-center relative overflow-hidden group"
             >
               {/* Decorative Elements */}
               <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-brand-primary/5 rounded-full -mr-40 -mt-40 blur-[100px] group-hover:bg-brand-primary/10 transition-colors duration-700"></div>

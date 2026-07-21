@@ -149,7 +149,7 @@ const TourPackages = () => {
           {tourPackages.map((pkg) => (
             <div
               key={pkg.id}
-              className={`group relative bg-white rounded-[2rem] overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500 border border-brand-black/5 hover:-translate-y-2 ${
+              className={`group relative bg-white rounded-[2rem] overflow-hidden shadow-xl border border-brand-black/5 hover:-translate-y-2 transition-transform duration-500 ${
                 pkg.custom ? "ring-1 ring-brand-red" : ""
               }`}
             >
@@ -239,7 +239,7 @@ const TourPackages = () => {
                 {/* CTA Button */}
                 <button
                   onClick={() => handleInquiry(pkg.name)}
-                  className={`w-full py-4 rounded-full font-bold font-display uppercase tracking-wider text-sm flex items-center justify-center gap-2 transition-all hover:scale-[1.02] ${
+                  className={`w-full py-4 rounded-full font-bold font-display uppercase tracking-wider text-sm flex items-center justify-center gap-2 ${
                     pkg.custom
                       ? "bg-brand-black text-white hover:bg-brand-red shadow-lg shadow-brand-black/20"
                       : "bg-brand-gray text-brand-black hover:bg-brand-black hover:text-white"
@@ -268,7 +268,7 @@ const TourPackages = () => {
             </p>
             <button
               onClick={() => handleInquiry("Custom Package - Consultation")}
-              className="bg-brand-red text-white px-10 py-5 rounded-full font-bold font-display uppercase tracking-wider text-sm shadow-xl hover:bg-white hover:text-brand-black transition-all inline-flex items-center gap-3"
+              className="bg-brand-red text-white px-10 py-5 rounded-full font-bold font-display uppercase tracking-wider text-sm shadow-xl hover:bg-white hover:text-brand-black inline-flex items-center gap-3"
             >
               <Phone size={20} />
               Contact Our Marketing

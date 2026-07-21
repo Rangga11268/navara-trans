@@ -105,7 +105,7 @@ const Fleet = () => {
                   className="group cursor-pointer"
                 >
                   {/* Card */}
-                  <div className="bg-white rounded-[2.5rem] overflow-hidden border border-brand-black/5 hover:border-brand-primary/20 transition-all duration-500 hover:shadow-[0_15px_30px_rgba(0,0,0,0.05)] hover:-translate-y-2 relative h-full flex flex-col">
+                  <div                   className="bg-white rounded-[2.5rem] overflow-hidden border border-brand-black/5 hover:border-brand-primary/20 hover:-translate-y-2 transition-[border-color,transform] duration-500 relative h-full flex flex-col">
                     {/* Image Container */}
                     <div className="relative h-[320px] overflow-hidden bg-brand-gray/50">
                       <img
@@ -135,7 +135,7 @@ const Fleet = () => {
                             <span>{item.capacity}</span>
                           </div>
                         </div>
-                        <div className="w-12 h-12 rounded-2xl bg-brand-gray flex items-center justify-center group-hover:bg-brand-primary group-hover:text-white transition-all duration-300 shadow-sm group-hover:rotate-45">
+                        <div className="w-12 h-12 rounded-2xl bg-brand-gray flex items-center justify-center group-hover:bg-brand-primary group-hover:text-white group-hover:rotate-45 transition-[color,background-color,transform] duration-300 shadow-sm">
                           <ArrowUpRight size={22} />
                         </div>
                       </div>

@@ -54,7 +54,7 @@ const Destinations = () => {
           </div>
           <a
             href="/services"
-            className="group flex items-center gap-3 bg-brand-black text-white px-8 py-4 rounded-full font-display font-bold uppercase tracking-wider text-sm hover:bg-brand-primary transition-all duration-300 shadow-xl"
+              className="group flex items-center gap-3 bg-brand-black text-white px-8 py-4 rounded-full font-display font-bold uppercase tracking-wider text-sm hover:bg-brand-primary shadow-xl"
           >
             Lihat Semua Katalog
             <ArrowRight
@@ -68,10 +68,10 @@ const Destinations = () => {
           {destinationList.map((dest, idx) => (
             <div
               key={idx}
-              className="group relative rounded-[2rem] overflow-hidden aspect-[4/5] cursor-pointer shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2"
+              className="group relative rounded-[2rem] overflow-hidden aspect-[4/5] cursor-pointer shadow-lg hover:-translate-y-2 transition-transform duration-500"
             >
               <div className="absolute top-4 left-4 z-20">
-                <span className="bg-white/90 backdrop-blur-md text-brand-black px-4 py-2 rounded-full text-[10px] font-bold uppercase tracking-widest shadow-sm">
+                <span className="bg-white/90 text-brand-black px-4 py-2 rounded-full text-[10px] font-bold uppercase tracking-widest shadow-sm">
                   {dest.type}
                 </span>
               </div>
@@ -98,7 +98,7 @@ const Destinations = () => {
                       {dest.price}
                     </span>
                   </div>
-                  <div className="w-10 h-10 rounded-full bg-white text-brand-black flex items-center justify-center group-hover:bg-brand-primary group-hover:text-white transition-all duration-300 transform group-hover:-rotate-45">
+                  <div className="w-10 h-10 rounded-full bg-white text-brand-black flex items-center justify-center group-hover:bg-brand-primary group-hover:text-white group-hover:-rotate-45 transition-[color,background-color,transform] duration-300">
                     <ArrowRight size={20} />
                   </div>
                 </div>

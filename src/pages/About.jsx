@@ -111,7 +111,7 @@ const About = () => {
                 <motion.div
                   key={index}
                   variants={fadeInUp}
-                  className="p-8 bg-brand-gray rounded-[2rem] border border-brand-black/5 hover:border-brand-primary/20 hover:bg-white hover:shadow-xl transition-all duration-500 group"
+                  className="p-8 bg-brand-gray rounded-[2rem] border border-brand-black/5 hover:border-brand-primary/20 hover:bg-white group"
                 >
                   <div className="w-14 h-14 bg-white rounded-2xl flex items-center justify-center text-brand-black mb-6 shadow-sm group-hover:bg-brand-primary group-hover:text-white transition-colors duration-500">
                     <item.icon size={28} />
@@ -192,10 +192,10 @@ const About = () => {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ delay: 0.2, duration: 0.8 }}
-                    className="bg-white/5 backdrop-blur-md rounded-3xl p-8 border border-white/10 hover:border-brand-primary/50 transition-colors group"
+                    className="bg-white/5 rounded-3xl p-8 border border-white/10 hover:border-brand-primary/50 group"
                   >
                     <div className="flex items-start gap-6">
-                      <div className="p-3 bg-white/10 rounded-xl text-brand-primary group-hover:bg-brand-primary group-hover:text-white transition-colors">
+                      <div className="p-3 bg-white/10 rounded-xl text-brand-primary group-hover:bg-brand-primary group-hover:text-white">
                         <Target size={24} />
                       </div>
                       <div>
@@ -216,10 +216,10 @@ const About = () => {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ delay: 0.4, duration: 0.8 }}
-                    className="bg-white/5 backdrop-blur-md rounded-3xl p-8 border border-white/10 hover:border-brand-primary/50 transition-colors group"
+                    className="bg-white/5 rounded-3xl p-8 border border-white/10 hover:border-brand-primary/50 group"
                   >
                     <div className="flex items-start gap-6">
-                      <div className="p-3 bg-white/10 rounded-xl text-brand-primary group-hover:bg-brand-primary group-hover:text-white transition-colors">
+                      <div className="p-3 bg-white/10 rounded-xl text-brand-primary group-hover:bg-brand-primary group-hover:text-white">
                         <Lightbulb size={24} />
                       </div>
                       <div>

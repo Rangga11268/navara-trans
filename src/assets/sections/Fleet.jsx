@@ -141,14 +141,12 @@ const Fleet = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 auto-rows-[300px]">
             {/* 1. Featured Video Card (Top Left, 2x2) */}
             <div className="md:col-span-2 md:row-span-2 relative rounded-[2.5rem] overflow-hidden group shadow-2xl ring-1 ring-brand-black/5 bg-brand-black">
-              <video
-                src="/assets/video/Dieng.mp4"
+              <img
+                src="/assets/img/Dieng/diengBus.webp"
                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-80 group-hover:opacity-60"
-                muted
-                loop
-                playsInline
-                preload="none"
-                poster="/assets/img/Dieng/diengBus.webp"
+                alt="Dieng Bus"
+                loading="lazy"
+                decoding="async"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-brand-black/90 via-brand-black/20 to-transparent"></div>
               <div className="absolute bottom-0 left-0 p-10 w-full">
@@ -190,6 +188,8 @@ const Fleet = () => {
                 src="/assets/img/Seat.webp"
                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-70 group-hover:opacity-50"
                 alt="Interior Comfort"
+                loading="lazy"
+                decoding="async"
               />
               <div className="absolute inset-0 bg-brand-black/20 group-hover:bg-brand-black/10 transition-colors"></div>
               <div className="absolute inset-0 flex flex-col items-center justify-center text-center p-6">
@@ -221,7 +221,7 @@ const Fleet = () => {
             {/* CTA Card */}
             <div
               onClick={handleCTAClick}
-              className="relative rounded-[2rem] overflow-hidden group shadow-xl bg-brand-primary flex flex-col items-center justify-center text-center p-8 cursor-pointer hover:bg-cyan-700 transition-all"
+              className="relative rounded-[2rem] overflow-hidden group shadow-xl bg-brand-primary flex flex-col items-center justify-center text-center p-8 cursor-pointer hover:bg-cyan-700 transition-colors"
             >
               <div className="w-16 h-16 rounded-full bg-white/20 flex items-center justify-center text-white mb-4">
                 <CalendarClock size={32} />
@@ -252,7 +252,7 @@ const Fleet = () => {
 
 const FleetCard = ({ item, onClick }) => (
   <div
-    className="relative rounded-[2rem] overflow-hidden group cursor-pointer shadow-xl ring-1 ring-brand-black/5 transition-all duration-500 hover:-translate-y-2 bg-brand-black"
+    className="relative rounded-[2rem] overflow-hidden group cursor-pointer shadow-xl ring-1 ring-brand-black/5 transition-transform duration-500 hover:-translate-y-2 bg-brand-black"
     onClick={onClick}
   >
     <img
@@ -265,7 +265,7 @@ const FleetCard = ({ item, onClick }) => (
     <div className="absolute inset-0 bg-gradient-to-t from-brand-black via-brand-black/20 to-transparent"></div>
 
     <div className="absolute top-6 right-6 flex flex-col items-end gap-2">
-      <div className="bg-white/10 backdrop-blur-md border border-white/20 text-white px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider">
+      <div className="bg-white/10 border border-white/20 text-white px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider">
         {item.category}
       </div>
       {item.note && (
@@ -294,7 +294,7 @@ const FleetCard = ({ item, onClick }) => (
         ))}
       </div>
 
-      <div className="flex items-center gap-2 text-white font-bold text-sm uppercase tracking-wider transition-all duration-300 translate-x-0 opacity-0 group-hover:translate-x-0 group-hover:opacity-100">
+      <div className="flex items-center gap-2 text-white font-bold text-sm uppercase tracking-wider transition-[transform,opacity] duration-300 translate-x-0 opacity-0 group-hover:translate-x-0 group-hover:opacity-100">
         View Details <ArrowRight size={16} />
       </div>
     </div>
