@@ -1,26 +1,18 @@
 import React from "react";
 import Hero from "../assets/sections/Hero";
-import MasalahSolusi from "../assets/sections/MasalahSolusi";
-import StatsBar from "../assets/sections/StatsBar";
-import Fleet from "../assets/sections/Fleet";
-import BookingWidget from "../assets/sections/BookingWidget";
+import AboutSection from "../assets/sections/AboutSection";
+import FleetPreview from "../assets/sections/FleetPreview";
 import Destinations from "../assets/sections/Destinations";
-import Testimonials from "../assets/sections/Testimonials";
-import FAQ from "../assets/sections/FAQ";
-import FinalCTA from "../assets/sections/FinalCTA";
+import BottomBooking from "../assets/sections/BottomBooking";
 
 const Home = () => {
   return (
     <main>
       <Hero />
-      <BookingWidget />
-      <MasalahSolusi />
-      <StatsBar />
-      <Fleet />
+      <AboutSection />
+      <FleetPreview />
       <Destinations />
-      <Testimonials />
-      <FAQ />
-      <FinalCTA />
+      <BottomBooking />
     </main>
   );
 };
